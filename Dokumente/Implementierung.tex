@@ -1,0 +1,359 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{a4wide,url,ngerman,graphicx}
+
+\parindent0pt
+\parskip3pt
+\setcounter{tocdepth}{2}
+
+\title{Partizipatorisches Virtuelles Museum\\[.6em] Implementierungsdetails}
+\date{Version vom 23. September 2016}
+\author{Sebastian Günther, Hans-Gert Gräbe}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+ 
+\section{Allgemein}
+ 
+Das \emph{Partizipatorische Virtuelle Museum} (PVM) ist als digitale
+Online-Plattform konzipiert, in der sich die Besucher mit Gegenständen aller
+Art künstlerisch auseinandersetzen können. Dazu sollte auf Basis von Wordpress
+in Kombination mit einer eigenen Plugin-Suite und ausgewählten
+Drittanbieter-Plugins in mehreren Iterationsstufen eine möglichst robuste
+Lösung entwickelt werden, die moderne Designansätze wie \emph{responsive
+  Design} umsetzt und auch in Zukunft Spielraum für Erweiterungen lässt.
+Zusätzlich sollte damit der Bedienkomfort der Seite erhöht und der
+Wartungsaufwand minimiert werden.
+
+Eine erste Version der
+Plattform\footnote{\url{http://pcai042.informatik.uni-leipzig.de/swp/SWP-15/index.html},
+  Gruppe SWP-15.} wurde im Sommersemester 2015 im Rahmen des SWT-Praktikums am
+Institut für Informatik der Uni Leipzig entwickelt.  Die vorliegende Version
+entstand im Studienjahr 2015/16 als gründliches Redesign dieser Basisversion,
+wobei detaillierte Gestaltungsanforderungen aus einem Begleitseminar am
+Institut für Kunstpädagogik (Leitung Hendrikje Düwel) einbezogen und umgesetzt
+wurden.  Der Designentwurf und die Implementierung wurden überwiegend von
+Sebastian Günther ausgeführt. Zeitweise beteiligt waren Alexander Lieder und
+Maximilian Malios. 
+
+Die folgende Beschreibung setzt die Kenntnis der grundlegenden Konzepte aus der
+Projekt-Beschreibung, siehe \texttt{beschreibung.pdf}, sowie der Terminologie
+im Umfang des dort zusammengestellten Glossars voraus.
+
+\section{Produktübersicht}
+
+\subsection{Prinzipielle Architektur-Entscheidungen}
+ 
+Basis der Plattform ist eine Wordpress-Single-Site-Installation, deren Look and
+Feel durch Auswahl und nachfolgende Anpassung eines geeigneten WP-Themes für
+den Anwendungszweck gestaltet wurde.  Zur Trennung von Layout und
+Funktionalität wurde ein eigenes Plugin \texttt{pvmkit} entwickelt, in dem die
+PVM-spezifischen funktionalen Aspekte gekapselt sind. Für Stellen, wo eine
+Verzahnung von Funktion und Layout erforderlich ist (etwas Such- oder
+Übersichtsseiten), wurde das von der Designgruppe ausgewählte Basisthema
+\emph{esteem} mit einem Child-Theme \texttt{esteem\_pvm\_child} modifiziert. 
+
+\subsection{Workflow aus Nutzersicht}
+
+Auf der Startseite, auf die man über den Button „Me \& Things“ zurückgelangt,
+werden neben dem Navigationsmenü eine Übersicht über die verfügbaren Werke
+sowie die vorgegebenen Merkmale angezeigt. Das Navigationsmenü ist als
+Zwei-Ebenen-Menü ausgestaltet und erlaubt eine grundsätzliche Navigation
+zwischen den einzelnen Bereichen \emph{About}, \emph{Tutorial},
+\emph{Inspiration} und \emph{Me Projects} der Plattform.
+
+Die Navigation zwischen verschiedenen Werken (oder verschiedenen Projekten, to
+do) ist als Kachelnavigation auf der Startseite ausgestaltet, wobei durch
+entsprechende Filterkriterien die Anzahl der angezeigten Werke eingeschränkt
+werden kann.
+
+In der Fußleiste sind Links auf \emph{Impressum}, \emph{AGB}, \emph{FAQ} und
+\emph{Login} vorhanden.  
+
+Als nicht angemeldeter Betrachter hat man Zugriff auf die Filterfunktion, mit
+deren Hilfe man die Anzahl der gelisteten Werkkacheln nach den vorgegebenen
+Merkmalen einschränken kann. Außerdem kann man auf den einzelnen Werkseiten
+die jeweiligen Ausstellungsstücke studieren. Weiterhin kann man sich an der
+Plattform registrieren oder anmelden.
+ 
+Angemeldete Benutzer (User) können weitere Funktionen der Plattform nutzen.
+Jegliche Partizipation (wie Einstellen neuer Werke oder Bewertung vorhandener)
+setzt eine Anmeldung voraus.
+
+\section{Grundsätzliche Struktur- und Entwurfsprinzipien}
+ 
+Zur Umsetzung der Funktionalität wurde ein WP-Plugin \texttt{pvmkit} erstellt.
+Aus Übersichtlichkeitsgründen und um die Updatefähigkeit von Wordpress zu
+wahren, benutzt \texttt{pvmkit} ein eigenes Datenmodell, das die
+Wordpressdatenbank um mehrere Tabellen erweitert.  
+ 
+Das Plugin \texttt{pvmkit} hat eine eigene Verzeichnis- bzw. Dateistruktur. Im
+Hauptverzeichnis des Plugins befinden sich die Dateien \texttt{pvmkit.php}, und
+\texttt{functions.php}, in den Unterverzeichnissen \texttt{backend},
+\texttt{classes}, \texttt{images}, \texttt{libs}, \texttt{shortcodes} und
+\texttt{widgets} verschiedene funktionale Einheiten, die weiter unten genauer
+beschrieben werden und vor allem die Applikationslogik sowie die Anbindung der
+Datenschicht realisieren.
+
+View-Funktionalitäten, insbesondere die für verschiedene Zwecke erforderlichen
+Seitentemplates, sind im Child Theme \texttt{esteem\_pvm\_child} zu finden. Die
+Templates greifen dabei auf die im Plugin implementierten Funktionalitäten
+zurück.  Die genauen Abhängigkeiten können durch die im Kopfbereich des
+jeweilgen Templatecodes inkludierten Dateien nachvollzogen werden.
+
+Weiterhin wird das Verzeichnis \texttt{wp\_content/uploads/pvm} der
+WP-Installation zur Ablage von Paketinformationen zu den einzelnen Werken
+verwendet.
+
+Die Datei \texttt{pvmkit.php} enthält die Plugin-Definition und dient als
+Container, über den die Funktionalitäten aus den einzelnen Unterverzeichnissen
+(Paketen) eingebunden werden. 
+
+Die Benutzerregistrierung und Authentifizierung wird derzeit über das Plugin
+\texttt{wp-members} realisiert, das dafür entsprechende Shortcodes
+bereitstellt. 
+ 
+\section{Struktur- und Entwurfsprinzipien einzelner Pakete}
+ 
+Strukturierung des Codes wird durch Unterverzeichnisse erreicht: 
+\begin{itemize}\itemsep0pt
+\item \texttt{backend} -- Enthält die Einbindung der Werkadministration ins
+  Backend. 
+\item \texttt{classes} -- Enthält alle Klassendefinitionen und
+  Vererbungsstrukturen. 
+\item \texttt{images} -- (Funktionale) Bilddateien, die an verschiedenen
+  Stellen eingebunden werden.
+\item \texttt{libs} -- PHP-Bibliothek \emph{EasyRDF}.  Diese wird in
+  \texttt{pvmkit\_package\_editable.php} zum Parsen der Manifest-Datei eines im
+  PVM-Paketformat als zip-Datei vorliegenden Werks benötigt.  
+\item \texttt{shortcodes} -- Verschiedene WP-Shortcodes. 
+\item \texttt{widgets} -- Widgets für die Sidebar.
+\end{itemize}
+
+\subsection{Erstellen und Verwalten von Werken}
+
+Relevante Datenbanktabellen sind    
+\begin{itemize}\itemsep0pt
+\item \texttt{pvmkit\_packages}: Tabelle der Werke. Jedes Werk hat u.a. die
+  Felder id, title, author (Verweis in die Autorentabelle),
+  Veröffentlichungsdatum und Status.  Über den Status (status=8 bedeutet „Werk
+  veröffentlicht“) wird der Werk-Workflow überwacht.  
+\item \texttt{pvmkit\_package\_components}: Zuordnung von Id und Typ der
+  einzelnen Werkteile zu einem Werk. Das dem Werk zugeordnete Titelbild wird in
+  der Werkübersicht als Kachel dargestellt und dient dort der Navigation auf
+  die Werkeinzelseite.
+\item \texttt{pvmkit\_objects}: Daten der einzelnen Werkteile.               
+\item \texttt{pvmkit\_object\_properties}: -- Tabelle ist obsolet.
+\item \texttt{pvmkit\_property\_index}: Zuordnung der Eigenschaften zu einem
+  Werk.    
+\end{itemize}
+
+\subsubsection*{Workflow Werke}
+
+Ein Werk wird grundsätzlich über den ins Frontend integrierten Editor
+(Edit-Template) erstellt, der auf der Profilseite des Autors verlinkt ist.
+Über die Einstiegsseite des Editors können die verschiedenen Bestandteile
+eines Werks hochgeladen (Bilder) bzw. erstellt (Text) sowie Merkmale
+zugeordnet werden.  Weiterhin können fertige Werke zur Freigabe gemeldet
+werden. 
+
+Im Zuge des Editierprozesses werden
+\begin{itemize}\itemsep0pt
+\item Eine Werk-Id vergeben und ein Zustandsflag gesetzt.
+\item Werkdaten in die Datenbank eingetragen.
+\item Bilder entsprechend zugeschnitten und abgespeichert.
+\item Der Text in die Datenbank übernommen.
+\item Merkmale entsprechend der hinterlegten morphologischen Tabelle zugeordnet.
+\item Das Autorenprofil zugeordnet. Über die Autoren-Id ist eine User-Id zu
+  erreichen, wenn der Autor als User an der Plattform existiert.  
+\item Werke sind in dieser Phase im Zustand 1.
+\item Alle Werke eines Autors, auch die im Zustand 1, sind über die
+  Profilseite des Autors unter dem Link „Eigene Werke“ gelistet.
+\item Mit einem Link „Editieren“ kann das Edit-Formular gestartet werden.
+\item Mit einem Link „Veröffentlichen“ wird  das Werk zur Veröffentlichung
+  eingereicht wird und geht damit in den Zustand 5 über. 
+\item Mit einem Link „Löschen“ wird das Werk in den Zustand 0 versetzt (das
+  Werk ist noch da, aber als gelöscht markiert). 
+\end{itemize}
+Alternativ erhält man über den Link „Eigene Werke“ auf der Profilseite des
+Autors eine Auflistung aller eigenen Werke im Kachelformat. Jedes noch durch
+den Autor editierbare Werk (also im Zustand 1) het einen Edit-Button, über den
+man ebenfalls auf die Einstiegsseite des Editors gelangt und das Editieren des
+Werks fortsetzen kann.  Hier lässt sich auch das Hochladen eines Werks im
+als zip-Datei PVM-Paketformat einbinden (aktuell nicht implementiert). 
+
+Im Zustand 5 kann das Werk nicht mehr vom Autor editiert werden. Das Werk
+erscheint in der Redaktionsliste „Werke zur Freigabe“ und kann von einem
+Redakteur
+\begin{itemize}\itemsep0pt
+\item über den Link „Vorschau“ in einer Vorschau betrachtet werden (dazu wird
+  das Seitentemplate „Einzelnes Werk“ mit der jeweiligen Werk-Id aufgerufen), 
+\item über den Link „Werk editieren“ redaktionell überarbeitet werden (dazu
+  wird das Edit-Template für Werke gestartet),
+\item über den Link „Freischalten“ in den Fundus übergeben werden, womit das
+  Werk in der Zustand 8 übergeht und in diesem Zustand weder vom Autor noch von
+  der Redaktion bearbeitet werden kann, 
+\item über den Link „Löschen“ in den Zustand 0 (Werk als gelöscht markiert)
+  überführt werden.
+\end{itemize}
+Ein Werk im Zustand 0 kann komplett aus der Datenbasis gelöscht werden („delete
+permanently“)\footnote{Siehe dazu die Funktion \texttt{delete\_package\_db}, in
+  der diese Funktionalität über einen zweiten Parameter rudimentär
+  implementiert ist.}.  Bis dahin ist das Werk noch über seine Werk-Id zu
+erreichen und kann durch unmittelbare Modifikation des Status-Flags in der
+Datenbank wieder aktiviert werden.
+
+Ergänzungen zum Workflow Werke
+\begin{itemize}\itemsep0pt
+\item Bedeutung Werk-Status: 0=gelöscht, 1=wird erstellt, 5=eingereicht,
+  8=freigegeben.
+\item Auch erst teilweise fertiggestellte Werke sind ablegbar, wenn die
+  erforderlichen weiteren Elemente gerade nicht zur Hand sind oder im Rahmen
+  der Schulstunde nicht hochgeladen werden können.  Das Werk bleibt im
+  Zustand~1. 
+\item Der Autor findet auf seiner Profilseite in der Übersicht „eigene Werke“
+  auch all seine Werke „in Bearbeitung“.
+\end{itemize}
+
+\subsection{Erstellen und Verwalten von Projekten}
+ 
+Relevante Datenbanktabellen sind    
+\begin{itemize} \itemsep0pt
+\item \texttt{pvmkit\_projects} -- Ein Datensatz dieser Tabelle repräsentiert
+  ein Projekt, welches von einem User initiiert wurde.
+\item \texttt{pvmkit\_project\_participants} -- Besitzer des Projekts. 
+\item \texttt{pvmkit\_projects\_packages} -- Dem Projekt zugeordnete Werke.
+\item \texttt{pvmkit\_project\_images} -- Dem Projekt zugeordnete Bilder.  Das
+  dem Projekt zugeordnete Titelbild wird in der Projektübersicht als Kachel
+  dargestellt und dient dort der Navigation auf die Projektseite.
+\end{itemize}
+ 
+Workflow Projekte (Anforderungen)
+\begin{itemize}\itemsep0pt
+\item Dieser soll ähnlich aufgebaut werden wie Workflow Werke: Von einer
+  Hauptseite wird auf Seiten für die einzelnen Unteraufgaben (Text eingeben,
+  Bild hochladen usw.) weitergeleitet und von dort zurück auf die Hauptseite.
+\item Die Projektseite enthält drei Texte (Kurztext, Projektdokumentation,
+  Abschlusstext), welche vom Projektleiter bereitgestellt und während des
+  Projektverlaufs überarbeitet werden können; (+ dokumentarische Bilder)
+\item Ähnlich wie bei den Favoriten wird auf der Profilseite eine Übersicht
+  über die Projekte eines Nutzer angelegt, in denen er der Projektleiter ist.
+\item Wie bei Werken muss auch ein Projekt in \emph{mehreren} Schritten mit
+  Abspeicher\-möglichkeit des aktuellen Stands erstellbar sein.
+\item Der Projekt-Lebenszyklus wird wie bei Werken über eine Statusvariable
+  verwaltet, wobei wenigstens die Zustände „noch nicht freigegeben“,
+  „freigegeben für initiale Werkzuordnung“, „in Realisierung“, „archiviert“
+  vorzusehen sind.
+\end{itemize}
+
+\subsection{Seitenaufbau}
+
+Eine Reihe von (scheinbar) individuellen Seiten wie etwa die Profilseite eines
+Autors werden direkt und nur aus Informationen aus der PVM-Datenbank
+aufgebaut.  Dazu wird ein spezielles Seitentemplate mit einer speziellen Seite
+im Wordpress verbunden, der die darzustellende variierende Information über
+GET-Parameter weitergegeben wird.  
+
+So stellt \texttt{single\_user/?author\_id=23} die Profilseite des Autors mit
+der \texttt{id=23} dar.
+
+\begin{itemize} \itemsep0pt
+\item \texttt{single\_user} -- Profilseite eines Autors.
+\item \texttt{profile\_package\_list} -- Einstiegsseite in die Verwaltung der
+  Werke eines Autors.
+\item \texttt{autor-favoriten} -- Favoriten des Autors.
+\item \texttt{single\_package} -- Einzelseite eines Werks.
+\end{itemize}
+
+Auf diese Weise wird ein konsistentes und einheitliches Design der
+Profilseiten der Autoren usw. als eine grundlegende Anforderung aus den
+Gestaltungsentwürfen erzwungen.
+
+\section{Datenmodell}
+ 
+Das Standard-Wordpress-Datenmodell wird nicht verändert, um eine reibungslose
+Funktion und Updatefähigkeit des Grundsystems sicherzustellen. Das
+PVM-Datenmodell ist deshalb konzipiert als Erweiterung des WP-Datenmodells um
+PVM-spezifische Begrifflichkeiten, die über drei Bindings -- (1) an die
+Tabellenstruktur der SQL-Datenbank, (2) an einen eigenen Upload-Bereich im
+Dateisystem des Webservers und (3) an die CSS-Struktur des verwendeten
+WP-Basisthemes -- die entsprechenden WP-Datenrepräsentationen erweitert.
+
+Die Erweiterung (1) der Datenbank erfolgt durch mehrere Tabellen, welche durch
+das Präfix\footnote{Hinzu kommt das allgemeine WP-Datenbank-Präfix, mit dem
+  verschiedene WP-Installationen unterschieden werden können, die eine
+  gemeinsame Datenbank nutzen.} \texttt{pvmkit\_} gekennzeichnet sind. Neben
+den oben bereits aufgelisteten Tabellen sind dies
+\begin{itemize}\itemsep0pt
+\item \texttt{pvmkit\_authors}: Tabelle der Zuordnung von Autoren zu
+  WP-Usern.  
+
+  Nur WP-User können als Autoren oder in Vertretung von Autoren agieren.  
+
+  Ein User kann mehreren Autoren zugeordnet sein (Power-User\footnote{Etwa ein
+  Tutor, der die Ergebnisse eines Offline-Kurses für die Autoren in die
+  Plattform einspielt.}). 
+
+  Das User-Feld kann auch leer sein. Dann ist der Autor nicht mehr an der
+  Plattform aktiv.
+\item \texttt{pvmkit\_notifications}: Tabelle mit Nutzerbenachrichtigungen. 
+\item \texttt{pvmkit\_properties}: Tabelle der extern vorgegebenen
+  Eigenschaften (morphologische Tabelle), die einzelnen Werken zugeordnet
+  werden können.
+\item \texttt{pvmkit\_ratings}: Bewertung der einzelnen Werke durch User.  
+\end{itemize}
+
+Das System der Benutzerrechte verwendet den ACL-Mechanismus von Wordpress; die
+entsprechenden Rechte werden in der Tabelle \texttt{user\_meta} gespeichert. 
+
+\section{Weitere Informationen}
+
+\begin{itemize}\itemsep0pt
+\item Projekten werden Werke, aber keine Teilnehmer mehr zugeordnet. Jeder
+  Autor kann für jedes Projekt auf der Projektseite eigene Werke vorschlagen,
+  die vom Projektleiter bestätigt werden müssen.
+\item Ein User kann mehrere Autoren vertreten (Power-User). Dazu muss er vom
+  Administrator auf seiner Profilseite das entsprechende Recht zugewiesen
+  bekommen. 
+\item Wenn ein User gelöscht wird, bleiben das oder die zugeordneten
+  Autorenprofile bestehen.
+\item Bereits freigegebene Werke können zurückgenommen werden (mehrfach von
+  Frau Düwel praktizierter Use Case, weil die Werke den Qualitätsansprüchen
+  nicht genügten). 
+
+  Dazu müssten die Beteiligten entsprechend informiert werden.
+\item Ein Power-User (mit mehreren Autorenprofilen) sieht im eingeloggten
+  Zustand auf \emph{allen} Profilen \emph{alle} ihm zugeordtene Werke als
+  „eigene Werke“.
+\item Bilder zu Werken werden während des Erstellungsprozesses in verschiedenen
+  Auf"|lösungen im Verzeichnis \texttt{uploads/pvm/images} abgelegt, Bilder zu
+  Projekten im Verzeichnis \texttt{uploads/pvm/project\_images}.
+\end{itemize}
+
+\section{Offene Fragen}
+ 
+\begin{itemize}\itemsep0pt
+\item In einer frühen Planungsphase waren der Export eines Werks als zip-Datei
+  im PVM-Paketformat (auf RDF-Basis) und die Möglichkeit des Hochladen eines
+  solchen Werks vorgesehen.
+
+  In der aktuellen Version wurde diese Variante des Persistierens nicht weiter
+  entwickelt und steht damit auch nicht zur Verfügung.  Einzelne Dateien in den
+  Verzeichnissen \texttt{uploads/pvm/archive} und \texttt{uploads/pvm/zip} auf
+  dem Server sind noch Relikte dieser 
+
+\item Im Plugin \texttt{pvm2rdf} werden prototypisch WP-Shortcodes definiert,
+  mit denen sich Teile der PVM-spezifischen Tabellen als RDF ausgeben lassen.
+  Siehe dazu auch den PHP-Code des Plugins. 
+
+\item Volltextsuche über Werke einbinden.
+
+\item Ansatz „social media“: Links sollen Share-Buttons sein wie aktuell
+  bereits angelegt. Funktioniert bei Facebook nur zufällig. Nicht systematisch
+  implementiert.
+\end{itemize}
+
+\end{document}
+                 

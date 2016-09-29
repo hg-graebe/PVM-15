@@ -1,0 +1,1132 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{a4wide,url,ngerman}
+
+\newcommand{\Kommentar}[1]{
+  \begin{quote}\textbf{Kommentar:} #1 \end{quote}
+}
+
+\newcommand{\FV}[1]{
+  \begin{quote}\textbf{Formulierungsvorschlag für Einfügung:} #1 \end{quote}
+}
+
+\newcommand{\glossar}[1]{{$\to$ \textsc{#1}}}
+\parindent0pt
+\parskip3pt
+\setcounter{tocdepth}{2}
+
+\title{Partizipatorisches Virtuelles Museum\\[.6em] 
+  Stand der Anforderungsaufnahme}
+\date{Version vom 29. März 2016}
+\author{Hans-Gert Gräbe}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\newpage  
+
+\emph{Ziel} dieses Dokuments ist es, den Stand der Anforderungserhebung zur
+Erstellung und Weiterentwicklung der \glossar{Plattform} des PVM-Projekts
+verbindlich festzuhalten.  Dieses Dokument wird durch Prof. Gräbe als
+\emph{Project Owner} der IT-Gruppe fortgeschrieben und in regelmäßigen
+Abständen mit Frau Düwel als \emph{Leiterin des Gesamtprojekts} entsprechend
+den „Festlegungen zur Anforderungsaufnahme“ (siehe Kurs-Wiki) abgestimmt.
+
+Das Dokument wurde zuletzt in einer Durchsprache am 14.1.2016 abgestimmt, im
+Nachgang entsprechend der Durchsprachen zum Thema „Projekte“ modifiziert und
+im Gespräch am 29.3.2016 ohne weitere Detaildurchsprache als Arbeitsgrundlage
+bestätigt.
+
+\section{Einführung}
+
+Kern des Partizipatorischen Virtuellen Museums (PVM) ist eine digitale
+\glossar{Plattform}, die auf Beteiligung von Internetusern ausgerichtet ist. Es
+stellt eine virtuelle Ausstellungsform mit festgelegter Thematik und
+Präsentationsart dar.  Die präsentierte \glossar{Ausstellung} entsteht jedoch
+ausschließlich durch die \glossar{User} selbst.
+
+Der Museumsbegriff wird im Kontext des PVM lediglich als \emph{Analogie}
+bzw.\ Vergleich verwendet, um zu erklären oder Vorgänge zu beschreiben, die
+einem Museum ähnlich sind, z.B. das Präsentieren von Objekten (etwa im
+About-Text oder im Tutorial).  In der Außendarstellung und als Bezeichnung für
+die Site soll der Museumsbegriff nicht verwendet werden, da Jugendliche und
+junge Erwachsene dem \emph{traditionellen} Museum eher ablehnend
+gegenüberstehen (vgl. Bocatius 2014).
+
+\Kommentar{15.01.2015, Gräbe: Mit der Formulierung „Kern des \ldots“ wird dem
+  Umstand Rechnung getragen, dass das PVM-Konzept über die Verfügbarkeit einer
+  digitalen Plattform als \emph{virtuelle Ausstellungsform} hinausreicht und
+  als „Museum“ weitergehende didaktische und konzeptionelle Ziele verfolgt,
+  insbesondere mit der Vorgabe von Design-Richtlinien sowie der Möglichkeit zu
+  \glossar{Projekten}. Diese weitergehenden Konzepte müssen im Lichte digitaler
+  Technologien einzeln bewertet werden.  Das muss nicht unbedingt unter einem
+  eigenen einheitlichen Begriff eines \emph{digitalen Museums} zusammengefasst
+  werden. }
+
+Auf der \glossar{Plattform} werden von \glossar{Usern} bereitgestellte digitale
+Darstellungen von Gegenständen als \glossar{Werke} gesammelt. Die Gegenstände
+werden repräsentativ als Darstellungsmittel der eigenen Person betrachtet.
+Voraussetzung ist, dass der Gegenstand etwas mit der eigenen Person zu tun hat.
+Dann kann er diese repräsentieren.
+
+Der Schwerpunkt liegt auf der Sammlung und Reihung einer großen Anzahl von
+\glossar{Werken}, die unterschiedlich zusammengestellt werden können, sowie auf
+der interaktiven Teilnahme. 
+
+\glossar{Werke} können von (nicht angemeldeten) \glossar{Besuchern} in
+verschiedener Weise allein durch unterschiedliche Sortiermöglichkeiten
+angeschaut werden.  Die Nutzung weitergehender partizipativer Möglichkeiten
+setzt eine Registrierung an der Plattform als \glossar{User} voraus.
+
+\glossar{Werke} sind im \glossar{PVM-Paketformat} für die Integration in die
+\glossar{Plattform} über einen spezifizierten \glossar{Einreichungs}- und
+\glossar{Freigabeprozess} bereitzustellen. Ein \glossar{Redakteur} entscheidet
+über die Veröffentlichung.
+
+Das Zusammenstellen von einzelnen \glossar{Werkteilen} zu einem \glossar{Paket}
+im \glossar{PVM-Paket"|format} wird durch die Bereitstellung einer
+\glossar{Formularseite} unterstützt.
+
+Ein \emph{Ziel} des PVM-Projekts ist es, Lehrenden die Möglichkeit zu geben,
+die \glossar{Plattform} im Unterricht zu nutzen.  Neben der Möglichkeit, auf
+Inhalte über unsere allgemeinen Plattformkonzepte zuzugreifen, bieten wir
+Lehrenden die Möglichkeit, eigene \glossar{Projekte} zu verwirklichen oder
+eines unserer \glossar{Projektangebote} mit der eigenen Klasse umzusetzen.
+
+Auf der Basis erster konzeptioneller Überlegungen zu einem
+\emph{Partizipatorischen Virtuellen Museum} (PVM) von Frau Düwel wurde im
+Sommersemester 2015 im Rahmen des Software"|technik-Praktikums eine erste
+prototypische Software-Skizze eines solchen digitalen Museums auf der Basis von
+Wordpress erstellt, die im Zuge folgender Semester im Rahmen eines Projekts der
+Laboruniversität weiterentwickelt werden soll.
+
+Grundlage der Arbeit und Orientierungsmuster waren neben diesen konzeptionellen
+Überlegungen weiter verschiedene „Fundstücke“-Projekte am Institut für
+Kunstpädagogik, die in den letzten Jahren aus studentischen Semesterarbeiten
+entstanden sind.
+
+\section{Konzeptionelle Grundlagen}
+
+\subsection{Allgemeines}\label{grundlagen.allgemeines}
+
+Das PVM-Konzept geht von der Grundvorstellung (Metapher) eines Museums aus, in
+dem die öffentlich zugänglichen \glossar{Werke} als fertige, nicht weiter
+modifizierbare Einheiten im \glossar{Fundus} als „Sammlung“ zusammengefasst
+sind.  
+
+Diese Werke sind in einer \glossar{Dauerausstellung} dem Publikumsverkehr
+zugänglich und können von \glossar{Besuchern} über Such- und Filterfunktionen
+auf der Basis der zugeordneten \glossar{Merkmale} verschieden strukturiert
+werden.  Das Konzept der \glossar{Dauerausstellung} orientiert sich an der
+Metapher einer großen Ausstellungshalle, in der die fertigen \glossar{Werke}
+unterschiedslos platziert sind.
+
+Derartige \glossar{Werke} werden in einem \glossar{Werkstattprozess} von
+einzelnen Personen, den \glossar{Urhebern}, erstellt, nach der Erstellung
+einem Begutachtungsprozess durch die \glossar{Redakteure} unterzogen und nach
+einem positiven Votum in den \glossar{Fundus} übernommen werden.
+
+\glossar{Werke} können ausschließlich in der \glossar{Werkstatt} bearbeitet
+werden, außerhalb der Werkstatt sind sie unveränderlich.
+
+Als dingliche Einheit liegen \glossar{Werke} in der Form von \glossar{Paketen}
+zusammengehörender \glossar{Werkteile} vor, die zugleich
+\begin{itemize}
+\item Ergebnis des kreativen Schaffens von \glossar{Urhebern} im Sinne der
+  PVM-Konzeption eines reflexiven Zugangs zum Selbst über dingliche
+  Darstellungsmittel in privatem \glossar{Werkstattprozess} und
+\item Ausgangspunkt rezeptiven Zugangs (anonymer) \glossar{Besucher} zu einer
+  vernetzten Vielfalt solcher Artefakte in der \glossar{Dauerausstellung}
+  sind.
+\end{itemize}
+Solche \glossar{Pakete} sind im \glossar{PVM-Paketformat} zum Import in die
+\glossar{Plattform} bereitzustellen.
+
+Registrierte Nutzer (\glossar{User}) können neue \glossar{Werke} hochladen, die
+aus
+\begin{itemize}\itemsep0pt
+\item Titel, 
+\item Titelbild als \glossar{Bild-Teil},  
+\item einer Assoziation dazu als \glossar{Text-Teil}, 
+\item einer bildnerischen Darstellung als weiterem \glossar{Bild-Teil} sowie
+\item Merkmalszuweisungen aus einer vorgegebenen Menge von \glossar{Merkmalen}
+\end{itemize}
+bestehen.  Die \glossar{Merkmale} sind als morphologische Tabelle
+plattformweit vorgegeben.  Zu jedem Werk ist weiter dessen \glossar{Urheber}
+sowie das Einreichungsdatum hinterlegt.  Über den \glossar{Urheber} ist eine
+Orts-Information verfügbar. Neue Werke können grundsätzlich nur registrierte
+\glossar{User} einreichen.  Der Import von externen Paketen durch Dritte ohne
+Beteiligung des Urhebers ist nicht vorgesehen.
+
+In ausgebautem Zustand soll die inhaltliche Weiterentwicklung der Plattform
+erfolgen 
+\begin{enumerate}
+\item über \glossar{Projekte}, die beide Aspekte (Reflexion in speziell
+  konzipiertem \glossar{Ausstellungskontext} und private Kreativität in
+  alters- und zielgruppenspezifisch angepasstem \glossar{Werkstattprozess})
+  unter je spezifischen didaktischen Zielstellungen miteinander verbinden
+  sowie 
+\item über den musealen Allgemeinprozess in der \glossar{Dauerausstellung}
+  (Einreichen neuer \glossar{Werke}, Begutachtung und Freigabe durch die
+  \glossar{Redakteure}), für den noch ein genaues Betreiberkonzept zu
+  entwickeln ist.
+\end{enumerate}
+Für diesen musealen Allgemeinprozess der \glossar{Dauerausstellung} steht eine
+Übersicht über alle \glossar{Merkmale} zur Verfügung, mit denen
+\glossar{Besucher} Ordnungs"|möglichkeiten für die \glossar{Werke} an die Hand
+gegeben werden. Insofern entstehen allein durch die Such- und Filterfunktionen
+verschieden strukturierte \glossar{Ausstellungen}.
+
+\subsection{Projekte}\label{grundlagen.projekte}
+
+\subsubsection{Projekte und Projektangebote}
+
+In einem \glossar{Projekt} werden Lehrer typischerweise 
+\begin{enumerate}
+\item \emph{eigene} didaktische Zielstellungen mit den Möglichkeiten unserer
+  \glossar{Plattform} umsetzen oder
+\item eines unserer \glossar{Projektangebote} für die eigene Zielgruppe nutzen
+  und dazu entsprechend modifizieren.
+\end{enumerate}
+Es ist prinzipiell möglich, auf der Basis unserer \glossar{Plattform}
+\emph{freie Projekte} umzusetzen.  Details hierzu sind mit den
+Plattformbetreibern in jedem Fall einzeln abzustimmen. 
+
+Als \emph{Hauptform} orientieren wir jedoch darauf, ein Projekt auf der
+Grundlage eines unserer \glossar{Projektangebote} umzusetzen. Dafür werden
+unterschiedliche Lehrmaterialien in verschiedenen Szenarios als \glossar{Sets}
+im Bereich ME PROJECTS zur Verfügung gestellt. Ein solches Set ist eine
+Sammlung von ausführlichen Materialien (Informationen zum Thema, zum Inhalt, zu
+den Lernzielen, den didaktischen Methoden, zur Zeitplanung, sowie empfohlene
+Unterrichtsfächer und Altersklassen, sowie vorgefertigte Arbeitsaufträge mit
+Arbeitsblättern) zur Umsetzung eines Projekts und enthält in der Regel
+\begin{itemize}
+\item Erklärtext mit Akzentuierung, Altersgruppe, übergreifendes Fach
+\item Text zur Beschreibung
+\item Grob-Übersicht (Zim-Plan) mit Ziel, Inhalt, Methode, Zeit (Tabelle, vier
+  Einheiten für die Doppelstunde)
+\item Stundenplanung (Tabelle) mit Ziel, Inhalt, Methode, Zeit (Tabelle mit
+  Literaturhinweisen)
+\item Methoden mit Glossar
+\item Arbeitsblätter und Materialien (Medien).
+\end{itemize}
+Diese Materialien werden als komplettes Set von Materialien zum Download im
+\glossar{Bereitstellungsraum} der Plattform vorgehalten.
+
+\Kommentar{02.03.2016, Gräbe: Die Materialien sollten als Open Educational
+  Resources unter einer CC-Lizenz zur Verfügung gestellt werden, welche die
+  Nachnutzung \emph{und} Modifikation der Materialien erlaubt, um die
+  urheberrechtliche Situation klar zu regeln.  Dem müssten dann auch die
+  Autoren der Materialien zustimmen. }
+
+Einzelne Materialien können zu mehreren \glossar{Sets} gehören, die
+Zugehörigkeit zu einzelnen Projektangeboten wird durch eine
+Angebotsbeschreibung im RDF-Format aufgelöst.
+
+Das Kernteam des PVM-Projekts kümmert sich um die Weiterentwicklung dieser
+Materialien, wozu insbesondere das Feedback der Projekte ausgewertet wird.
+Die Erhebung dieses Feedbacks erfolgt in direktem Kontakt mit den
+\glossar{Projektleitern}. Eine Unterstützung dieses Prozesses durch die
+\glossar{Plattform} ist aktuell nicht vorgesehen.
+
+\Kommentar{29.03.2016, Gräbe: Perspektivisch ist die Einbindung eines
+  Fragebogen-Plugins vorgesehen.  Diese Anforderung muss noch genauer
+  untersetzt und priorisiert werden. Umfragen müssen dazu konzeptionell
+  genauer in den gesamten Plattformprozess eingeordnet werden.}
+
+\subsubsection{Projekte umsetzen}
+
+Zunächst ist vom \glossar{Projektleiter} ein \emph{Konzept} für das Projekt zu
+entwickeln und einzureichen, das von einem \glossar{Redakteur} daraufhin
+geprüft wird, ob es mit unserer \glossar{Plattform} in ihrem aktuellen
+Ausbauzustand umgesetzt werden kann.
+
+Ein Projekt durchläuft die Phasen \emph{Beantragung}, \emph{Durchführung},
+\emph{Archiv}.  Nach Beantragung und Freigabe wird zur Durchführung des
+Projekts auf der Plattform eine \glossar{Projektseite} eingerichtet, die vom
+Projektleiter entsprechend der \emph{Richtlinien für Projekte} geführt und
+gestaltet werden kann.
+
+\Kommentar{02.03.2016, Gräbe: Derartige Richtlinien sind zu erstellen. }
+
+Diese \glossar{Projektseite} ist während der Durchführungsphase als Direktlink
+(öffentlich) erreichbar, aber nicht in die Menüstrukturen des PVM eingebunden.
+Dies erfolgt erst nach Abschluss des Projekts und Übergabe der Seite durch den
+\glossar{Projektleiter} an einen \glossar{Redakteur}, der die Einbindung der
+Projektkachel in die Seite „Alle Projekte“ veranlasst.  Damit soll
+gewährleistet werden, dass die Projektseite sowohl als Arbeitsseite während
+der Projektdurchführung als auch als Ergebnisseite nach Projektende verwendet
+werden kann und zugleich die Einheitlichkeit des Plattformdesigns
+gewährleistet ist.
+
+\Kommentar{29.03.2016, Gräbe: Es gibt noch keine Designvorgabe für die
+  Struktur der Projektseite. }
+
+\subsubsection{Standardprojekte}
+
+Entsprechend unserem Plattformkonzept geht die \emph{zentrale Form} eines
+Projekts davon aus, dass die Teilnehmer im Projektverlauf neue Werke
+erstellen, wobei der \glossar{Projektleiter} in einem realen Lernsetting mit
+einer Gruppe eine thematisch gebundene \glossar{Ausstellung} erstellt. Dabei
+wird jeder Projektteilnehmer zum \glossar{Urheber} und erstellt und
+veröffentlicht ein eigenes \glossar{Werk} zu einen gemeinsamen Thema in der
+Plattform. Der \glossar{Projektleiter} fasst die Werke der Gruppe zu einer
+\glossar{Ausstellung} zusammen, der gemeinsame Prozess der Werkserstellung
+wird auf der Plattform auf einer \glossar{Projektseite} dokumentiert. 
+
+Für derartige Projekte ist eine \glossar{Registrierung} auch aller Teilnehmer
+an der \glossar{Plattform} zwingend erforderlich, da nur registrierte
+\glossar{User} neue \glossar{Werke} hochladen können.
+
+Vor dem Hochladen eines \glossar{Werks} müssen dessen Einzelteile am eigenen
+Computer erstellt bzw. zusammengestellt werden.  Das Hochladen fertiger
+\glossar{Werke} folgt dem allgemeinen Einreiche- und Freigabeprozess der
+Plattform.  Es können nur solche Werke hochgeladen werden, welche die
+allgemeinen Anforderungen an Werke erfüllen. Werke werden nach Durchlaufen des
+standardisierten \glossar{Freigabeprozesses} der Plattform grundsätzlich
+dauerhaft in den \glossar{Fundus} übernommen.  Ein Löschen von Werken aus dem
+Fundus ist nur nach den allgemeinen Richtlinien der PVM-Plattform möglich.
+
+Erst nach dieser Freigabe kann der Projektleiter ein Werk seinem
+Projektkontext zuordnen und damit in die projektspezifische Ausstellung
+übernehmen.
+
+\subsection{Das PVM-Rollenkonzept}\label{grundlagen.rollenkonzept}
+\begin{quote}
+  \begin{tabular}{l|p{.65\textwidth}}
+    \textbf{Rolle} & \textbf{Aufgaben}\\\hline
+    Administrator & Konfiguration der \glossar{Plattform} sowie Verwaltung von
+    Accounts und deren Rollenzuordnung\\ 
+    Redakteur & Freischalten von \glossar{Werken}, Missbrauchsmeldungen
+    bearbeiten\\ 
+    Projektleiter & Konfiguration und Verwaltung von
+    \glossar{Projekt}-Kontexten\\ 
+    Urheber & Autor von eigenen \glossar{Werken}\\
+    User & Registrierter und an der \glossar{Plattform} angemeldeter Nutzer\\
+    Besucher & Anonyme Nutzung des öffentlichen Bereichs der
+    \glossar{Plattform} 
+  \end{tabular}
+\end{quote}
+Der öffentliche Bereich des Museums kann grundsätzlich von jedem
+\glossar{Besucher} betreten werden, diese PVM-Rolle ist also auf keine WP-Rolle
+abzubilden. Ein Besucher kann sich im Museum umschauen und dabei den
+verschiedenen Filter- und Navigationspfaden folgen, aber selbst keine
+Änderungen am Zustand des Museums vornehmen. 
+
+Wie bei Wordpress auch stehen die Rollen zueinander in einem hierarchischen
+Verhältnis, d.\,h.\ jede höherwertige Rolle verfügt auch über alle Rechte einer
+niederwertigeren Rolle.  Die Rollen „Administrator“, „Redakteur“ und
+„Projektleiter“ sind direkt den jeweiligen WP-Standardrollen zugeordnet und
+erweitern diese um PVM-spezifische Funktionalitäten.  
+
+\Kommentar{29.03.2016: Welcher WP-Standardrolle ist der Projektleiter
+  zugeordnet? }
+
+Die Rolle „User“ ist der WP-Rolle „Benutzer“ zugeordnet. Nur ein
+\glossar{User} kann ein neues \glossar{Werk} als \glossar{Urheber} einreichen,
+allerdings kann es Urheber geben, die nicht mehr als User an der Plattform
+registriert sind.  Ein Urheber, der zugleich User ist, hat eine eigene
+\glossar{Profilseite}. Zu einem nicht mehr an der Plattform aktiven Urheber
+wird ein standardisiertes personenspezifisches FOAF-Profil vorgehalten, aber
+keine Zuordnung zu einer WP-Rolle vorgenommen.
+
+\Kommentar{29.03.2016: Es ist ein weiterer Menüpunkt „Inspiration“
+  hinzugekommen, der als Blog von Usern in der Rolle \glossar{Blogautor}
+  geführt werden soll. Die Zulassung als Blogautor soll an das Ausfüllen des
+  Plattform-Fragebogens gekoppelt werden und wird durch einen \glossar{Admin}
+  veranlasst. }
+
+\subsection{Prozess der Werkerstellung}\label{grundlagen.werkerstellung}
+
+In der \glossar{Werkstatt} werden \glossar{Werke} neu erstellt. Der
+\glossar{Werkstattprozess} wird (perspektivisch) durch ein Autorenwerkzeug
+unterstützt.  Der Werkstattprozess schließt mit dem \glossar{Einreichen} des
+fertigen Werks im \glossar{PVM-Paketformat}.
+
+Im Release~1 der Plattform wird das \glossar{Einreichen} eines fertigen Werks
+nur durch eine \glossar{Formularseite} unterstützt, über welche die Einzelteile
+eines \glossar{Pakets} zusammengetragen und valide im
+\glossar{PVM-Paket"|format} gespeichert werden können.
+
+Das Werk erscheint nicht direkt im Frontend der \glossar{Plattform}, also in
+der \glossar{Dauerausstellung}, sondern muss dafür durch einen
+\glossar{Redakteur} \glossar{freigegeben} werden.
+
+Ein Werk kann einem oder mehreren \glossar{Projekten} zugeordnet werden.
+
+\subsection{Entwicklungs- und Betreiberkonzept}
+\label{grundlagen.betreiberkonzept}
+
+Die \glossar{Plattform} entsteht auf der Basis einer
+Standard-Wordpress-Installation mit ausgewählten unveränderten Plugins, über
+die abgegrenzte Funktionalitäten realisiert werden (etwa die Registrierung und
+Verwaltung von \glossar{Usern}) sowie eigenen \textbf{PVM-Plugins}, in denen
+die plattformspezifischen Funktionalitäten gebündelt werden.  Das Design der
+Plattform wird über ein eigenes \textbf{PVM-Theme} realisiert, das als Child
+Theme das Basisthemes
+\emph{Esteeme}\footnote{\url{https://wordpress.org/themes/esteem/}} realisiert
+wird.  Bei der Abgrenzung der Zuordnung einzelner Funktionalitäten zu den
+PVM-Plugins oder zum PVM-Theme ist auf eine klaren Trennung zwischen
+Funktionalität und Layout/Design zu achten.
+
+Bei der Auswahl des Basisthemes wurde darauf geachtet, dass es \emph{responsive
+  Design} unterstützt.
+
+Es soll möglich sein, die Plattform auf einem anderen Server auszurollen.  Dazu
+ist ein entsprechendes \textbf{Relokationskonzept} zu entwickeln.
+
+Dies ist nur durch ein iteratives Entwicklungsmodell zu erreichen, in dem
+konzeptionelle, inhaltliche und technische Weiterentwicklung der Plattform
+angemessen miteinander verzahnt werden.  Technisch ist dazu zwischen der
+Produktiv- und einer Entwicklungsplattform zu unterscheiden sowie ein stimmiges
+Release-Konzept zu entwickeln, nach dem die Produktivplattform periodisch
+aktualisiert wird.
+
+\Kommentar{4.12.2015, Düwel: Die Site bekommt im April 2015 eine Domain von
+  Strato, Kosten trägt das Institut für Kunstpädagogik. Sie liegt auf dem
+  Server der Uni (Informatik), braucht aber einen kurzen Namen und muss
+  jederzeit exportierbar sein, es muss gewährleistet sein, dass sie immer
+  läuft.}
+
+\Kommentar{5.12.2015, Gräbe: Für die Gewährleistung des Betriebs müssen die
+  erforderlichen personellen Ressourcen bereitgestellt werden.}
+
+\subsubsection{Rollen im Betriebskonzept} 
+
+Zum Betrieb der Wordpress-Produktivinstanz der PVM-Plattform sind folgende
+Rollen zu besetzen:
+\begin{itemize}
+\item \emph{Site-Admin} --- zuständig für die Installation und Aktualisierung
+  der grundlegenden Software auf dem Rechner, das Basis-Backup sowie Kontakt
+  bei Rechnerausfällen und Neustart.
+\item \emph{Portal-Admin} --- Aktualisierung der Wordpress-Instanz auf eine
+  neue Version, Installation und Aktualisierung von Plugins und des
+  PVM-eigenen Themas, Upload-Verwaltung.  Ein Portal-Admin hat Zugriff auf das
+  Installationsverzeichnis auf dem Server.
+\item \emph{WP-Admin} --- zuständig für konzeptionelle Fragen sowie die
+  Konfiguration der verschiedenen Anwendungen, Plugins und Funktionen über die
+  Admin-Konfigurations-Oberfläche von Wordpress. Ein WP-Admin hat keinen
+  Zugriff auf das Installationsverzeichnis auf dem Server.
+\item \emph{WP-Redakteure} und \emph{WP-Autoren} --- zuständig für die Inhalte
+  der Plattform.
+\end{itemize}
+
+\section{Anwenderszenarien}
+
+\subsection{Möglichkeiten für nicht angemeldete Besucher} 
+
+\subsubsection{Werke suchen und zusammenstellen}
+
+Die Such- und Filterfunktion verfügt über zwei grundsätzliche Funktionen. Dies
+ist zum einem die Volltextsuche, die bei allen \glossar{Werken} im Titel und im
+dazugehörigen Text nach Übereinstimmungen zur Suchphrase sucht und sich somit
+fast nicht von der Wordpress-Standard-Suche unterscheidet. Zum anderen gibt es
+eine Suche nach \glossar{Merkmalen}, welche nur diejenigen \glossar{Werke}
+zurückgibt, welche mit der ausgewählten Merkmalskombination markiert sind.
+
+Bei beiden Suchfunktionen kann man die gefilterten Werke nach verschiedenen
+Kriterien (etwa Beliebtheit oder Erstellungsdatum) sortieren lassen.
+
+\subsection{Möglichkeiten für \glossar{User}}
+
+\subsubsection{Registrierung und Authentifizierung}
+
+Für eine Registrierung sind die folgenden Angaben obligatorisch:
+\begin{itemize}
+\item obligatorisch: Name, Benutzername (nick name), Email, Standort 
+\item optional: eigenes Foto, Verweis auf eigene Webpräsenz 
+\end{itemize}
+Der Standort kann aus einer liste vorgegebener Standorte ausgewählt
+werden. Die Auswahlliste der Standorte liegt im RDF-Format vor und kann durch
+einen Portal-Admin erweitert werden. 
+
+Im Zuge der Registrierung als \glossar{User} sind die AGB zu bestätigen.
+Während des Einreichens von \glossar{Werken} wird keine weitere AGB-Bestätigung
+abgefragt; die AGB müssen also auch alle rechtlichen Fragen behandeln, die mit
+dem Einreichen von Werken durch einen \glossar{Urheber} zu klären sind.
+
+\subsubsection{Benutzerprofil und \glossar{Profilseite}}
+
+Ein \glossar{User} kann nach Anmeldung im WP-Backend auf sein Benutzerprofil
+zugreifen und dort alle bei der Registrierung angegebenen Daten einsehen sowie
+diese bei Bedarf, mit Ausnahme des Nutzernamen, ändern.  Weiterhin hat er dort
+die Möglichkeit, eine kleine Biographie anzugeben und sein Passwort sowie die
+Ortsangabe aus einer vordefinierten Auswahl zu ändern. 
+
+Aus diesen Daten wird die \glossar{Profilseite} des Users erzeugt.  Auf der
+Profilseite sind neben den Angaben zum \glossar{User} dessen \glossar{Werke}
+sowie dessen \glossar{Bewertungen} der Werke anderer gelistet.
+
+Name, Ortsangabe und Profilbild bilden als \texttt{foaf:name},
+\texttt{foaf:based\_near} und \texttt{foaf:Image} die Basis für ein
+standardisiertes FOAF-Profil des Users, das auch nach Löschen des Accounts in
+der Plattform erhalten bleibt, um Urheberschaften referenzieren zu können.
+
+\subsubsection{Werke bewerten}
+
+Ein \glossar{User} findet auf jeder Einzelseite eines Werks eine Möglichkeit,
+für dieses Werk eine Bewertung aus einer global vorgegebenen Liste von
+Bewertungen abzugeben oder zu modifizieren. Jeder User kann jedes Werk nur
+einmal bewerten, diese Bewertung aber ändern. 
+
+\subsubsection{Ein neues Werk zusammenstellen und einreichen}
+
+Ein \glossar{User} kann ein neues \glossar{Werk} als valides \glossar{Paket} im
+\glossar{PVM-Paketformat} zusammenstellen, in den \glossar{Bereitstellungsraum}
+hochladen und zur \glossar{Freigabe} anmelden.  Dieser \glossar{User} ist damit
+zugleich der \glossar{Urheber} dieses Werks.
+
+Dazu erstellt ein \glossar{Urheber} zunächst sein \glossar{Werk} entsprechend
+den Vorgaben.  Ort dieses Prozesses ist die \glossar{Werkstatt}, vorbereitende
+Arbeiten kann der Urheber auf seinem eigenen PC ausführen.  
+
+Diese Phase schließt mit der \glossar{Einreichung} eines validen
+\glossar{Pakets} ab.  Dabei wird der \glossar{Urheber} durch die Bereitstellung
+einer \glossar{Formularseite} unterstützt, über welche die einzelnen
+\glossar{Werkteile} ausgewählt, zu einem validen \glossar{Paket} im
+\glossar{PVM-Paketformat} zusammengefasst und in den
+\glossar{Bereitstellungsraum} der \glossar{Plattform} hochgeladen werden
+können.
+
+Danach beginnt der Prozess der \glossar{Freigabe}.
+
+\subsubsection{Freigabe eines Werks}
+
+Der \glossar{Freigabe}-Prozess wird mit Abschluss der \glossar{Einreichung}
+eines \glossar{Werks} ge"|startet.  In dieser Zeit befindet sich das Werk in
+einer Art Zwischenstadium, in dem der \glossar{Urheber} keine Änderungen mehr
+am Werk vornehmen kann, das Werk aber auch noch nicht in den \glossar{Fundus}
+übernommen ist.
+
+Die \glossar{Freigabe} erfolgt durch einen \glossar{Redakteur}, der das Werk
+nach entsprechender Prüfung für den \glossar{Fundus} freigibt oder aber das
+Werk zurückweist. Die Freigabe durch einen Redakteur soll in erster Linie das
+Einhalten der AGB's (die jeder \glossar{User} beim Erstellen seines Accounts
+bestätigt) sowie eine saubere Zuordnung gewährleisten.
+
+\Kommentar{15.01.2016, Gräbe: Der Redakteur achtet dabei vor allem auf formale
+  Gesichtspunkte. Hierzu ist eine genauere Auf"|listung der zu beachtenden
+  Aspekte als Handreichung für den \glossar{Redakteur} zu entwickeln.}
+
+\subsubsection{Mitarbeit in einem Projekt}
+
+\glossar{User} können auf Einladung durch den \glossar{Projektleiter} in einem
+\glossar{Projekt} mitarbeiten.  Die Mitarbeit im Projekt orientiert sich an den
+\emph{projektspezifischen Zielen} und erfolgt unter Anleitung und Koordinierung
+des Projektleiters.
+
+Im Rahmen einer solchen Mitarbeit ist es möglich, eigene \glossar{Werke} aus
+dem \glossar{Fundu}s in den Projektkontext über einen
+\glossar{Projektfreigabeprozess} einzubringen (und auch wieder aus dem Projekt
+zu entfernen).
+
+Werke können mehreren \glossar{Projekten} zugeordnet sein. 
+
+\subsubsection{Löschen eines Werks}\label{werk.loeschen}
+
+Das Löschen eines Werks sollte der Ausnahmefall bleiben, kann aber aus
+verschiedenen Gründen erforderlich sein:
+\begin{itemize}
+\item Externe Gründe: Die Auf"|forderung zum Entfernen eines Werks wird von
+  außen an die Plattformbetreiber herangetragen.
+\item Interne Gründe: Der \glossar{Urheber} fordert die Plattformbetreiber
+  auf, sein Werk oder seine Werke zu entfernen.
+\end{itemize}
+Die Auf"|forderung zum Löschen eines Werks ist grundsätzlich an einen
+\glossar{Admin} zu richten, der das Weitere veranlasst.
+
+Vor dem Löschen des Werks prüft der Admin, welche \glossar{Projekte} von der
+Löschung betroffen sind, welche Auswirkung das Löschen auf diese Projekte hat,
+ob diese Projekte ggf. selbst zu löschen sind oder modifiziert werden müssen,
+löst die entsprechenden Aufträge an die \glossar{Projektleiter} aus und
+überwacht den Fortgang.
+
+Beim Löschen eines Werks werden die Verweise auf dieses Werk aus allen
+\glossar{Projekten} gelöscht, sämtliche werkrelevanten Dateien aus der
+\glossar{Plattform} und dem \glossar{Bereitstellungsraum} entfernt und danach
+der Status des Werks auf „gelöscht“ gesetzt.  Es verbleibt eine rudimentäre
+standardisierte Information zum Werk im System.
+
+\subsubsection{Löschen eines Users}\label{nutzer.loeschen}
+
+Ein \glossar{User} kann bei einem \glossar{Admin} beantragen, dass sein Account
+gelöscht wird.  Von einem gelöschten User wird der \texttt{foaf:name} und eine
+Orts-URI als \texttt{foaf:based\_near} als standardisiertes FOAF-Profil zu
+Referenzzwecken gespeichert, die \glossar{Profilseite} wird gelöscht.
+
+Beim Löschen eines Useraccounts verbleiben die \glossar{Werke} des Users in
+der Regel im \glossar{Fundus} und können entsprechend den Nutzungsrechten auch
+weiterhin in der \glossar{Plattform} verwendet werden.  Die Urheberschaft an
+diesen Werken wird über das verbliebene standardisierte FOAF-Profil
+ausgewiesen, der Verweis auf die Profilseite durch einen standardisierten
+Verweis ersetzt, dass der \glossar{Urheber} dieses Werks auf der Plattform
+nicht mehr als \glossar{User} aktiv ist.
+
+Der User kann in Ausnahmefällen zusätzlich beim Admin beantragen, dass mit dem
+Löschen des Accounts auch alle seine Werke zu löschen sind. In diesem Fall hat
+der Admin zusätzliche Aktivitäten nach Abschnitt \ref{werk.loeschen} in die
+Wege zu leiten.  
+
+Wenn zum User keine Werke mehr in der Plattform vorhanden sind, kann auch das
+verbliebene standardisierte FOAF-Profil aus der Plattform gelöscht werden.
+
+\subsection{Möglichkeiten für \glossar{Projektleiter}}
+
+\subsubsection{Allgemeines}
+ 
+Projekte können nur von \glossar{Projektleitern} erstellt werden, wozu ein
+registrierter \glossar{User} von einem \glossar{Administrator} durch Anpassen
+der zugeordneten Rolle autorisiert werden muss.
+
+Projektleiter erstellen und verwalten \glossar{Projekte} im Rahmen ihrer
+Möglichkeiten und Intentionen. Wenn der Projektleiter sein Projekt löscht, so
+wird bei allen \glossar{Werken}, die bisher diesem Projekt zugeordnet waren,
+lediglich die Projektzugehörigkeit gelöscht, nicht jedoch die Werke selbst.
+
+\subsubsection{Projekt erstellen und bestätigen}
+
+\begin{itemize}
+\item Ein neues \glossar{Projekt} kann nur von einem \glossar{Projektleiter}
+  erstellt werden.
+\item Der Projektleiter reicht über die \emph{Projektformularseite} einen
+  \emph{Antrag} auf ein neues Projekt ein, welcher (wenigstens) Projektkürzel,
+  Titel, Projektfoto und \emph{Projektkonzept} umfasst. Aus den Metadaten
+  werden Projektleiter und Einreichungsdatum ergänzt.
+
+  Der Bezug zu \glossar{Projektangeboten} ist nur lose, neue Projekte müssen
+  sich nicht auf eines der Projektangebote beziehen.
+
+\item Ein solcher \emph{Projektantrag} wird von einem \glossar{Redakteur}
+  begutachtet und bestätigt oder abgelehnt.  Die Entscheidung wird dem
+  Einreicher per E-Mail mitgeteilt. 
+
+\item Für einen bestätigten \emph{Projektantrag} legt der \glossar{Redakteur}
+  die \glossar{Projektseite} an.  In der Durchführungsphase ist diese Seite
+  nur über einen Direktlink zu erreichen.
+
+  Die Seite wird erst nach Abschluss des Projekts als Kachel auf der Seite
+  „Alle Projekte“ integriert und damit in die Menüstrukturen übernommen.
+
+\item Nach dem Anlegen dieser Projektinfrastruktur in der Plattform wird der
+  Projektleiter informiert und kann sein Projekt im Rahmen der
+  \emph{Richtlinien für Projekte} umsetzen. 
+
+\Kommentar{02.03.2016, Gräbe: Derartige Richtlinien sind zu erstellen. }
+
+\end{itemize}
+
+\subsubsection{Zuordnen von Teilnehmern zu einem Projekt}
+
+\begin{itemize}
+\item Ein \glossar{User} wird \glossar{Projektleiter}, indem er dies bei einem
+  \glossar{Admin} beantragt und von diesem der WP-Rolle Projektleiter
+  zugeordnet wird.  Ein User kann erst dann einen Projekterstellungsprozess
+  starten, wenn er als Projektleiter registriert ist.
+
+\item \emph{Projektteilnehmer} registrieren sich zunächst als \glossar{User}
+  und werden dann vom \glossar{Projektleiter} in das Projekt eingeladen.  Nach
+  der Bestätigung der Teilnahme durch den User ist dieser dem Projekt
+  zugeordnet und dessen Werke im Projektkontext sichtbar.  
+\item Der Projektleiter kann Teilnehmer wieder aus dem Projekt austragen.  Der
+  Teilnehmer bleibt dabei \glossar{User}.  Das Löschen als User ist ggf. in
+  einem weiteren Schritt zu beantragen, siehe Abschnitt \ref{nutzer.loeschen}.  
+\end{itemize}
+
+\subsubsection{Zuordnen von Werken zu einem Projekt}
+
+\begin{itemize}
+\item Einem \glossar{Projekt} können nur \glossar{Werke} zugeordnet werden,
+  die bereits in den \glossar{Fundus} aufgenommen wurden und damit den
+  allgemeinen Prozess der \glossar{Freischaltung} von Werken durchlaufen
+  haben.  Dies gilt auch für Werke von \emph{Projektteilnehmern}.
+
+\item Der \glossar{Projektleiter} kann seinem Projekt in der Durchführungsphase
+  Werke von Projektteilnehmern zuordnen und solche Zuordnungen auch wieder
+  entfernen.  Dazu wird ihm im WP-Backend eine Liste der Werke aller
+  Projektteilnehmer angezeigt, die einzeln für das Projekt an- und abgewählt
+  werden können.  Eine Zustimmung des jeweiligen Projektteilnehmers ist dabei
+  nicht erforderlich.  Allerdings wird davon ausgegangen, dass diese Zustimmung
+  im begleitenden pädagogischen Prozess eingeholt wurde.
+
+  Zuordnen und Entfernen eines Werks ändern dessen Zugehörigkeit zum
+  \glossar{Fundus} nicht.
+
+\item Ein Werk kann gleichzeitig in mehreren Projektkontexten referenziert
+  sein.
+
+\end{itemize}
+
+\subsubsection{Löschen von Projekten}
+
+Das Löschen eines \glossar{Projekts} sollte nur in Ausnahmefällen geschehen
+und ist durch den \glossar{Projektleiter} bei einem \glossar{Admin} zu
+beantragen.
+
+Beim Löschen des Projekts wird die \glossar{Projektseite} aus dem PVM entfernt
+und alle Verbindungen von Teilnehmern und \glossar{Werken} zu diesem Projekt
+gelöscht.  Dies hat weder Einfluss auf die Zugehörigkeit eines \glossar{Werks}
+zum \glossar{Fundus} noch auf die Registrierung eines Teilnehmers des Projekts
+als \glossar{User}.
+
+Über das Löschen des Projekts hinausgehende Aktionen (Löschen von
+\glossar{Usern} oder \glossar{Werken}) sind einzeln wie in den Abschnitten
+\ref{werk.loeschen} und \ref{nutzer.loeschen} beschrieben zu beantragen und zu
+prozessieren.
+
+\subsection{Möglichkeiten für \glossar{Redakteure}}
+
+Aufgabe der Redakteure ist die \glossar{Freigabe} eingereichter \glossar{Werke}
+sowie die Bearbeitung von gemeldeten Verstößen.  Weiterhin können sich
+Redakteure über statistische Informationen zur Nutzung der \glossar{Plattform}
+informieren. 
+
+\paragraph{Freigabe eingereichter Werke:} 
+Dem Redakteur wird dazu eine Liste aller zur Freigabe anstehenden
+\glossar{Werke} im \glossar{Bereitstellungsraum} angezeigt.  Zur Prüfung eines
+dieser Werke kann der Redakteur das Werk in einem geschützten Modus zeitweise
+im \glossar{Fundus} verfügbar machen und später freischalten oder wieder aus
+dem Fundus entfernen.  Der \glossar{Redakteur} informiert den \glossar{Urheber}
+über das Ergebnis der Prüfung.
+
+\Kommentar{15.01.2016, Gräbe: Hat der Urheber bei Ablehnung die Möglichkeit zum
+  Einspruch und wie wird dieser behandelt? Wie wird mit \glossar{Werken}
+  umgegangen, die im \glossar{Bereitstellungsraum}, nicht aber im
+  \glossar{Fundus} sind? Es ist ein Workflow zu definieren, unter welchen
+  Umständen und wie Werke wieder aus dem \glossar{Bereitstellungsraum} entfernt
+  werden dürfen.}
+
+\paragraph{Gemeldete Werke:} 
+\glossar{User} sehen zu jedem \glossar{Werk} auf dessen \emph{Werkseite}
+einen Link „Verstoß melden“.  Dieser dient dazu, die \glossar{Redakteure} auf
+bereits veröffentlichte Werke aufmerksam zu machen, die aus verschiedenen
+Gründen den Standards des PVM nicht gerecht werden.  Es kann zum Beispiel
+vorkommen, dass sich ein User absichtlich oder unwissentlich nicht an die AGB
+hält oder Urheber-Rechte verletzt wurden. Um dagegen vorgehen zu können
+existiert die Melde-Funktion.
+
+Über diesen Link wird der \glossar{User} zu einem Formular weitergeleitet, über
+das er an die \glossar{Redakteure} innerhalb der Website eine Nachricht senden
+kann. Nach dem Abschicken dieser Nachricht wird im Backend unter „Gemeldete
+Werke“ ein neuer Eintrag angelegt, der nur von den Redakteuren eingesehen und
+bearbeitet werden kann. Ein Redakteur kann das entsprechende \glossar{Werk}
+entweder wieder „entwarnen“ (also die Meldung löschen) oder das Werk löschen,
+siehe Abschnitt \ref{werk.loeschen}.
+
+Gemeldete Werke bleiben sichtbar, bis sie ggf. gelöscht werden, werden also
+nicht präventiv aus der \glossar{Dauerausstellung} entfernt.
+
+\paragraph{Statistik:} 
+Redakteure können Statistik-Informationen über den Besuch einzelner Seiten der
+Plattform auswerten.  Hierzu wird ein WP-Standard-Plugin installiert, das im
+Backend ein Statistik-Menü zur Verfügung stellt.  Innerhalb des Statistik-Menüs
+können keine Einstellungen vorgenommen, sondern nur Informationen ausgelesen
+werden.
+
+\section{Konzeptionelle und Design-Fragen}
+
+\subsection{Design}
+
+Mit einer schlichten Oberfläche zur Darstellung der \glossar{Werke} soll
+erreicht werden, dass die Umgebung sauber und aufgeräumt wirkt, die einzelnen
+Werke in ihrer Ganzheit wirken und nichts von ihrer direkten Rezeption ablenkt.
+So gibt es zum Beispiel keine Animationen oder starke und unpassende
+Farbkontraste.
+
+Der Einstieg in die \glossar{Plattform} erfolgt über die \emph{Startseite}.
+Weiter gibt es 
+\begin{itemize}
+\item eine \emph{Seite „Alle Werke“} mit Such- und Filterfunktion, auf der alle
+  \glossar{Werke} als Kacheln angezeigt werden,
+\item für jeden \glossar{User} eine \emph{Profilseite}, 
+\item für jedes \glossar{Werk} eine \emph{Werkseite},
+\item eine \emph{Seite „Alle Projekte“}, auf der alle (abgeschlossenen)
+  \glossar{Projekte} als Kacheln angezeigt werden, 
+\item für jedes \glossar{Projekt} eine \emph{Projektseite}
+\item eine \emph{Seite „Alle Projektangebote“}, auf der alle
+  \glossar{Projektangebote} als Kacheln angezeigt werden, sowie
+\item für jedes \glossar{Projektangebot} eine \emph{Projektangebotsseite}. 
+\end{itemize}
+Um die Einheitlichkeit der Darstellung zu sichern wird für jede dieser Seiten
+bzw.\ Seitentypen im PVM-Theme jeweils ein eigenes \emph{Seitentemplate}
+angelegt.  
+
+Daneben gibt es weitere Seiten mit erklärendem Charakter -- „About“,
+„Tutorium“, „Impressum“ -- sowie die WP-Standardfunktionen \emph{Login},
+\emph{Registrierung} und \emph{Passwort-Reset}, die in die Menüführung
+eingeordnet sind.
+
+\Kommentar{29.03.2016: Es ist ein weiterer Menüpunkt „Inspiration“
+  hinzugekommen, der als Blog von Usern in der Rolle \glossar{Blogautor}
+  geführt werden soll. }
+
+Die Nutzerführung erfolgt über das Menü sowie über die Seiten „Alle Werke“ und
+„Alle Projekte“, auf denen die einzelnen Items als Bildkacheln dargestellt
+sind. Über Filterfunktionen kann die Anzahl der angezeigten Items reduziert
+werden.  Damit wird ein übermäßiges Aufblähen des Menüs verhindert.
+
+Einzelne Seiten sind auch über Direktlinks zu erreichen.  Die Projektseiten
+noch nicht abgeschlossener Projekte sind \emph{nur} über ihren Direktlink zu
+erreichen.
+
+\subsection{Frontend und Backend}
+
+Wordpress unterscheidet zwischen dem Präsentationsbereich (Frontend) und dem
+Administrationsbereich (Backend).  Während das Frontend das „Schaufenster“ der
+Anwendung ist, kann das Backend grundsätzlich nur von angemeldeten Benutzern
+per Navigation über die nach der erfolgreichen Anmeldung am oberen Rand
+sichtbare schwarze WP-Standard-Leiste erreicht werden.  Das „Look and Feel“ des
+Frontends ist in dem Umfang einheitlich wie dies das Design der Plattform
+vorsieht, das Backend sellt rollenabhängig Funktionalität in verschiedenem
+Umfang bereit.
+
+Das Backend wird ggf. für die Rollen \glossar{Redakteur} und
+\glossar{Projektleiter} um PVM-spezifische Funktionen erweitert.  User in
+diesen Rollen müssen also hinreichend mit dem allgemeinen „Look and Feel“ des
+WP-Backends vertraut sein.
+
+Das User-Profil kann ebenfalls über das WP-Backend editiert werden, wobei hier
+nur die Standardmöglichkeiten des Plugins \texttt{wp-members} genutzt werden,
+die durch einen Administrator plattformspezifisch konfiguriert werden können.
+Das ist bei der Abfassung einer Handreichung ggf. zu berücksichtigen. 
+
+\subsection{Seitenaufbau der Plattform}
+
+Details zum Seitenaufbau der Plattform werden nur in dem Umfang in den
+Requirements erfasst, in dem sich der Seitenaufbau \textbf{nicht} allein durch
+Konfiguration der Plattform im Administratoren-Menü des ausgewählten
+Basisthemes gestalten lässt, sondern vorbereitende Arbeiten im PVM-Theme oder
+im PVM-Plugin erforderlich sind.  Für jeden der folgenden Seitentypen ist ein
+eigenes Seitentemplate zu entwickeln. 
+
+\subsubsection{Startseite}
+
+Die \emph{Startseite} ist die Einstiegsseite in die Plattform.  Dort sollen
+einerseits die verfügbaren Merkmale und andererseits die im Fundus vorhandenen
+Werke aufgelistet bzw. präsentiert werden.  
+
+\subsubsection{Übersichtsseite „Alle Projekte“}
+Auf der \emph{Übersichtsseite „Alle Projekte“} werden alle abgeschlossenen
+\glossar{Projekte} gelistet.  Jedes abgeschlossene Projekt wird durch eine
+Kachel repräsentiert.
+
+\subsubsection{Übersichtsseite „Alle Werke}
+Auf der \emph{Übersichtsseite „Alle Werke“} werden alle vorhandenen
+\glossar{Werke} gelistet und verschiedene Such- und Filterfunktionen
+angeboten, um die Zahl der angezeigten \glossar{Werke} zu beschränken.  Jedes
+Werk wird durch eine Kachel repräsentiert.
+
+\subsubsection{Profilseite eines Users}
+Jeder an der \glossar{Plattform} registrierte Nutzer (\glossar{User}) hat eine
+Profilseite, auf der im Zuge des Anmeldeprozesses erhobene Pflichtinformationen
+zu seiner Person angezeigt werden und die er durch persönliche Informationen im
+festzulegenden Umfang ergänzen kann.  Auf der Profilseite werden die
+\glossar{Werke} des Users gelistet und dessen \glossar{Bewertungen} anderer
+\glossar{Werke}.  
+
+Der User kann die Profilseite nicht direkt editieren. Es gibt ein
+Profilseiten-Template mit einer einzigen (leeren) Profilseite, der User wird
+über die Autor-ID als Get-Parameter in der URL übergeben und darüber die
+hinterlegte User-Information ausgelesen. 
+
+\subsubsection{Projektseite}
+Seite, auf der ein einzelnes \glossar{Projekt} angezeigt wird.  Diese Seite
+wird erst auf der Seite „Alle Projekte“ verlinkt, wenn das Projekt
+abgeschlossen ist. 
+
+\subsubsection{Werkseite}
+Seite, auf der ein einzelnes \glossar{Werk} angezeigt wird.  Sidebar zeigt
+dann die \glossar{Merkmale} des Werks und die \glossar{Bewertungen} durch
+\glossar{User}.  Im eingeloggten Zustand wird dem User die Möglichkeit
+angeboten, eine eigene Bewertung abzugeben oder zu ändern.
+
+\newpage
+\section{Glossar} 
+
+\paragraph{Administrator:} 
+Standard-WP-Rolle, die auf alle Daten und Funktionen innerhalb des Systems
+zugreifen kann, Nutzeranmeldungen freischaltet, Nutzern Rollen zuweist und die
+Plattform konfiguriert.  Sie ist allen anderen Rollen in diesem Sinne
+übergeordnet.
+
+\paragraph{Ausstellung:} 
+Eine Zusammenstellung und Präsentation von \glossar{Paketen} aus dem
+\glossar{Fundus} in einem spezifischen didaktischen {Kontext}.
+
+Das PVM ist als Virtuelles Museum insbesondere eine \emph{virtuelle
+  Ausstellung}, die sich von einer \emph{digitalisierten Ausstellung} insoweit
+unterscheidet, als letztere eine \emph{reale} Ausstellung digital abbildet.
+Wesentlicher Unterschied ist dabei, dass in virtuellen Ausstellungen ein
+Ausstellungsobjekt \emph{gleichzeitig} in \emph{mehreren} Ausstellungen
+gezeigt werden kann.
+
+\paragraph{Bereitstellungsraum:} 
+Bereich der \glossar{Plattform}, in welchem alle (sowohl die freigegebenen als
+auch die noch auf ihre Freigabe wartenden) \glossar{Werke} im
+\glossar{PVM-Paketformat} abgelegt sind sowie weitere global verfügbare
+Materialien vorgehalten werden.
+
+\paragraph{Besucher:} 
+Als Besucher wird eine nicht eingeloggte Person bezeichnet, die den
+öffentlichen Bereich des PVM nutzt.
+
+\paragraph{Bewertungssystem:} 
+System fest vorgegebener Begriffe mit bildlichen Icons, das \glossar{User} zur
+Bewertung von \glossar{Werken} einsetzen können.
+
+Die Überwachung freier Kommentare ist mit den verfügbaren Personalressourcen
+nicht zu bewältigen, deshalb wird es (wenigstens in dieser Ausbaustufe des PVM)
+keine Möglichkeit zu freien Kommentaren und auch kein Forum geben.  
+
+\paragraph{Bild-Teil:}
+Spezielle Art von \glossar{Werkteil}, das eine Bilddatei im png-Format enthält.
+Um ein einheitliches Erscheinungsbild innerhalb der \glossar{Plattform} zu
+garantieren, muss ein Bild-Teil spezielle \emph{Designvorgaben} erfüllen.
+
+\paragraph{Blogautor:} 
+Ausgewählte \glossar{User} in der WP-Rolle „Autor“, die den Blog unter dem
+Menüpunkt „Inspiration“ führen. 
+
+\paragraph{Dauerausstellung:} 
+Präsentation aller \glossar{Pakete} aus dem \glossar{Fundus} im (näher zu
+definierenden) \emph{Allgemeinkontext} des PVM-Projekts.
+
+\paragraph{Einreichung:} 
+Ein \glossar{Urheber} lädt ein \glossar{Werk} als valides \glossar{Paket} im
+\glossar{PVM-Paket"|format} über die Eingabeschnittstelle in den
+\glossar{Bereitschaftsraum} der \glossar{Plattform} hoch.
+
+\paragraph{FOAF:} 
+Friends of a Friend, eine RDF-Ontologie, siehe
+\url{http://xmlns.com/foaf/0.1/}.
+
+\paragraph{Formularseite:} 
+Webseite, über welche die Einzelteile eines \glossar{Pakets} zusammengetragen
+und valide im \glossar{PVM-Paketformat} gespeichert werden kön"|nen.  
+
+Damit erfährt im Release~1 des PVM der \glossar{Werkstattprozess} rudimentäre
+Unterstützung.
+
+\paragraph{Freigabe:} 
+Prüfprozess, der nach der \glossar{Einreichung} eines \glossar{Werks} durch den
+\glossar{Urheber} einsetzt. Ein \glossar{Redakteur} entscheidet über Freigabe
+oder Zurückweisung des eingereichten {Werks}.
+
+\paragraph{Fundus:} 
+Sammlung aller aktuell veröffentlichten \glossar{Werke}.  Alle
+veröffentlichten Werke sind auch im \glossar{PVM-Paketformat} im
+\glossar{Bereitstellungsraum} abgelegt.
+
+\paragraph{Merkmal:} 
+Paare (Merkmalsart, Ausprägung), die in einem \glossar{Paket} vom
+\glossar{Urheber} zur Charakterisierung von Paketen verwendet werden können.
+Die möglichen Merkmale sind als \emph{morphologische Tabelle} in Form einer
+\glossar{Merkmalsontologie} vorgegeben.
+
+\paragraph{Merkmalsontologie:} 
+Im Rahmen des Systems fest vorgegebene \emph{morphologische Tabelle}, die als
+\glossar{SKOS}-basierten Ontologie vorliegt, in der Ausprägungen als
+\texttt{skos:Concept} und Parameter (Merkmalsklassen) -- Farbe, optische
+Eigenschaften, Material, Oberfläche, Größe, Alter -- als
+\texttt{skos:ConceptScheme} konzeptualisiert werden.
+
+Die Darstellung des Parameters „Standort“ ist noch gesondert zu diskutieren, da
+er konzeptionell anderer Art ist (Wertebereich ist nicht fixiert).
+
+\Kommentar{5.11.2015, Gräbe: Die morphologische Tabelle wurde in der Zuarbeit
+  Düwel vom 29.09.2015 vorgegeben und in die Form einer
+  \glossar{SKOS}-Ontologie gebracht, die in der Datei \texttt{Merkmale.ttl} im
+  RDF-Format vorliegt. }
+
+\paragraph{Paket:} 
+Grundlegende Einheit einer \glossar{Ausstellung} oder eines \glossar{Projekts},
+das
+\begin{itemize}\itemsep0pt
+\item ein Container verschiedener \glossar{Werkteile} ist,
+\item einer festen Struktur folgt, die als \glossar{Paket-Metainformation} in
+  digitaler Form Teil des Pakets ist,  
+\item von einem \glossar{Urheber} im Zuge eines \glossar{Werkstattprozesses}
+  in einem privaten Raum geschaffen und zur Veröffentlichung vorgeschlagen
+  wurde und
+\item von einem \glossar{Redakteur} zur Veröffentlichung freigegeben wird.
+\end{itemize}
+Ein Paket kann nach der \glossar{Freigabemeldung} nicht mehr verändert werden.
+Physisch liegen veröffentlichte Pakete als Digitalisate in Dateiform im
+\glossar{PVM-Paketformat} im \glossar{Bereitstellungsraum}.
+
+\paragraph{Paket-Metainformation:}
+Digital lesbare Beschreibung des Inhalts eines \glossar{Pakets}, die einer
+\emph{Beschreibungsspezifikation} folgt.  Um maximale Kompatibilität zu
+\emph{Linked Open Data}\footnote{\url{http://linkeddata.org/}.} Konzepten zu
+gewährleisten, werden Beschreibung und Beschreibungsspezifikation über RDF als
+Framework realisiert.
+
+\paragraph{Plattform:} 
+Synonym für die zunächst unter der Bezeichnung \glossar{Museum} gefasste
+Erweiterung des Begriffs \glossar{Ausstellung} um eine
+didaktisch-konzeptionelle Dimension. 
+
+\paragraph{Profilseite:} 
+Jeder \glossar{User} hat eine eigene solche Profilseite.  
+
+\paragraph{Projekt:} 
+In einem \glossar{Projekt} können Lehrer \emph{eigene} didaktische
+Zielstellungen mit den Möglichkeiten unserer \glossar{Plattform} umsetzen oder
+eines unserer \glossar{Projektangebote} für die eigene Zielgruppe nutzen und
+dazu entsprechend modifizieren.
+
+\paragraph{Projektangebot:} 
+Spezifischer didaktischer Rahmen zur Nutzung der Plattform. Im Rahmen des PVM
+werden Projektangebote systematisch entwickelt und dazu \glossar{Sets} aus
+Materialien bereitgestellt.
+
+\paragraph{Projektfreigabeprozess:} 
+Prozess, nach dem ein \glossar{Werk} in ein \glossar{Projekt} eingebracht
+wird. Werke können nur von Projektteilnehmern eingebracht werden. Die
+Einbringung erfordert die Zustimmung des \glossar{Projektleiters}. Werke können
+ausschließlich vom Projektleiter wieder aus dem Projekt entfernt werden,
+verbleiben dabei aber im \glossar{Fundus}.
+
+\paragraph{Projektleiter:} 
+Eine Erweiterung der WP-Rolle „Mitarbeiter“ um das Recht, Projekte anzulegen
+und zu verwalten.  Jedes \glossar{Projekt} verfügt über einen Projektleiter.
+
+\paragraph{PVM-Paketformat:}
+Spezifischen Binding der \glossar{PVM-Paketstruktur}, um ein \glossar{Paket}
+als Digitalisat in einer einzelnen Datei zu speichern.
+
+\paragraph{PVM-Paketstruktur:}
+Innere Struktur eines Pakets als in RDF beschriebenes \emph{Datenmodell} samt
+eines spezifischen Bindings an das \glossar{PVM-Paketformat}.  Ein Paket
+enthält
+\begin{itemize}
+\item Urheber, Entstehungszeitpunkt, Ort des Urhebers, Titel als
+  \glossar{Paket-Metainforma"|tion}, 
+\item ein vom \glossar{Urheber} selbst erstelltes oder urheberrechtlich
+  zulässig nachgenutztes \emph{Titelbild} als \glossar{Bild-Teil},
+\item eine vom \glossar{Urheber} selbst erstellte Beschreibung als
+  \glossar{Text-Teil},
+\item eine bildnerische Interpretation als weiteren \glossar{Bild-Teil},
+\item zugeordnete Merkmale als Menge von URIs aus der
+  \glossar{Merkmalsontologie} als Teil der \glossar{Paket-Metainfomation}.
+\end{itemize}
+
+\paragraph{Redakteur:} 
+Erweiterung der Wordpressrolle „Redakteur“ um die Aufgaben des Freischaltens
+von Werken und der Bearbeitung von Meldungen.
+
+\paragraph{Set:} 
+Menge von Download-Materialien zu einem \glossar{Projektangebot}.  Einzelne
+Materialien können zu mehreren Projektangeboten gehören.  Die Materialien sind
+einheitlich im \glossar{Bereitstellungsraum} abgelegt, die Zugehörigkeit zu
+einzelnen Projektangeboten wird durch eine Angebotsbeschreibung im RDF-Format
+aufgelöst.
+
+Die Beziehung zwischen Projektangeboten und Sets ist vergleichhbar zu der
+Beziehung zwischen \glossar{Werken} und \glossar{PVM-Paketen} organisiert.
+
+\paragraph{SKOS:} 
+Simple Knowledge Organization System, eine RDF-Ontologie, siehe
+\url{http://www.w3.org/2004/02/skos/}.
+
+\paragraph{Text-Teil:}
+Spezielle Art von \glossar{Werkteil}, das eine Textdatei als valides
+HTML-Fragment enthält.  Um ein einheitliches Erscheinungsbild innerhalb der
+\glossar{Plattform} zu garantieren, muss ein Text-Teil spezielle
+\emph{Designvorgaben} erfüllen.
+
+\paragraph{Urheber:} 
+\glossar{User}, der Zugang zur Werkstatt hat und damit in der Lage ist, eigene
+\glossar{Werke} zu erstellen.  Werke können einen Urheber haben, der nicht mehr
+als User an der Plattform aktiv ist. Neue Werke können nur von aktiven Users
+eingereicht werden. Jedes Werk besitzt einen eindeutigen Urheber.
+
+\paragraph{User:} 
+Registrierter und angemeldeter Nutzer der \glossar{Plattform}. Ein User hat die
+AGB akzeptiert und hat eine eigene \glossar{Profilseite}. 
+
+Wird der User gelöscht, so wird auch diese Profilseite gelöscht und durch
+einen Standardverweis ersetzt. 
+
+Von einem gelöschten User wird der \texttt{foaf:name} und eine Orts-URI als
+\texttt{foaf:based\_near} zu Referenzzwecken gespeichert.
+
+\Kommentar{02.03.2016, Gräbe: Eine solche RDF-basierte Menge von Ortsreferenzen
+  ist aufzubauen und in die Plattform zu integrieren. }
+
+\paragraph{Werk:} 
+Ein \glossar{Paket} speziell unter urheberrechtlichen sowie
+plattform-technischen Gesichtspunkten. 
+
+\paragraph{Werkstattprozess:} 
+Prozess der Erstellung von Paketinhalten vor deren Veröffentlichung. Dieser
+Prozess und die dabei verfügbaren Instrumente und Inhalte sind noch genauer zu
+spezifizieren, insbesondere die Frage, in welchem Umfang in diesem
+Werkstattprozess auf Teile anderer \glossar{Pakete} zurückgegriffen werden
+kann.
+
+\paragraph{Werkteil:}
+Bestandteil eines \glossar{Werks}, das eine physische Repräsentation als Datei
+hat und so in ein \glossar{Paket} aufgenommen werden kann. Werkteile sind
+jenseits des \glossar{Werkstattprozesses} nur über Pakete zugänglich.
+\glossar{Pakete} enthalten neben den Werkteilen auch \emph{Beschreibungen}
+dieser Werkteile als Metainformationen.
+
+Es gibt \glossar{Bild-Teile} und \glossar{Text-Teile}.
+
+\newpage
+\section{Änderungshistorie dieses Dokuments}
+
+\paragraph{29.03.2016, Gräbe:} 
+Einarbeitung der Änderungen aus dem Gespräch mit Frau Düwel am 29.03.2016. 
+
+\paragraph{02.03.2016, Gräbe:} 
+Einarbeitung der Änderungen wie in den beiden Durchsprachen zum Thema Projekte
+am 05.02. und 22.02.2016 mit Frau Düwel abgestimmt.  
+
+\paragraph{15.01.2016, Gräbe:} 
+Einarbeitung der Änderungen wie in der Durchsprache am 14.01.2016 mit
+Prof. Wendt und Frau Düwel abgestimmt.  Das Glossar wurde weiter gekürzt und
+der Abschnitt „FAQ“ einfernt, da er nicht zur Anforderungsaufnahme gehört.
+ „FAQ“ einfernt, da er nicht zur Anforderungsaufnahme gehört.
+
+\paragraph{13.01.2016, Gräbe:} 
+Es wurde die Strukturierungsform „Formulierungsvorschlag“ einge"|führt und die
+Anforderungserhebung noch einmal überarbeitet.
+
+\paragraph{20.12.2015, Gräbe:} 
+Eine Reihe von Begriffen wurde weiter konsolidiert und die Requirements
+entsprechend dem aktuellen Stand der Anforderungserhebung noch einmal
+grundlegend überarbeitet.
+
+\paragraph{17.12.2015, Gräbe:} 
+Rollen Redakteur und Moderator wie im Tutorium besprochen im Glossar als
+„Redakteur“ zusammengeführt und Beschreibung präzisiert. Beschreibung von
+„Profilseite“ und Begriff „Formularseite“ ergänzt. Abschnitt „Konzeptionelle
+und Design-Fragen“ ergänzt.
+
+\paragraph{5.12.2015, Gräbe:} 
+Der nicht konsolidierte Teil wurde in ein eigenes Dokument „Offene Fragen“
+ausgelagert und später ins Wiki übertragen.  Weiter wurden Diskussionen in den
+Seminaren am 19. und 26.11. sowie die Ergebnisse der Abstimmung mit Frau Düwel
+am 2.12. eingearbeitet.
+
+\paragraph{3.12.2015, Gräbe:} 
+Abschnitt „Plattform-Bootstrap“ wurde in das Wiki übertragen und hier entfernt,
+da er nichts mit der Anforderungsaufnahme zu tun hat.
+
+\paragraph{12.11.2015, Gräbe:} 
+Übernahme der Punkte aus dem Wiki. 
+
+\paragraph{06.11.2015, Gräbe:} 
+Diskussionen in den Seminaren am 29.10. und 05.11.  sowie die Absprachen mit
+Sebastian Günther am 04.11. eingearbeitet.
+
+\paragraph{17.10.2015, Gräbe:} 
+Handreichung Düwel vom 14.10.2015 eingearbeitet und kommentiert.
+
+\paragraph{29.09.2015, Gräbe:} 
+Aufzeichnungen zum Gespräch Gräbe -- Düwel eingearbeitet. 
+
+\end{document}

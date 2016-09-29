@@ -1,0 +1,1332 @@
+
+= Weekly Scrum 10.12.2015 =
+
+Dabei: Gräbe, Günther, Lieder
+
+* Abstimmung Termin Weekly Scrum: ab jetzt immer donnerstags 12:00 Uhr im Büro Prof. Gräbe
+
+* Der Workflow von einem abgestimmten und verbindlichen Gestaltungsentwurf zu dessen Umsetzung als Wordpress Child Theme ist zu fixieren. 
+** Hintergrund: Seit wenigstens dem 5.11. werden im Seminar intensiv Gestaltungsentwürfe für die Website (vor allem einer Einstiegsseite) diskutiert. Als wesentliche Varianten des Gestaltungsentwurfs kristallisierten sich dabei eine Version ohne Sidebar für die Einstiegsseite sowie eine Version mit Sidebar-Menü für weitere Seiten heraus (siehe dazu im Detail die vorgestellten Gestaltungsentwürfe). 
+** Herr Lieder hat am 26.11. ein Tutorium zu Gestaltungsmöglichkeiten mit CSS abgehalten und dort auch eine erste rudimentäre Variante für ein WP Theme vorgestellt, mit der sich der zu diesem Zeitpunkt favorisierte Gestaltungsentwurf umsetzen lässt, obwohl bisher kein WP-Basistheme zur Verfügung steht.
+** Herr Lieder führt aus, dass nach dem 3.12. und der massiven Kritik von Prof. Wendt an den bisherigen Gestaltungsentwürfen diese Arbeiten komplett entwertet sind. Die Kapazitäten des IT-Teams reichen nicht aus, um die technische Umsetzung mehrerer Gestaltungsentwürfe parallel voranzutreiben, was im derzeitigen Ping-Pong zwischen konkreten Vorschlägen aus der Design-Gruppe und deren kritischem Zerpflücken im Plenum eigentlich erforderlich wäre. 
+** Derartige Varianten eines Gestaltungsentwurfs werden aktuell nur bis zu Indesign-Skizzen vorangetrieben; für die Umsetzung eines verbindlich fixierten Gestaltungsentwurfs in ein WP Child Theme ist mit wenigstens 2 Wochen Arbeit zu rechnen. 
+** ''Schlussfolgerung: Das [[2015-12-02|Ziel]], bis Weihnachten einen Prototypen mit Struktur und ersten Templates fertigzustellen, ist nicht mehr zu erreichen.'' 
+** Grundlage für die Entwicklung eines Child Themes ist die Fixierung und Verfügbarkeit eines Basis-Themes im git Repo. Hierfür gibt es bis jetzt noch überhaupt keine Deadline. 
+
+* Stand der Aufbereitung von Werken aus früheren Projekten und deren Transformation in das zu entwickelnde Paketformat.
+** Herr Günther hat dazu einen separaten PHP-gestützten Upload-Prozess entwickelt, der an Hand eines Testpakets getestet und weiter entwickelt wird. 
+** Es wird vereinbart, eine Reihe von Bündeln auf der Werkbank bis 17.12. so weit aufzubereiten, dass sie über den Upload-Prozess in der Plattform verfügbar gemacht werden, und dies im Tutorium am 17.12. auch zu zeigen. 
+** Prof. Gräbe passt die Merkmale auf der Werkbank noch an die aktuelle Version der morphologischen Tabelle an, die aus der Zuarbeit von Frau Düwel am 17.10. als SKOS-Ontologie extrahiert wurde. 
+** Es wird vereinbart, den Paket-Upload zunächst als direkte Upload-Funktion im Backend der Rolle "Moderator" einzubinden. Später ist an dieser Stelle noch der Freigabeprozess einzuklinken.
+
+* Das Tutorium am 17.12. wird von Herrn Lieder geleitet. Basis des Tutoriums sollen die "Requirements" sowie die "Offenen Fragen" sein, aus denen ein für den zeitlichen Rahmen angemessener Teil auszuwählen ist.
+** Die "Offenen Fragen" sollen dazu weiter konsolidiert und in eine Wikiseite übertragen werden. (V: Lieder)   
+
+* Weitere Fragen
+** Email-Versand in der Plattform wurde gefixt und von Gräbe über die Funktion "Neues Passwort" auch getestet.
+
+= Weekly Scrum 17.12.2015 =
+
+Dabei: Düwel, Gräbe, Günther, Lieder
+
+Frau Düwel kommt kurzfristig zum Termin hinzu, so dass es nicht möglich ist, einen regulären Weekly Scrum abzuhalten.
+
+Es werden zunächst ein paar unaufschiebbare organisatorische Punkte besprochen:
+* Es wird vereinbart, dass alle wichtigen Artefakte ins git Repo eingecheckt werden (im Zweifel eher mehr als weniger) und deren Arbeitsstand so aktuell wie möglich gehalten wird. 
+* Herr Lieder hat Probleme mit dem Zugang zum Repo, das offensichtlich an unpassenden Schlüsseln auf dem Server liegt. Herr Lieder wird das Problem über den ftp-Zugang selbst fixen. (Stand 18.12.: noch nicht gefixt)
+* Herr Lieder hat in Vorbereitung des Tutoriums am 17.12. ein pvm_theme und 5 Pakete eingespielt, die von Herrn Günther vorher in das zu entwickelnde [[Paketformat]] gebracht und zum Upload vorbereitet worden sind. 
+** Das pvm_theme wurde von Herrn Günther ins Repo eingespielt. 
+* Herr Lieder hat die "Offenen Fragen" durchgesehen, davon sei nur noch wenig relevant. Für das Tutorium hat er eine Reihe von Punkten aus dieser Sammlung vorbereitet, zu denen noch Klärungsbedarf besteht. 
+** Nachtrag Gräbe: Eine Durchsprache der Kommentare in den Requirements steht damit auch diesmal nicht auf der Agenda und muss wahrscheinlich auf anderer Ebene besprochen werden. Das Thema habe ich deshalb für ein Gespräch mit Prof. Wendt und Frau Düwel am [[2016-01-06|6.1.2016]] auf die Agenda gesetzt. 
+
+Gespräch mit Frau Düwel: 
+* Es geht ein weiteres Mal um die unbefriedigende kommunikative Situation um die Frage, in welchem Umfang eine schriftlich fixierte Anforderungsanalyse für die Arbeit der IT-Gruppe wesentlich ist und agile Methoden der mündlichen Abstimmung möglich sind. 
+* Frau Düwel führt aus, dass ausweislich der Evaluationsergebnisse vom 10.12. diese Differenzen den Seminarbetrieb ganz erheblich stören durch die Art, wie Prof. Gräbe diese Differenzen dort bisher thematisiert habe. Das ganze Anliegen bleibe ihr unverständlich. Wenn Probleme bestünden, dann möge Prof. Gräbe bitte '''konkrete''' Anforderungen formulieren, auf die sie dann auch '''konkret''' reagieren könne. Eine weitere Teilnahme von Prof. Gräbe an Seminar oder Turorium sei unproduktiv.  
+* Prof. Gräbe führt aus, dass er mit der Konsolidierung der Vorarbeiten in den "Requirements" eine '''sehr zeitintensive Vorarbeit''' geleistet habe, um den Kontext vorzustrukturieren und es so zu ermöglichen, den Spannungsbogen zwischen Wünschenswertem und dem in einem konkreten Realisierungskontext Möglichen zu prozessieren. Als Informatiker stehe er für die "Realisierung des Möglichen" und trage dafür innerhalb des Projekts auch die Verantwortung, die ihm das IT-Team nicht abnehmen könne. Mehr noch verstehe er sich als Betreuer des IT-Teams und sehe sich damit in der Pflicht, einerseits auf eine qualitativ hochwertige SW-Lösung zu dringen und andererseits sich bereits abzeichnenden zeitlichen Belastungen des IT-Teams entgegenzutreten, die den vereinbarten Umfang überschreiten. 
+* Prof. Gräbe führt weiter aus, dass die Spannungen im Seminar aus seiner Sicht damit zu tun haben, dass dieser Spannungsbogen bis Ende November nicht  thematisiert wurde. Die eigene Teilnahme am Seminar war ein Weg, die Berücksichtigung der "Kunst des Möglichen" einzufordern, ohne den Zeitfonds des IT-Teams weiter zu belasten. Bis heute sind die "Requirements", auch in ihrer ausführlich kommentierten Version vom 5.12., nicht Gegenstand einer Abstimmung gewesen.
+* Prof. Gräbe führt weiter aus, dass sich für ihn bereits Anfang November abgezeichnet habe, dass alle zeitlichen Planungen des Projekts (Handout, S. 5) hinfällig und die dort fixierten Termin-Ziele nicht mehr zu erreichen seien. Dem widerspricht Frau Düwel vehement. In der weiteren Diskussion wird deutlich, dass selbst Begriffe wie "Ende der Entwurfsphase", "Auswahl eines Erscheinungsbilds", "Realisation" oder "Gesamtlayout" verschieden interpretiert werden, man hier also schlicht aneinander vorbeigeredet habe.
+* Als Konsequenz wird sich Prof. Gräbe, jenseits der bereits abgesprochenen Teilnahme am heutigen Tutorium, nicht weiter an Seminar und Tutorium beteiligen. Eine solche, bereits nach dem [[2015-12-02|Gespräch am 02.12.]] eingeleitete Kehrtwende bedeutet allerdings, dass Prozesse intensiver dokumentiert werden, um die Nachvollziehbarkeit auch aus einer solchen entfernteren Position zu gewährleisten. Dazu wurde in der IT-Gruppe bereits vereinbart, die gruppeninternen Prozesse stärker an der Scrum-Methodik zu orientieren, ein Termin für ein Weekly Scrum vereinbart und dies auch [[2015-12-10|seit dem 10.12.]] umgesetzt.
+* Frau Düwel spricht sich gegen einen "Dokumentations-Overhead" aus und wird in dieser Frage von Herrn Lieder unterstützt, der insbesondere auf die '''zeitlichen''' Konsequenzen verweist. Aktuell würden die beiden SHK donnerstags mit Weekly Scrum, Seminar und Tutorium von 12:00 bis 17:00 Uhr allein 5 der 6 Wochenstunden mit Präsenzterminen verbringen, die zeitliche Belastung durch das Projekt reicht damit bereits jetzt weit über die vereinbarten Rahmen hinaus. Prof. Gräbe betont, dass für ihn sowohl für die Sicherung der Qualität der IT-Arbeiten als auch ein sinnvollen Anforderungsmanagement, das auch die verfügbaren Zeitbudgets einschließt, an einer regelmäßigen Abstimmung des konzeptionellen Rahmens mit ihm als "Project Owner" der IT-Gruppe kein Weg vorbeiführe. Niemand könne von ihm ernsthaft erwarten, dass er sich auf andere Weise als über klar definierte schriftliche Unterlagen über den Fortgang des Projekts informiere. Die Festlegung eines solchen Dokumentationsprozesses über Absprachen wenigstens innerhalb der IT-Gruppe sei unverzichtbar.
+* Herr Lieder führt aus, dass er sich unter diesen Bedingungen zeitlich nicht in der Lage sieht, die noch in der [[2015-12-10|Vorwoche]] vereinbarte Übertragung der "Offenen Fragen" auf eine Wikiseite auszuführen. Dies übernimmt Prof. Gräbe.  
+** Ist unter [[Anforderungen]] eingepflegt. (Gräbe, 18.12.)
+* Im Nachgang hat Prof. Gräbe im Rahmen seiner Kompetenzen als Partner im PVM-Projekt solche [[Plattform-Bootstrap|Dokumentationsrichtlinien]] und -verantwortlichkeiten sowohl für die Arbeit in der IT-Gruppe als auch für den Umgang mit Anforderungsaufnahmen festgelegt. 
+
+Offene Fragen vom letzten Termin:
+* Der Workflow von einem abgestimmten und verbindlichen Gestaltungsentwurf zu dessen Umsetzung als Wordpress Child Theme ist zu fixieren. 
+** Grundlage für die Entwicklung eines Child Themes ist die Fixierung und Verfügbarkeit eines Basis-Themes im git Repo. Ein solches Basisthema wurde nach wie vor nicht ausgewählt und zur Verfügung gestellt, so dass die Entwicklung eines PVM Child Themes noch nicht begonnen werden konnte. (V: Düwel) 
+** Mit pvm_theme hat Herr Lieder ein eigenständiges PVM Theme entwickelt, um wenigstens prototypisch die  Umsetzungsmöglichkeit der bisherigen Design-Ansätze zu demonstrieren. Das Theme wurde am 26.11. bereits kurz vorgestellt und wird im heutigen Tutorium im Zusammenspiel mit der bisher rudimentär implementierten Upload-Funktion für Pakete demonstriert.  
+* Stand der Aufbereitung von Werken aus früheren Projekten und deren Transformation in das zu entwickelnde Paketformat.
+** Herr Günther hat dazu einen separaten PHP-gestützten Upload-Prozess entwickelt, der an Hand eines Testpakets getestet und weiter entwickelt wird. 
+** Herr Günther hat eine Reihe von Bündeln auf der Werkbank bis 17.12. aufbereitet und für den Upload-Prozess in der Plattform verfügbar gemacht. 
+** Prof. Gräbe hat die Merkmale auf der Werkbank an die aktuelle Version der morphologischen Tabelle aus der Zuarbeit von Frau Düwel am 17.10. angepasst und diese sowie die auf der Werkbank extrahierten Pakete des SWT-Praktikums in einem Verzeichnis http://pcai042.informatik.uni-leipzig.de/~pvm-15/Projekte/SWT-Praktikum/ sowohl im Web als auch im Repo verfügbar gemacht. Gräbes Ansatz gibt Antworten auf eine Reihe von Fragen der kontextuellen Einbettung von Paketen, die in Günthers Version nicht adressiert werden. 
+** Beide Zugänge müssen konzeptionell weiter konsolidiert und zusammengeführt werden. Siehe hierzu die Aufzeichnungen unter [[Paketformat]]. 
+** Paket-Upload ist noch nicht als direkte Upload-Funktion im Backend der Rolle "Redakteur" eingebunden, der Freigabeprozess auch noch nicht weiter spezifiziert. 
+
+Weitere Festlegungen und offene Aufgaben:
+* Am 07.01. wird der 1. Sprint innerhalb der IT-Gruppe abgeschlossen und der 2. Sprint geplant.
+* Konsolidierung und Übertragung der "Offenen Fragen" ins Wiki. (Gräbe)
+* WP-Instanz an die Webadresse http://pvm.uni-leipzig.de anpassen. (Günther)
+* Protokoll des Tutoriums (s.u.) durchsehen und ergänzen. (Lieder)
+* Konzeptionelle Konsequenzen der verschiedenen Ansätze zu einem [[Paketformat]] durchsprechen.
+* Zuarbeit von Frau Düwel zum Thema "Was ist ein Projekt?" (Repo UnterlagenDuewel/20151218-ME-PROJECTS.pdf) durchsehen und mit den Requirements abgleichen.
+
+= Tutorium =
+
+Herr Lieder stellt den PVM-Prototyp mit eingespieltem pvm_theme und 5 hochgeladenen Objekten vor. Danach werden eine Reihe von Punkten aus den "Offenen Fragen" diskutiert und hierzu folgende Festelgungen getroffen:
+* Mainbar nicht mitlaufend
+* Die Anzahl der auf der Übersichtsseite angezeigten Objekte soll beschränkt werden können.
+* Die Glossar-Begriffe "Redakteur" und "Moderator" bezeichnen dasselbe. Es wird vereinbart, nur den Begriff "Redakteur" beizubehalten und als Erweiterung der entsprechenden Wordpressrolle zu fassen. 
+* Kommentare und Bewertungen: Die Überwachung freier Kommentare ist mit den verfügbaren Personalressourcen nicht zu bewältigen, deshalb wird es (wenigstens in dieser Ausbaustufe des PVM) keine Möglichkeit zu freien Kommentaren und auch kein Forum geben.
+* Ein Icon-Bewertungssystem mit fest vorgegebenen Begriffen soll eingebaut werden.
+** Eine Liste dieser Begriffe muss geliefert werden. 
+** Bewertungen sind nur von Usern möglich und beziehen sich immer auf ein ganzes Werk.
+** Jeder User kann jedes Werk nur einmal bewerten, Bewertungen können revidiert werden.
+** Am Werk werden die Bewertungen anonym angezeigt.
+** Auf der Profilseite des Users werden sowohl die eigenen Werke gelistet als auch die eigenen Bewertungen anderer Werke. 
+* Anforderungen an Text-Objekte innerhalb von Werken
+** Es darf nur reiner Text ohne alle HTML-Auszeichung abgeliefert werden. Allein die Strukturierung durch Absätze ist erlaubt. 
+** Von Teilnehmern wird dies als unangemessen einschränkend angesehen, da zum Beispiel ein Gedicht anders dargestellt werden sollte als ein Fließtext. 
+** Die Zeichenzahl eines Textes soll beschränkt werden, auf etwa 1500 Zeichen.
+* Für den Werkstattprozess wird ein Formular zur Verfügung gestellt, mit dem man einzelne Objekte auf dem eigenen Computer auswählen, zu einem PVM-Paket zusammenpacken und als solches in den Stagingbereich der Plattform hochladen kann. 
+* Jedes Werk besteht aus Titel, Titelbild, Text, bildnerische Darstellung, der Zuordnung von Merkmalen aus einer vorgegebenen morphologischen Tabelle sowie Angaben zu Urheber, Erstellungsdatum und ggf. Ort. Ort bezieht sich dabei auf den Autor, nicht auf das Werk. 
+* "Ähnliche Werke" - dieses Konzept wird aktuell nicht weiter verfolgt. 
+
+= Gespräch Prof. Gräbe, Prof. Wendt, Frau Düwel am 6.1.2016 13:13 Uhr im Büro Prof. Gräbe =
+
+Hintergrund: Siehe Mailverkehr Prof. Wendt und Prof. Gräbe vom 16.12.2015 sowie das Gespräch mit Frau Düwel vom [[2015-12-17|17.12.]]
+
+==Agenda ==
+* Verständigung über 
+** die Ergebnisse der Evaluierung
+** die [[Plattform-Bootstrap|Festlegungen]] zur weiteren Arbeit der IT-Gruppe von Prof. Gräbe
+** Einsatz der IT-Gruppe im Sommersemester, Abgleich von Leistungsumfang und Personalressourcen. 
+* Durchsprache der Kommentare [https://moodle2.uni-leipzig.de/pluginfile.php/404149/mod_wiki/attachments/1024//Requirements.pdf? im Dokument "Requirements", Version vom 5.12.]
+* Durchsicht der aktuellen Version der [[Anforderungen]]
+* Verständigung über Erfordernis der Readjustierung von Zeitplänen des Projekts insgesamt
+
+==Aufzeichnungen ==
+Dabei: Prof. Gräbe, Prof. Wendt, Frau Düwel
+
+* Agenda des Treffens
+** Prof. Wendt drückt sein Missfallen darüber aus, dass Prof. Gräbe die Agenda des Treffens eigenmächtig erweitert und verändert hat.
+** Prof. Gräbe führt aus, dass dies für ihn ein gängiges Verfahren der Wiki-Nutzung ist, um in einer Zusammenarbeit auf Augenhöhe die Agenda eines Treffens abzustimmen. 
+* Zur kommunikativen Situation im Lichte der Ergebnisse der Evaluierung am 10.12.
+** Prof. Gräbe verweist auf die [[2015-12-17|Aufzeichnungen des Gespräch mit Frau Düwel vom 17.12.]] sowie die daraufhin seinerseits getroffenen [[Plattform-Bootstrap|Festlegungen]] zur weiteren Arbeit der IT-Gruppe. Eine entsprechende Ergänzung der Agenda dieses Treffens erfolgte am 22.12. 
+** Prof. Wendt und Frau Düwel kennen diese Aufzeichnungen nicht und konstatieren eine allgemein geringe Übersichtlichkeit der Aufzeichnungen zu diesem Kurs. 
+** Prof. Gräbe bittet Frau Düwel, die Aufzeichnungen vom 17.12. durchzusehen, um hier zu einem abgestimmten Text zu kommen. 
+** Prof. Gräbe verweist auf den Abschnitt "Seiten der IT-Gruppe im Wiki" auf der Einstiegsseite und erläutert, dass das IT-Team in Zukunft enger nach der Scrum-Methodik arbeiten und umfassendere Aufzeichnungen im Wiki führen wird. Die Navigationsstruktur zu den Aufzeichnungen ist auf der Einstiegsseite des Wiki zu finden ist. Die wichtigsten Wikiseiten sind
+*** [[Protokolle]] - Übersicht über Aufzeichnungen zu verschiedenen Treffen
+*** [[Anforderungen]] - nicht konsolidierte Anforderungen; dies ist der Regeleintrittspunkt für neue Anforderungen sowie die Präzisierung und Rethematisierung alter, den alle Kursteilnehmer nutzen können.
+*** [[Plattform-Bootstrap]] - Project Backlog des IT-Teams, dort auch Abschnitte "Erforderliche Zuarbeiten von Frau Düwel" und "Grundlegende Festlegungen zur Arbeitsweise der IT-Gruppe". 
+
+* Requirements
+** Prof. Gräbe erläutert noch einmal, wie er sich den Umgang mit Anforderungen im allgemeinen und dem Dokument "Requirements.pdf" im speziellen vorstellt.  
+*** Die Wikiseite [[Anforderungen]] wird ständig von allen Kursteilnehmern auf einem aktuellen Stand gehalten.
+*** Wenn sich die Anforderungen in das bisherige Plattformkonzept einordnen lassen, werden diese vom IT-Team in die aktuelle interne Version der Requirements übernommen, anderenfalls wird Diskussionsbedarf angemeldet. 
+*** Die aktuelle interne Version der Requirements wird in regelmäßigen Abständen mit der Projektleitung abgestimmt und danach als offizielles Dokument "Requirements.pdf" kursweit veröffentlicht. 
+*** Diese abgestimmte Variante ist die Basis für die Weiterführung von Project Backlog und Sprint Backlogs und schließlich die priorisierte Umsetzung einzelner Features der Plattform.
+** Im Weiteren werden einzelne Punkte der Requirements vom 5.12. besprochen.  Aus Zeitgründen wird die weitere Besprechung auf das [[2016-01-14|Projekttreffen am 14.1.]] vertagt.  Zu folgenden Punkten wird Einvernehmen hergestellt:
+*** S. 2: Es ist zwischen Urheber (mit Werken) und User (an der Plattform registriert, aber ohne Werke) zu unterscheiden. Jeder Urheber ist User (die Möglichkeit des Hochladens von Paketen mit Urheberschaft Dritter wird ausgeschlossen).  Besucher haben in der Tat derart rudimentäre Möglichkeiten; für eine partizipative Nutzung der Plattform wird eine Anmeldung vorausgesetzt. 
+*** Es gibt eine einzige fundusweite morphologische Tabelle mit Eigenschaften und eine einzige Liste mit Urhebern. Beide sind nicht projektspezifisch. 
+*** Es wird intensiver über Details des Freigabeprozesses für eingereichte Werke und die Konsequenzen für das Plattform-Modell diskutiert. Über ein Upload-Formular sollen einzelne Dateien auf dem Rechner des Urhebers zu einem validen Paket im PVM-Format zusammengefasst und in einem Staging-Bereich der Plattform gelagert werden. Zur Entscheidungsfindung soll ein solches Bündel probeweise in den Fundus übernommen werden, dort von einem Moderator über die WP-Oberfläche begutachtet und dann freigegeben oder ggf. wieder entfernt werden können. Dieser Prozess bleibt weiter zu spezifizieren. 
+* Ausführungen zum Thema "Projekt" von Frau Düwel vom 18.12.
+** Prof. Gräbe verweist auf eine Mail an Frau Düwel, in der er um Überarbeitung dieses Dokuments unter Berücksichtigung der Fragen bittet, die auf der Seite [[Plattform-Bootstrap]] aufgelistet sind. Eine solche Mail hat Frau Düwel nicht erhalten. 
+** Dieser Punkt bleibt offen und weiter zu diskutieren.
+
+Die weiteren Punkte
+* Durchsicht der aktuellen Version der [[Anforderungen]]
+* Verständigung über Erfordernis der Readjustierung von Zeitplänen des Projekts insgesamt
+
+wurden nicht besprochen.
+
+= 7.1.2016: Weekly Scrum, Sprint Review 1. Sprint und Sprint Planning 2. Sprint =
+
+Dabei: Gräbe, Günther. Entschuldigt: Lieder
+
+Agenda
+# Grundlegende Abstimmungen zur weiteren Arbeitsweise
+# Review 1. Sprint
+# Planung 2. Sprint
+# Operatives
+
+''1. Grundlegende Abstimmungen zur weiteren Arbeitsweise''
+* Prof. Gräbe hat die Offenen Fragen konsolidiert und unter [[Anforderungen]] ins Wiki übertragen. (18.12.)
+* Die [[Plattform-Bootstrap|Dokumentationsrichtlinien]] und -verantwortlichkeiten für die IT-Gruppe werden besprochen und sind für die weitere Arbeit verbindlich.
+
+''2. Review 1. Sprint''
+* Wir gehen die [[Plattform-Bootstrap|Sprint Goals]] durch; diese sind weitgehen erfüllt.
+* Wir gehen die [[Sprint-1|Burndown Chart]] durch. Dort ist die getane Arbeit mit Zeitaufschreibungen weiter zu ergänzen. 
+* Wir gehen die [[Sprint-1|offenen Stories]] durch. 
+** Bis auf den Einbau der kurzen Adresse http://pvm.uni-leipzig.de und eines Basisthemes ist eine erste Prototyp-Version der Plattform betriebsbereit.
+** Für Intro-, Übersichts- und Einzelseite sind Seitentemplates in einem eigenen PVM-Theme angelegt. 
+*** Mit hoher Priorität ist im 2. Sprint ein Basistheme zu spezifizieren, das PVM-Theme als Child-Theme dieses Basisthemes auszuprägen und in die Plattform zu integrieren, damit die einzelnen Arbeitsgruppen redaktionelle Arbeiten im Wordpress Setting der Zielplattform ausführen können. 
+** Es wurde eine erste rudimentäre Version des PVM-Paketformats spezifiziert, einige ältere Werke in dieses Format überführt und in den Plattform-Fundus importiert. 
+*** Das PVM-Paketformat samt Einreichungs- und Freischaltprozess muss weiter konsolidiert werden, dies aber im 2. Sprint mit geringer Priorität, da keine der Gruppen Aufgaben bearbeitet, die einen Plattform-Upload erfordern.
+** Die Entwurfsdokumentation ist nicht über einen Anfangsstatus hinausgekommen. Diese Aufgabe wird ebenfalls mi geringer Priorität in den 2. Sprint übernommen. 
+** Bisher sind keine Teilnehmer an der Plattform registriert, obwohl diese Funktionalität schon länger zur Verfügung steht. 
+*** Mit hoher Priorität ist im 2. Sprint umzusetzen, damit die einzelnen Arbeitsgruppen redaktionelle Arbeiten in der Zielplattform ausführen können. 
+
+''3. Planung 2. Sprint''
+* Sprint Goal: 
+** Einspielen des noch auszuwählenden WP-Basisthemes und Umschreiben von pvm_theme in ein PVM Child Theme dieses Basisthemas.
+** Einarbeiten des Gesamterscheinungsbilds sowie Unterstützung der redaktionellen Einarbeitung der Zuarbeiten der Gruppen in die Plattform.
+** Vorbereitung der Präsentationen der Projektergebnisse durch die Gruppen am 4.2.
+** Mit geringerer Priorität: Weitere Konsolidierung des PVM-Paketformats sowie des Einreichungs- und des Freigabeprozesses.
+* Artefakte: 
+** Weiter ausgebauter Plattformprototyp
+** Erste Spezifikation des Einreichungs- und des Freigabeprozesses samt prototypischer Implementierung als alleinstehende PHP-Anwendung, die auf Autorisierungen der Plattform-Datenbank zugreift.
+
+''4. Operatives''
+* Bisher wurde keine Entscheidung über ein Basistheme gefällt, da die visuelle Durchsicht keine Favoriten erkennen ließ. Diese Entscheidung soll unter dem zusätzlichen Aspekt "responsive Design" (dafür kommen z.B. Themes in Frage, die auf dem [https://bootstrapwp.com/ Bootstrap-Framework] aufsetzen) durch die Strukturgruppe getroffen werden. (V: Lieder)
+** Das entsprechende Theme ist in der Plattform auszurollen, in das git Repo einzuspielen und das eigene PVM-Theme entsprechend in ein Child-Theme zu transformieren. 
+* Durchsprache der Punkte, die Frau Düwel für den 7.1. auf die Seminar-Agenda gesetzt hat.
+** Ausstehende Templates, die noch zu gestalten sind: Profilseite (offen), Registrierenformular (existiert bereits)
+** Werkerstellungsformular (Felder: Benutzername und Standort werden automatisch eingetragen, Objekttitel, Objektfoto, Merkmale zum auswählen, Text, bildnerische Interpretation), 
+*** Hier ist der Einreichungs- und Freigabeprozess zunächst genauer zu spezifizieren und dann auch zu modellieren. Da aktuell keine Aufträge zum Hochladen von Werken ausgegeben sind, kann dieser Punkt mit geringer Priorität eingeordnet werden. Notfalls können weitere Werke manuell in den Fundus der Plattform eingepflegt werden.
+** Fragebogenformular, Projekte, Bewertungsicons (nach vorgestelltem Konzept)
+*** Diese Themen sind bisher nicht spezifiziert und können deshalb auch nicht kurzfristig umgesetzt werden.
+** Impressum (einfache Gestaltung ohne Sidebar sinnvoll), AGB (einfache Gestaltung ohne Sidebar sinnvoll, Link, Aufruf der AGB in Fenster bei Abschluss der Registrierung,  Bestätigungsfeld durch Häkchen, zusätzlicher Link in Impressum), 
+*** Dies ist redaktionell einzubauen, dafür müssen sich die Akteure an der Plattform registrieren und die erforderlichen redaktionellen Rechte (Redakteur?) zugewiesen bekommen. 
+
+''5. Offene Punkte''
+* Herr Lieder hat Probleme mit dem Zugang zum Repo. Stand: offen.
+* Zeitplan für die weitere Diskussion des [[Paketformat]]s.
+* Protokoll des [[2015-12-17|Tutoriums]] durchsehen und ergänzen. (Lieder)
+* Abstimmung zum weiteren Umgang mit der Zuarbeit von Frau Düwel zum Thema "Was ist ein Projekt?" 
+** Repo UnterlagenDuewel/20151218-ME-PROJECTS.pdf
+
+= Treffen des Projektteams am 14.1.2016 16:00 Uhr im ZMK =
+
+==Agenda==
+# Allgemeine Verständigung zum Verlauf des Projekts
+# Besprechung der Planung eines Symposiums
+# Verständigung über Einsatz der IT-Gruppe im Sommersemester, Abgleich von Leistungsumfang und Personalressourcen. 
+# Durchsprache der Kommentare im Dokument "Requirements", Version vom 5.12.
+# Verständigung über Erfordernis der Readjustierung von Zeitplänen des Projekts insgesamt
+
+==Aufzeichnungen==
+
+Dabei: Düwel, Fiebig, Prof. Gräbe, Prof. Wendt
+
+Prof. Ganguin ist aus nicht bekannten Gründen nicht zum Treffen erschienen. Es wird beschlossen, die übergreifenden Fragen zu vertagen und nur die "Requirements" durchzusprechen. Frau Fiebig verlässt die Besprechung, da sie dieser Punkt nicht tangiert. 
+
+Prof. Gräbe, Prof. Wendt und Frau Düwel sprechen die "Requirements" durch. Dabei bleiben alle Fragen ausgeklammert, welche die genaue Struktur des Projektbereichs der Plattform betreffen. Hierzu wird es nach der Besprechung in der Gruppe "Projekte" am 15.1. eine weitere konsolidierte Vorlage von Frau Düwel geben, die in die [[Anforderungen]] eingearbeitet und bei einer nächsten Besprechung der Requirements in etwa 3 Wochen durchgesprochen und in die Requirements integriert wird. Arbeiten der IT-Gruppe zu diesem thematischen Bereich sind damit frühestens im 3. Sprint möglich. Frau Düwel macht darauf aufmerksam, dass eine erste funktionsfähige Umsetzung dieses Bereichs im Sommersemester benötigt wird und deshalb bis Ende März 2016 verfügbar sein muss.   
+
+Prof. Gräbe wird das Ergebnis der Durchsprache zeitnah als neue Version der "Requirements" veröffentlichen. Die neue Version '''ersetzt''' die alte. 
+
+Offen bleiben die Punkte  
+* Verständigung über Einsatz der IT-Gruppe im Sommersemester, Abgleich von Leistungsumfang und Personalressourcen. 
+* Verständigung über Erfordernis der Readjustierung von Zeitplänen des Projekts insgesamt
+
+=Seminar 14.01.2016=
+
+Informationen aus der Diskussion
+* Text des Pakets ist auf 3000 Zeichen beschränkt
+* Der Nutzer erhält nach der Freischaltung eines Pakets ("Werk") eine E-Mail, die ihn darüber informiert
+Nachtrag Gräbe: In die [[Anforderungen]] übernommen
+
+= Weekly Scrum 14.01.2016 =
+
+Dabei: Gräbe, Günther, Lieder
+
+Allgemeines
+* Herr Lieder war in der Vorwoche krank und wird auch am 21.1. nicht beim Weekly Scrum dabei sein. 
+* Zugang Lieder zum Repo ist weiter offen. 
+* Führung des Sprint Backlog durch das Team, insbesondere Zeitaufschreibung, ist weiter zu intensivieren.
+
+Aktualität des git Repo
+* Herr Günther erläutert, dass es Differenzen zwischen der in der Webplattform ausgerollten Version des Plugins und der Version im git Repo gibt, da in der Webplattform nur konsolidierter Code eingespielt wird, um das Funktionieren zu gewährleisten. Bei Differenzen sollte der Code im git Repo also neuer sein als der in der Webplattform. 
+* Nachtrag: Mache Prüfung mit "diff -rqw", da die meisten Differenzen auf verschiedene Zeilenendezeichen zurückgehen. Wesentliche Differenzen gehen dann aber gerade in die andere Richtung - es gibt (neue?) Dateien in der Webplattform, die nicht im Repo sind, etwa
+** Only in /home/pvm-15/public_html/wp/wp-content/plugins/pvmkit/classes: pvmkit_workshop.php
+** Only in /home/pvm-15/public_html/wp/wp-content/plugins/pvmkit/classes: pvmkit_ws_module.php
+** Only in /home/pvm-15/public_html/wp/wp-content/plugins/pvmkit/classes: pvmkit_ws_ui.php
+* Auch im pvm_theme sind die Dateien  in der Webplattform neuer als die im Repo.
+
+* Adresse http://pvm.uni-leipzig.de ist eingebaut, es gibt noch ein kleines Problem mit /index.php/ im Link.
+
+Die weiteren Fragen, dass Links nicht funktionieren und Registrieren nicht sichtbar ist, hängt mit der statischen Struktur des provisorischen pvm_theme zusammen, das "vor der Anwendung hängt". 
+* Mit Blick auf die hohe Priorität der Verfügbarkeit einer Plattform, in die Seminarteilnehmer Inhalte einpflegen können, und die Komplexität des Auswahlprozesses eines Basisthemas wird die bisherige WP-Instanz unter http://pvm.uni-leipzig.de als ''WP-Produktivinstanz'' mit einem Basisthema ausgestattet, um dort Registrierung zu ermöglichen und Inhalte einzuspielen. In dieser Produktivinstanz werden Schritt für Schritt die bisher vereinbarte Menüstruktur sowie die Übersichtsseite über Werke im Fundus verfügbar gemacht. Parallel wird eine ''WP-Entwicklungsinstanz'' aufgebaut, in der die Gestaltung des Designs auf der Basis des noch auszuwählenden Basisthemes bis zur Produktreife vorangetrieben wird. Die Ergebnisse werden Schritt für Schritt in der Produktivinstanz verfügbar gemacht. (V: Günther, Lieder)
+* ''Nachtrag Gräbe, 15.1.:'' Ich habe nach dem Weekly Scrum die bisherigen Entwicklungen noch einmal genauer durchgesehen, da mir bis dahin nicht klar war, welches [https://de.wikipedia.org/wiki/Potemkinsches_Dorf "Potemkinsche Dorf"] das von Herrn Lieder entwickelte PVM-Theme ist. Dazu einige Anmerkungen:
+** Herr Günther hat sehr schnell twentyfifteen als Basisthema in der Produktivinstanz verfügbar gemacht, das allerdings gegen das bisher entworfene Design wenig intuitiv ist, da Menubar und Sidebar beide an der (linken) Seite erscheinen. Auch die andern twenty* Themen sehen mit ihrer dominant schwarzen Farbe (für mich) hässlich aus. Ich habe deshalb das zeeflow-Theme aus einem "Fundstücke"-Projekt als weiteres Theme eingespielt, aktiviert und die Menüführung grob an die bisherigen Design-Vorgaben angepasst. 
+** Das aktuelle ''pvm_theme'' ist eine Mischung aus Produktivcode, der eigentlich ins PVM-Plugin gehört, und Präsentationscode. Das PVM-Theme darf nicht auf die Datenbank durchgreifen, sondern muss eine API des PVM-Plugin benutzen, über die alle Einträge im Fundus (oder eine definierbare Auswahl) als PHP-Objekte ausgeliefert werden (ggf. als Methode eines PVM-WerkeManagers). Auch der Inhalt einer Werk-Einzelseite muss vom PVM-Plugin geliefert werden (als PHP-Array oder PHP-Objekt), der dann vom PVM-Theme weiter aufbereitet und gerendert wird. Weiter muss das PVM-Theme die bestehenden WP-Erweiterungspunkte (das Seiten-Template-Konzept mit getHeader(), getFooter(), den WP-Workflow usw.) sinnvoll verwenden und nicht komplett überbügeln, dass man nicht mal mehr an die Admin-Konsole herankommt. 
+** Mit hoher Priorität benötigt werden eine erste Version 
+*** einer Übersichtsseite über die bereits eingespielten Werke,
+*** von Einzelseiten zu jedem dieser Werke,
+*** eines Widgets mit den Merkmalen.
+** Hierzu sind sinnvollerweise ShortCodes zu entwickeln und im PVM-Plugin zu integrieren. Also V: Günther.
+** Für die gesamte weitere Arbeit am PVM-Theme unter genauer und kluger Verwendung der WP-Erweiterungspunkte, dessen Einbettung als Child-Theme in ein Basis-Theme usw., einschließlich der Abstimmung von Requirements mit der PVM-Plugin-Entwicklung sowie der zügigen Einbindung von fertigen Teilen in die WP-Produktivinstanz ist Herr Lieder verantwortlich. Den Fortschritt dieser Arbeiten bewerte ich auf der Basis des Stand im git Repo. 
+* ''Nachtrag Lieder, 15.1.:'' Das besagte PVM-Theme ist entstanden, weil Herr Gräbe möglichst schnell zur Präsentation im Seminar eine erste provisorische Version des Themes wünschte, das alle hochgeladenen Werke sowie Detailinformationen zu jedem einzelnen Werk anzeigen kann. Das Theme ist also nur zu diesem Zweck entstanden. Insbesondere zu der Detailansicht bestanden zu diesem Zeitpunkt noch keine konkreten Vorstellungen (siehe auch das Protokoll vom 10.12.2015).  Überdies enthielt das Backend (pvmkit_package.php) zu dem Zeitpunkt (sowie auch in der jetzt aktuellen Version im Repo) keine Methode zum Abfragen aller Pakete in der Datenbank. Es existiert lediglich die Methode load_by_id(), die im Theme auch zum Einsatz kommt. Somit ist eine Direktabfrage der DB im Theme unumgänglich. 
+Dass es sich bei dem Theme nicht um eine Produktivversion handelt, war von vornherein klar, da es nur zu Präsentationszwecken entworfen wurde. Das habe ich im Seminar auch mehrmals betont. Umso mehr wundert es mich, dass es nun als Potemkinsches Dorf betitelt wird. Das ist unter den gegebenen Umständen weder sachlich noch angemessen.
+
+Auswahl und Einbau eines Basisthemes und Redesign des PVM-Theme als Child-Theme 
+* Das spezielle Design der Plattform, wie es in den verschiedenen Entwürfen ausgearbeitet ist, muss grundsätzlich selbst entwickelt werden. Die Auswahl eines Basisthemas kann sich deshalb auf die folgenden Punkte konzentrieren:
+** Sicherung responsive Design und Barrierefreiheit. Dazu soll ein Theme ausgewählt werden, was auf dem '''Bootstrap-Framework''' aufbaut als weit verbreiteter Plattform für responsive Web-Sites
+*** https://bootstrapwp.com/
+*** https://wrapbootstrap.com/themes/wordpress
+*** http://wptavern.com/18-free-wordpress-themes-built-with-bootstrap
+** Denkbar wäre auch, direkt auf dem Thema https://wordpress.org/themes/responsive/ aufzusetzen. 
+** Auswahl eines '''freien''' Themes, um eine kostengünstige Weiterentwicklung der Plattform zu gewährleisten. 
+** Auswahl eines Themes, das eine '''einfache Menükonfiguration''' auf der Ebene des Admin-Backends erlaubt.
+* Auswahl und Einbau eines Basisthemes in die Entwickungsinstanz soll unmittelbar nach dem nächsten Treffen der Design-Gruppe am 19.1. erfolgen. Es ist zügig zu prüfen, was davon auch in die Produktiv-Instanz übernommen werden kann.
+* Auf der Basis ist eine Roadmap für die das Redesign des PVM-Theme als Child-Theme zu entwickeln. 
+
+Stand Template Profilseite
+* Dazu existiert eine Indesign-Vorlage.
+
+Stand Registrierung von Kursteilnehmern, damit diese ihre Zuarbeiten ins Wordpress einpflegen können. 
+* Hier ist bisher nichts passiert, da die Registrierfunktion nicht als Seite verfügbar war. 
+
+Weitere konzeptionelle Diskussion zum Thema Projekte
+* Diese führt zunächst Prof. Gräbe als Project Owner zur Konsolidierung der vielfältigen Anforderungen und Übernahme einer strukturierten Anforderungserhebung in die Requirements. Erst danach wird die weitere Roadmap festgelegt.
+
+Weitere Diskussion des [[Paketformat]]s sowie von technischen Einzelheiten des Einreichungs- und Freigabeprozesses. 
+* Diese erfolgt am 21.1. 10:00 Uhr (Gräbe, Günther), wobei auch die folgenden Aspekte zu berücksichtigen sind.
+** Prototypischer Implementierung soll zunächst als alleinstehende PHP-Anwendung ausgelegt werden, die auf Autorisierungen der Plattform-Datenbank zugreift.
+** Anforderungen an ein Werkerstellungsformular (Felder: Benutzername und Standort werden automatisch eingetragen, Objekttitel, Objektfoto, Merkmale zum auswählen, Text, bildnerische Interpretation) ist mit zu berücksichtigen. 
+
+
+=21.01.: Weekly Scrum und Besprechung zum Paketformat und Einreichungsprozess= 
+
+==Vorabinformation Alexander Lieder==
+
+* Als Basistheme habe ich Esteem ausgewählt (http://demo.themegrill.com/esteem/). Es erfüllt sämtliche von Ihnen im Backlog spezifizierten Anforderungen und enthält Ansätze eines Kacheldesigns, sodass sich die Templatevorlagen einfacher umsetzen lassen dürften.
+** Siehe auch https://wordpress.org/themes/esteem/
+* Ich habe mich in der Entwicklungsinstanz registriert und meinen Account zum Admin befördert
+* Das Basistheme ist in der Entwicklungsinstanz eingespielt
+* Ich habe ein Child-Theme erstellt und eingespielt, selbiges finden Sie auch im git
+* Templateseiten für alle Werke und für die Detailanzeige sind innerhalb des Child-Themes angelegt, in das Menü integriert (alle Werke) und in der Entwicklungsinstanz zugänglich
+
+Als nächstes steht die Filternavigation für alle Werke auf dem Plan (sobald Sebastian eine zugehörige Klasse vorlegt). Darüber hinaus muss das Theme an die Indesign-Vorlagen angepasst werden. Ich habe beide Punkte ins Backlog eingetragen.
+
+==Aufzeichnungen==
+
+Dabei: Gräbe, Günther
+
+* Trennung von Paket-View und -Editor vollziehen
+* Paket-Workflow ausgearbeitet (für 2. Sprint und für danach)
+* Paketformat orientiert sich an bestehenden Paketen
+* Projektspezifische Funktionen sind im 2. Sprint noch kein Thema (Seiten für die Gruppe können natürlich erstellt werden)
+* Urheber (im techn. "author") erhalten eine URI (spezifiziert Plattform und Nutzer)
+
+==Besprochene konzeptionelle Aspekte==
+
+Es wurden ''konzeptionelle Aspekte von Werkerstellung, →Einreichung und →Freigabe für die Plattform'' diskutiert.
+
+→Plattform und →Werkstatt unterscheiden sich hinsichtlich des Bezugs zur Menge der Werke grundlegend; während in der Plattform '''Gesamtsichten auf die Menge aller →Werke''' zu generieren sind, wobei die →Werke in unveränderter und unveränderbarer Form vorliegen, geht es im →Werkstattprozess darum, ein einzelnes →Werk zu schaffen und für den →Fundus bereitzustellen. Um die Möglichkeiten eines späteren Einsatzes umfassenderer Autorenwerkzeuge offen zu halten, die auch auf dem Desktop des Urhebers genutzt werden können, sieht das Plattformkonzept (der IT-Gruppe) eine deutliche Trennung dieser beiden Bereiche vor, auch wenn eine derartige Trennung im Release 1 noch keine Bedeutung hat, da der Werkstattprozess nur rudimentär durch ein Upload-Formular unterstützt wird. 
+
+Die konzeptionelle Trennung wird dennoch bereits jetzt durch die Separierung entsprechender Funktionalität in ein zweites PVM-Plugin '''pvmwerkstatt''' unterstützt, wobei in diesem Plugin alle Funktionalität konzentriert wird, mit der ein →Werk schreibend geändert wird. Die Funktionalität im Plugin pvmkit geht davon aus, dass auf die pvmpackage-Objekte nach ihrer Erzeugung nur lesend (also nur mit Getter-Methoden?) zugegriffen wird. 
+
+Das Scharnier zwischen beiden Bereichen (→Werkstatt und →Plattform) bildet der →Bereitstellungsraum, in dem die plattformweiten Metainformationen (Merkmale und Urheberliste) sowie die in die Plattform hochgeladenen →Werke als zip-Dateien im →PVM-Paketformat in einem Verzeichnis auf dem Server (und in einem Spiegelverzeichnis im git Repo) auf dem Server zu finden sind. Diese Daten bilden auch die Basis für das (weiter zu präzisierende) '''Relokationskonzept'''; die Plattform soll intiial aus den Daten eines solchen Verzeichnisses hochgefahren werden können. 
+
+Der Dateiname jeder solchen Paket-Datei ist zugleich URI des entsprechenden →Werks in der →Plattform. An der Plattform wird über den Zustand jedes einzelnen dieser Werke Buch geführt , wobei wenigstens die Zustände "eingereicht", "in Prüfung", "freigegeben", "abgelehnt", "gemeldet", "zur Löschung vorgemerkt" zu unterscheiden sind. Für die möglichen Zustände eines Werks ist ein ''Zustandsübergangsdiagramm'' zu erstellen und die bei jedem Zustandsübergang auszuführenden Plattformaktivitäten genauer zu beschreiben. (V: Günther)
+
+Auch für freigegebene Werke bleibt die zugehörige zip-Datei im →Bereitstellungsraum, um ggf. das spätere Entfernen des Werks möglichst einfach zu gestalten - dazu müssen nur die in der Plattform ausgerollten Strukturen des jeweiligen Pakets entfernt werden. 
+
+''Zur Struktur einer Paketdatei:''
+* Eine →PVM-Paketdatei enthält zwei →Bild-Teile (Titelbild und bildnerische Darstellung), einen →Text-Teil sowie eine Manifest-Datei als einzelne Dateien. In der Manifestdatei sind im Turtle-Format die Metainformationen zum Paket (Titel, URI zum Urheber, Erstellungsdatum, Liste von Merkmals-URIs) sowie zu den einzelnen Teilen gespeichert. Zu diesen Metadaten ist eine ''genaue Ontologie-Beschreibung'' zu erstellen (V: Gräbe)
+
+''Plattformweiten Metainformationen (Merkmale und Urheberliste)''
+* Die Merkmale sind vorab als morphologische Tabelle in Frm einer Turtle-Datei '''Merkmale.ttl''' vorgegeben und müssen nur in die Plattform importiert werden.
+* Die Liste der Urheber muss aus der Plattform exportiert werden können, wozu insbesondere jedem Urheber eine eindeutige URI zuzuordnen ist. Die Eindeutigkeit in der Plattform wird durch einen Autoincrement-Index ID der Datenbank gewährleistet. Für eine weltweit eindeutige URI wird als Namensschema das Muster '''PVM-Präfix/Plattform-Präfix/A-ID''' verwendet. 
+
+= 28.01.: Weekly Scrum =
+
+==Aufzeichnungen==
+
+Dabei: Gräbe, Günther, Lieder
+
+Arbeiten in der letzten Woche: 
+* Herr Lieder war wie angekündigt nicht in Leipzig und konnte deshalb auch nicht an der Plattform weiterarbeiten.
+* Umstellung der Einbindung in den Apache (Günther)
+* Erstellen eines Merkmals-Widgets (Günther)
+
+Umstellen der Einbíndung in den Apache
+* Die Änderungsversuche zusammen mit Fabian Schmidt am 22.1. haben noch nicht zum gewünschten Ergebnis geführt.  Mit Blick darauf, dass Fabian Schmidt in der 4. KW im Urlaub ist und in der 5. KW für die Prüfung am Ende der Woche möglichst nicht mit Konfigurationen experimentiert werden sollte, wird weitere Arbeit an dieser Frage auf später und damit den 3. Sprint vertagt.
+
+Erstellen eines Merkmals-Widgets (Günther)
+* Die Merkmalsausprägungen wurden aus Merkmale.ttl in die DB-Tabelle pvmkit_properties importiert (value = Merkmalsausprägung, type = Merkmal) und die Ausprägungen über die DB-Tabelle pvmkit_property_index mit relevanten Werken (DB-Tabelle pvmkit_packages) verbunden.
+* Das Widget stellt diese Zuordnungen entsprechend den Vorgaben für das Merkmals-Widget als Übersicht dar.
+* Die Einbindung in die Gesamtstruktur (Anzeige einer Übersicht aller Werke mit dieser Merkmalsausprägung über einen angepassten WP-Shortcode) ist noch in Arbeit. 
+
+Vereinbarungen zum weiteren Plattformbetrieb
+* Wir diskutieren zunächst die Möglichkeiten, im git-Repo die Unterscheidung zwischen Produktiv- und Entwicklungsinstanz abzubilden. Das geschieht üblicherweise durch Anlegen mehrerer Zweige, hier also eines weiteren Zweigs '''develop''', der periodisch mit dem vorhandenen Zweig '''master''' zusammengeführt wird. 
+* Ein solches Vorgehen wird aber mit Blick auf den Overhead verworfen. Der Zweig '''master''' soll stets eine stabile Version des Codes von '''pvmkit''' und '''esteem_pvm_child''' enthalten, auf der die Produktivinstanz läuft. Dazu soll dieser Code über '''LokalerClon''' an die Produktivinstanz drangelinkt werden. 
+* In der Entwicklungsinstanz wird eine Kopie dieses Codes ausgerollt. Stabile Versionen werden möglichst rasch in das git Repo übernommen und über die Symlinks in der Produktivinstanz ausgerollt. 
+* Im Zuge dieser Umstellungen wird die Produktivinstanz zugleich auf SVN umgestellt und dort eine stabile Version des Basisthemes mit einigen bereits verfügbaren Erweiterungen ausgerollt. 
+** Nachtrag Gräbe, 28.01.: Ich habe den Umstieg der Produktivinstanz durch Ausrollen der erforderlichen Installation im Verzeichnis wp-svn auf dem Server vorbereitet. 
+* Diese Umstellungen sollen möglichst zügig realisiert werden, damit ab 30.01. die Produktivinstanz mit dem ausgewählten Basistheme für die Prüfungsvorbereitung zur Verfügung steht. (V: Lieder)
+
+= 04.02.: Weekly Scrum, Sprint Review und Sprint Planning =
+
+==Aufzeichnungen==
+
+Dabei: Gräbe, Günther, Lieder
+
+Arbeiten in der letzten Woche: 
+* Synchonisierung der Datenbanken von Entwicklungs- und Produktivinstanz. Die Produktivinstanz wurde auf das Basistheme und dessen PVM Child Theme umgestellt und die erforderlichen Codeanpassungen vorgenommen. (Lieder)
+** Damit sind alle Voraussetzungen erfüllt, damit die einzelnen Projektteams ihre Arbeiten in die Produktivplattform integrieren und am 5.2. vorstellen können.   
+** Herr Lieder informiert, dass am 4.2. kein Seminartermin mehr geplant ist. 
+* Weitere Arbeit am Merkmals-Widget. Es können verschiedene Merkmalsausprägungen an- und abgewählt werden, wobei die Ausprägungen zu einem Merkmal oder-verknüpft und die verschiedenen Merkmale und-verknüpft sind. Entsprechend wird die Anzeige in der "Übersicht Werke" gefiltert. (Günther)
+* Erstellung einer Kommentierung zum Dokument "Projekte", das Frau Düwel am 22.1. vorgelegt hat und das am 5.2. mit ihr diskutiert werden soll. (Gräbe) 
+
+Sprint Review und Sprint Planning
+* Damit sind bis auf einige Restarbeiten und den Block "Dokumentation" alle Aufgaben des zweiten Sprints umgesetzt. 
+** Im dritten Sprint soll die Anpassung der beiden Plattforminstanzen an die vereinbarte Ausrollstruktur zügig umgesetzt werden, die mit Blick auf den Prüfungstermin am 5.2. aufgeschoben wurde. 
+* Es werden Sprint Goal und Schwerpunkte für den dritten Sprint vereinbart und das [[Sprint-3|Sprint Backlog]] vorbereitet. Der  dritten Sprint wird am 03.03. abgeschlossen. 
+** Am 11.2. wird kein Weekly Scrum stattfinden, am 18.2. ist Herr Lieder nicht da. 
+
+Weitere Aufgaben:
+* Fixen der Einbindung von http://pvm.uni-leipzig.de über Permalinks. (Günther)
+* wp-svn nach wp transformieren, um SVN-ausgerollte Struktur und Links ans git-Repo wie spezifiziert umzusetzen.  (Günther)
+* Ist pvm_theme obsolet? Dann bitte entfernen.
+* Einzelne Menüpunkte (AGB, Impressum, FAQ) sollen aus dem Hauptmenü in ein Footer-Menü ausgelagert werden.  Dazu muss im PVM Child Theme ein entsprechendes Menü angelegt und in die Menüstrukturen eingebunden werden.  (Lieder)
+* Die Plugins von inspirata.de und leipzig-data.de werden zu Vergleichszwecken zur Verfügung gestellt. (Gräbe)
+* Die Entscheidungsgründe für die Auswahl des Basisthemes sind in der Entwurfsdokumentation festzuhalten. (Lieder)
+
+= 18.02.: Weekly Scrum =
+
+==Aufzeichnungen==
+
+Dabei: Gräbe, Günther. Lieder entschuldigt.
+
+* Einbindung von http://pvm.uni-leipzig.de über Permalinks wurde gefixt (Gräbe, 17.2.)
+* wp-svn nach wp transformieren, um SVN-ausgerollte Struktur und Links ans git-Repo wie spezifiziert umzusetzen.  (Günther)
+** Umstieg von wp auf wp-svn geht schief, es gibt vielfach Querlinks von der Produktivinstanz zur Entwicklungsinstanz, ohne dass der dafür verantwortliche Mechanismus zu erkennen ist. Seb. vermutet, dass dies mit unsauberem Code im git Repo zu tun hat. Dies soll zu einem separatem Termin direkt mit Alex analysiert werden.
+** <tt>diff -rqw esteem_pvm_child/ ~/public_html/wp/wp-content/themes/esteem_pvm_child/</tt><br/> im Verzeichnis pvm-15@pcai042:~/LokalerClon/Code zeigt eine überschaubare Menge von Differenzen zwischen der Version des Child Themes im git-Repo und der in der Produktivinstanz ausgerollten Version. 
+** Das soll analysiert, der git Code auf eine stabile Version gebracht und dann getagt werden. Auf der Basis soll wp-svn als Produktivinstanz aktiviert werden, entweder durch direkten Umzug oder durch Neuaufbau der Instanz mit einem weiteren DB-Präfix. Für die neue Produktivinstanz wird die getagte Version auf pvm-15@pcai042:~/LokalerClon ausgerollt und an die Produktivinstanz drangelinkt (bzw. ist es schon). Der Prozess wird in einer Aktualisierung des Adminhandbuchs dokumentiert. 
+*** Git Tags siehe https://git-scm.com/book/de/v1/Git-Grundlagen-Tags
+*** Der git push Befehl lädt Tags nicht von sich aus auf externe Server. Stattdessen muss Du Tags explizit auf einen externen Server hochladen, nachdem Du sie angelegt hast. Der Vorgang entspricht dem bei Branches: Du kannst den Befehl git push origin [tagname] verwenden.
+** Wenn das funktioniert, soll noch der Bereitstellungsraum an die bisherige Struktur angebunden werden. 
+* git Repo
+** zeeflow aus Verzeichnis Plugins-and-Themes entfernt, 5 PVM-Pakete aus dem Verzeichnis Code/pvmkit/uploads/zip ins Verzeichnis Bereitstellungsraum verschoben.
+**Weiterhin offene Fragen: 
+*** Verzeichnis esteem erforderlich? Das sollte das unveränderte Basis-Theme sein, Aktuell ist im Repo zusätzlich esteem/sidebar-all_pkg_sidebar.php, aber auch unter esteem_pvm_child 
+*** Ist pvm_theme obsolet? Dann bitte entfernen.
+* Einzelne Menüpunkte (AGB, Impressum, FAQ) sind aus dem Hauptmenü in ein Footer-Menü ausgelagert. (Lieder)
+* Weitere Anpassung des Plugin-Codes - Trennung von Edit und View Funktionen. (Günther)
+** Daran wird auch in der nächsten Woche weitergearbeitet. 
+* Einbindung von Merkmalen: Merkmalsausprägung und Typ sind in der DB-Tabelle pvmkit_properties aufgelistet, der Typ nur als Textfeld, da verschiedene Merkmale verschieden visualisiert werden, was (derzeit) hart im Frontend zu kodieren ist. pvmkit_property_index enthält die Kreuzreferenzen der Merkmale der einzelnen Werke.
+* Die Plugins von inspirata.de und leipzig-data.de sind zu Vergleichszwecken zur Verfügung gestellt. (Gräbe)
+* Die Entscheidungsgründe für die Auswahl des Basisthemes sind in der Entwurfsdokumentation noch nicht festgehalten. (Lieder)
+* Diskussion der Kommentierung zum Dokument "Projekte" mit Frau Düwel, wird am 22.2. fortgesetzt.  (Gräbe) 
+* SHK-Verträge ab April (je 7h/Woche) müssen zügig abgeschlossen werden. 
+
+= 25.02.: Weekly Scrum =
+
+==Aufzeichnungen==
+
+Dabei: Gräbe, Günther, Lieder 
+
+Erledigt:
+* Der Bereitstellungsraum wurde unter dem Link http://pvm.uni-leipzig.de/Bereitstellungsraum/ als SymLink an die Produktivinstanz angebunden. (Gräbe)
+* Verzeichnisse esteem und pvm_theme im Nachgang der Besprechung aus dem Repo entfernt. (Gräbe) 
+
+Offene Tasks:
+* wp-svn nach wp transformieren, um SVN-ausgerollte Struktur und Links ans git-Repo wie spezifiziert umzusetzen.  (Günther)
+** In Arbeit, Problematik siehe [[2016-02-18]], soll bis nächste Woche abgeschlossen sein. 
+* Die Entscheidungsgründe für die Auswahl des Basisthemes sind noch in der Entwurfsdokumentation festzuhalten. (Lieder)
+* Umsetzung des Einreiche- und Freigabeprozesses für Werke. (Günther)
+* Ansatz für eine ''Profilseite für User'', welche die Daten aus wp-members darstellt sowie die Werke und Bewertungen des jeweiligen Users anzeigt. (Lieder)
+
+Allgemeines:
+* Prof. Gräbe erläutert die Ergebnisse der Durchsprache des Dokuments "Projekte" mit Frau Düwel
+** Die Ergebnisse werden in der Requirements noch schriftlich fixiert. 
+* SHK-Verträge ab April 
+** Herr Lieder teilt mit, dass er seinen Vertrag mit Verweis auf eine andere Anstellung nicht verlängern wird. 
+** Herr Günther bereitet die Unterlagen in Kontakt mit der Laboruni (Frau Keil, Frau Hartung) vor. Frau Düwel ist im März 3 Wochen im Urlaub. 
+
+= 03.03.: Weekly Scrum =
+
+==Aufzeichnungen==
+
+Dabei: Gräbe, Günther.  Lieder sagt kurzfristig ab. 
+
+Organisatorisches
+* Aktuell gibt es noch keinen Nachfolger für Herrn Lieder als SHK. Herr Günther wird einen Vertrag mit 9h/Woche bis zum Projektende bekommen.  
+* Am 10.3. stimmen wir die Aufgaben für den 4. Sprint ab.
+* Frau Düwel ist bis zum 18.3. im Urlaub und auch per E-Mail nicht zu erreichen.
+
+SVN-Version als Produktivinstanz umsetzen
+* Wir schauen uns das Problem genauer an. Die ominöse Weiterleitung auf pvmdevelop wird durch eine .htaccess Datei im Wurzelverzeichnis der SVN-Version verursacht. Nach Entfernen dieser Datei funktioniert alles weitgehend korrekt. 
+* Die Verzeichnisse pvmkit und esteem_pvm_child sind aus einer lokalen Version des git Repos an die Produktivinstanz drangelinkt. 
+** Die git-Version ist noch einmal durchzusehen, weitere Fehler auszubauen und dann eine stabile Version zu [https://git-scm.com/book/de/v1/Git-Grundlagen-Tags taggen], die auf dem lokalen Clon auf dem Server ausgerollt wird. (Günther)
+* Die Bilder der Werke fehlen. Diese waren bisher in einem Verzeichnis wp-content/plugins/pvmkit/uploads/ abgespeichert, sollen aber in Zukunft im Verzeichnis wp-content/uploads/pvm abgespeichert werden. 
+* In der Datei public_html/.htaccess wurde eine Zugriffssperre für .svn-Verzeichnisse ergänzt. 
+
+Requirements und Konsequenzen
+* Prof. Gräbe erläutert die Änderungen im Requirements-Dokument, die auf der Basis der Durchsprachen des Dokuments "Projekte" mit Frau Düwel vorgenommen wurden, siehe dazu Dokumente/Requirements.tex im Repo. 
+** Insbesondere ist nun das Löschen von Usern, Werken und Projekten vorgesehen und genauer spezifiziert. 
+** Menüführung über Klassen mit größerer Menge von Instanzen (Werke, Projekte) erfolgt über eine Übersichtsseite wie "Alle Werke", auf der alle Instanzen aufgelistet werden und Filterfunktionen zur Verfügung stehen, über welche die Auswahl eingeschränkt werden kann. Alternativ kann jede Einzelinstanz über einen Direktlink erreicht werden. 
+* Wir diskutieren, dass einzelne global vorgegebene Datenbasen (etwa Merkmale, Orte, Bewertungen) als RDF-Dateien im Bereitstellungsraum vorliegen und von dort direkt über die EasyRDF-Bibliothek in das Frontend eingebunden werden sollen. Dazu sind diese aus Performancegründen im rdf-Format und nicht im Turtle-Format zu speichern. 
+** Zu allen Werken liegt während des ganzen Lebenszyklus eines (nach Definition unveränderlichen) Werks eine entsprechende zip-Datei im Bereitstellungsraum.  Ähnliches gilt später auch für (abgeschlossene) Projekte und Projektangebote.  Werke werden dazu in ein eigenes Verzeichnis "Werke" verschoben. 
+** Im Nachgang wurde das Verzeichnis "Bereitstellungsraum" im Repo entsprechend modifiziert. 
+
+Offene Tasks: 
+* Die Entscheidungsgründe für die Auswahl des Basisthemes sind noch in der Entwurfsdokumentation festzuhalten. (Lieder)
+* Umsetzung des Einreiche- und Freigabeprozesses für Werke. (Günther)
+* Ansatz für eine ''Profilseite für User'', welche die Daten aus wp-members darstellt sowie die Werke und Bewertungen des jeweiligen Users anzeigt. (Lieder)
+
+= 10.03.: Weekly Scrum, Sprint Review und Sprint Planning =
+
+==Aufzeichnungen==
+
+Dabei: Gräbe, Günther, Lieder. 
+
+Organisatorisches
+* Aktuell gibt es noch keinen Nachfolger für Herrn Lieder als SHK. 
+* Herr Günther hat einen Vertrag mit 9h/Woche bis Ende Mai.
+* Die wichtigsten Gestaltungsentwürfe sind ins git Repo übernommen worden. 
+* Damit sind die meisten Stories des dritten Sprints komplett abgearbeitet, es bleibt eine kleinere Aufgabe zur Dokumentation, die in den vierten Sprint übernommen wird.
+* Verständigung über Zeitraum, Goals und Priorisierung des vierten Sprints.
+
+Arbeitsberichte:
+* Lieder: Arbeit an der Profilseite User. 
+** Probleme: Wo kommt das User-Bild her, woher die Ortsangabe? wpmembers unterstützt das Hochladen eines Bilds nicht. 
+** Lösung Bild: Userbilder werden über den Plattform-Admin direkt in das img-Verzeichnis des Child-Themes eingespielt und in der Autor-Tabelle (!) gespeichert.
+** Die Autortabelle (ggf. User-ID, Autoren-URI (Primärschlüssel), foaf:name, foaf:based_near Ort-URI, foaf:image - lokal zum Theme-Verzeichnis) wird regelmäßig als RDF-Dump archiviert. 
+** Autor-Eintrag kann erst gelöscht werden, wenn kein Werk des Autors mehr in der Plattform ist. 
+* Übertragung aus der Entwicklungs- in die Produktivinstanz: 
+** Werke: Diese müssen in der Produktivinstanz neu ausgerollt werden. Das soll gleich längs des Werks-Prozesses erfolgen. 
+** Für Werks- und Profilseite müssen in der Produktivinstanz zwei neue Seiten angelegt werden. (Günther)
+** Das ist gleich im Admin-Handbuch festzuhalten. (Lieder)
+* Günther: Weitere Arbeit am Einbinden der Werke.
+
+Offene Tasks:
+* Anlegen der RDF-Dokumente für Bewertungen und Ortsnamen. (Gräbe)
+
+= 17.03.: Weekly Scrum =
+
+==Aufzeichnungen==
+
+Dabei: Gräbe, Günther, Malios. Herr Lieder fehlt. 
+* Nachtrag Lieder: Bitte entschuldigen Sie die Unzuverlässigkeit. Ich war Donnerstag bis Montag bei einem privaten Seminar und habe es dummerweise versäumt, mich rechtzeitig zu melden. Später ging es nicht mehr, weil es im Seminarhaus und Umgebung keine Internetverbindung gab.
+
+Organisatorisches
+* Maximilian Malios ist Nachfolger für Herrn Lieder als SHK. 
+** Student im Master Wirtschaftsinformatik, kann aus persönlichen Gründen maximal 4h/Woche als WHK eingesetzt werden.
+** Wir besprechen, dass er die Vertrags-Unterlagen zeitnah mit Frau Hartung fertigmacht. 
+** Kurze Einweisung in die vorhandene Infrastruktur, Eintrag in den Moodle-Kurs
+** Anmeldung am Wordpress (beide Instanzen) und ein ssh-Schlüssel für den Zugang zum git-Repo stehen noch aus. 
+* Herr Günther soll daraufhin mit 9h/Woche bis Projektende beschäftigt werden.
+** Herr Günther berichtet, dass es Probleme mit den Formularen für den Anschlussvertrag gibt und dieser frühestens ab 15.4. in Kraft treten kann. 
+
+Arbeitsberichte:
+* Günther: Für die Implementierung des Upload von Werken wird der bisherige '''composition manager''' überarbeitet und angepasst. Arbeiten werden grundsätzlich in der Entwicklungsplattform ausgeführt.
+* Gräbe: RDF Dateien für Bewertungen und für Orte (Übernahme aus geonames) in den Bereitstellungsraum sowie die Bewertungs-Icons in das img-Verzeichnis des Themes im Repo eingespielt. 
+
+Nächste Woche: 
+* Günther: Für die Implementierung des Upload von Werken soll der bisherige composition manager überarbeitet und angepasst werden. 
+** Wenn fertig, dann soll das in die Produktivinstanz übertragen werden und dort als "proof of concept" die vorhandenen Werke (derzeit ohne Bild, weil Upload beim Neuaufsetzen der Plattform neu gemacht wurde) gelöscht und dann nach dem Prozess eingeladen werden.  
+* Günther: Danach wird die Funktionalität "Werke bewerten" eingebaut.  
+
+Offene Tasks (Lieder):
+* Profilseite User.
+* In der Entwicklungsinstanz stimmen die Sidebars bei den einzelnen Menüeinträgen nicht. 
+* Funktionalität Dump der Autortabelle (ggf. User-ID, Autoren-URI (Primärschlüssel), foaf:name, foaf:based_near Ort-URI, foaf:image - lokal zum Theme-Verzeichnis) als RDF-Dump archivieren. 
+* Übertragung aus der Entwicklungs- in die Produktivinstanz: 
+** Werke: Diese müssen in der Produktivinstanz neu ausgerollt werden. Das soll gleich längs des Werks-Prozesses erfolgen. 
+** Für Werks- und Profilseite müssen in der Produktivinstanz zwei neue Seiten angelegt werden. Das ist gleich im Admin-Handbuch festzuhalten. 
+
+= 24.03.: Weekly Scrum =
+
+==Aufzeichnungen==
+
+Dabei: Gräbe, Günther, Lieder.
+
+Organisatorisches
+* Maximilian Malios ist Nachfolger für Herrn Lieder als SHK. 
+** Lieder, 21.3.: Heute habe ich mich mit Herrn Malios getroffen. Wir haben seine Zugänge eingerichtet. Er hat sich erfolgreich in das Repo eingeklont und ich habe ihm die projektspezifischen Grundlagen recht ausführlich erklärt. 
+** Wir haben für den 31.3. einen weiteren Termin vereinbart, bei dem er mir beim Erstellen eines Templates "über die Schulter schauen" wollte. 
+** Vertrags-Unterlagen wurden eingereicht, Beginn ab 1. Mai.
+** Anmeldung an beiden Wordpress-Instanzen und Zuordnung Admin-Rolle ist erfolgt. 
+* SHK-Vertrag für Herrn Günther ist im Personaldezernat.
+* Nächster Termin (Weekly Scrum und Sprint Review) ausnahmsweise am 1.4. 11:00 Uhr im Büro Prof. Gräbe.
+
+Arbeitsberichte:
+* Lieder: Bewertungsmöglichkeit für Werke eingearbeitet.
+** Es fehlt noch die Angabe der Anzahl der Bewertungen pro Art für das jeweilige Werk. Dazu muss noch eine entsprechende Funktion im Plugin gebaut werden. 
+** Alle vier Bewertungstypen sind im Seitentemplate "Einzelseite Werk" im Theme hart kodiert, Erweiterung um weiteren Bewertungstyp muss auch dort im Code ergänzt werden. 
+* Lieder: Max eingearbeitet, siehe oben.
+* Lieder: Profilseite User. Dazu existiert eine Designvorlage. 
+** Es ist ein Seitentemplate mit einer zugehörigen leeren Seite angelegt, die Werke und Bewertungen des Users werden über die Autor-ID gefunden. Offen ist noch die Darstellung von "Meine Favoriten". 
+** Offen ist weiter die Einbindung standardisierter User-Informationen. Soll in der aktuellen Ausbaustufe über die RDF-Quelle und User-Zuarbeit an einen Portal-Admin realisiert werden.  Perspektivisch ist zweite Seite "Edit Profile" mit Formular denkbar, über das standardisierte Informationen zur Person eingegeben werden können. Nicht sinnvoll über wp-members oder custom attributes zu realisieren, da dort keine Typinformation zur Validierung der Felder hinterlegt werden kann. 
+* Günther: Einbau der Orte. 
+** Werden aus der RDF-Vorlage in die Datenbank eingelesen und von dort aus in den View eingebunden. 
+** Aktualisierung oder Erweiterung durch Aktualisierung oder Erweiterung der RDF-Vorlage und Erneuerung (??, dann kein Zugriff auf die Datensätze über autoincrement-Feld) der Datenbanktabelle. 
+* Günther: Upload von Werken ist zu 80% in der Entwicklerinstanz fertig. Übertragung in die Produktivinstanz steht noch aus.  
+
+Brainstorming: 
+* Profilseite User. 
+** Autorentabelle ist aktuell nur Autor-ID, User-ID (wenn User dazu existiert, sonst NULL) und foaf:name
+** Dump der Autortabelle als RDF, auch denkbar als Primärquelle. 
+** Benötigte Minimalinformation: User-ID, Autoren-ID als URI (Primärschlüssel), foaf:name, foaf:based_near Ort-URI, foaf:image - lokal zum Upload-Verzeichnis. 
+
+Auszuführende Arbeiten: 
+* Gräbe: Dump der Autortabelle (im Nachgang am 24.3. erledigt)
+** Erste Version im Verzeichnis Daten in den Dateien inc_sample.php, db.php, Autoren.ttl (aus der pvmdevelop-DB) 
+** Dazu aktuellen Dump angelegt und im Repo gespeichert. Problem, dass im aktuellen Dump der Produktivversion kein Autor mit einem User verbunden ist. 
+* Die aktuellen pdf-Designvorlagen werden ins Verzeichnis "Gestaltungsentwuerfe" des Repos eingespielt. (Lieder)
+* Günther: Weitere Arbeit am Upload von Werken. 
+** Wenn fertig, dann soll das in die Produktivinstanz übertragen werden und dort als "proof of concept" die vorhandenen Werke gelöscht und dann nach dem Prozess eingeladen werden.  
+* Lieder: 
+** In der Entwicklungsinstanz stimmen die Sidebars bei den einzelnen Menüeinträgen nicht. 
+** Weiterarbeit an der Profilseite User.
+** Aktualisierung des Admin-Handbuchs. 
+
+= Treffen am 29.03.2016, 10 Uhr, Büro Düwel im GS-Haus =
+
+Dabei: Düwel, Prof. Gräbe
+
+Wir besprechen das Semesterbootstrap auf der Basis eines Handouts, das Frau Düwel vorbereitet hat.
+* Es sind wenigstens 12 TN aus der Medienpädagogik zu erwarten.
+* Der Termin für das Seminar ist wieder donnerstags ab 13 Uhr im ZMK, Emil-Fuchs-Straße 1, über die Gestaltung der Tutorials und der Gruppenarbeit ist noch nicht entschieden. 
+* Es gibt Vorabsprachen mit 3 Schulen, sich mit jeweils einer zehnten Klasse am PVM zu beteiligen. Die Gespräche werden durch Juliane Trinks koordiniert. 
+
+Anforderungen an die Plattform:
+* Im ersten Teil des Kurses (bis Ende April) sollen die TN eigene Werke erstellen und hochladen. Dazu sind die erforderlichen Grundlagen spätestens im 5. Sprint stabil zu schaffen. Der 5. Sprint schließt am 28.04. mit einem Sprint Review im Seminar ab. Letzte Nacharbeiten sind bis zum 12.05. möglich, danach wird die Plattform für den Einsatz in den Schulen benötigt. 
+* Weiterhin ist im 5. Sprint stabil die Möglichkeit zu schaffen, ein Projekt zu beantragen und dann auch zu beginnen.
+** Erfordert: Projektantragsformular, Prozess Einrichtung Projektseite, Zuordnung von Teilnehmern und Werken.
+** Als proof of concept soll ein Dummy-Projekt angelegt werden, das als Vorbild für ein beendetes und archiviertes Projekt dienen kann und als Kachel auf der Seite "Alle Projekte" verlinkt ist. 
+** Ähnliches soll ein Dummy-Projektangebot als proof of concept eingebunden und auf der Seite "Alle Projektangebote" als Kachel dargestellt werden.
+* Es ist ein weiterer Menüpunkt "Inspiration" hinzugekommen, der als Blog von Usern in der (bisher nicht genutzten) WP-Rolle "Autor" ("Blogautor" als neuer Glossarbegriff) geführt werden soll. Die Zulassung als Blogautor soll an das Ausfüllen des Plattform-Fragebogens gekoppelt werden. 
+* Damit wird deutlich, dass in die Plattform auch noch eine Fragebogenfunktionalität einzubinden ist. Dazu sollen entsprechende WP-Plugins evaluiert und eines ausgewählt werden. Dieses Requirement ist noch in die Liste der Requirements einzuordnen und entsprechend zu priorisieren. 
+* Die Funktionalität "Missbrauch melden" wird gering priorisiert und kann auch erst im Wintersemester 2016/17 in Angriff genommen werden. 
+
+Absprache zu den Requirements:
+* Einige Punkte der aktuellen Version der Requirements werden durchgesprochen und im Nachgang eingearbeitet.  Die Version der Requirements vom 29.03.2016 wird als aktuell mit Frau Düwel abgestimmte Version Grundlage der weiteren Arbeit in den Sprints 5 und 6, 
+
+= 01.04.: Weekly Scrum, Sprint Review und Sprint Planning  =
+
+==Aufzeichnungen==
+
+Dabei: Gräbe, Günther, Lieder, Malios.
+
+Organisatorisches
+* WHK-Vertrag 4h/Wo. 1.5.-30.9. für Herrn Malios ist im Personaldezernat. 
+* SHK-Vertrag 9h/Wo. 15.4.-30.5. für Herrn Günther ist im Personaldezernat, soll zügig bis 30.9. verlängert werden. 
+* Repo-Verzeichnis "Gestaltungsentwürfe" aufgeräumt. 
+* Herr Günther stellt zum Seminarauftakt am 7.4. 13 Uhr den aktuellen Arbeitsstand an der Produktivinstanz der Plattform vor. 
+* Abstimmung zum Backlog des [[Sprint-5|5. Sprints]]
+* Nächstes Weekly Scrum erst am 14.4. 12:00 Uhr im Büro Prof. Gräbe.
+
+Arbeitsberichte:
+* Gräbe berichtet vom Gespräch mit Frau Düwel am [[2016-03-29|29.03.]] und den Planungen für das Sommersemester 2016, siehe dazu 20160329-Handout.pdf im git-Repo.
+* Upload (Günther)
+** Upload eines einzelnen Werks aus einer zip-Datei heraus für den Freischaltprozess erfolgt über eine pvmkit-Funktion. 
+** Dabei wird (neben Bilderupload und -zuschnitt) im Frontend eine Werkseite verfügbar, über die User in entsprechenden Rollen den Werkstatus (repräsentiert durch Statusfeld:integer) über entsprechende Button verändern können. So kann Vorschau und Freischaltung durch einen Redakteur, aber (perspektivisch) auch Rücknahme und Löschen organisiert werden. 
+** Im Backend sieht ein Redakteur eine Auflistung der noch nicht freigeschalteten Werke und kann eins zur weiteren Bearbeitung auswählen. 
+** Navigation zu bereits freigeschalteten Werken ist über die Übersicht "Alle Werke" im Frontend möglich. 
+* Weitere Funktionalität (Günther)
+** Zu den einzelnen Ratings eines Werks werden Counter angezeigt.
+** Funktion, die zu User die Liste der Werk-IDs seiner Favoriten ausgibt. Muss noch in "Profilseite User" integriert werden. 
+* Profilseite User (Lieder)
+** Integration User-Bild wurde über custom field im wp-members für eine externe URL als Provisorium realisiert. Im Zuge der Freischaltung eines neuen Users durch einen Admin soll das Bild ins Upload-Verzeichnis kopiert und von dort referenziert werden, um Missbrauch zu verhindern. 
+** Das Konzept "Profilseite User" ist noch einmal zu überarbeiten.
+* Admin-Handbuch aktualisiert und Sidebars in der Entwicklungsinstanz gefixt. (Lieder)
+
+Fertigzustellen:
+* Stabiles Release konsolidieren, im git-Repo taggen, in der Produktivinstanz ausrollen, dort weiterhin die vorhandenen Werke hochladen und freischalten, um das im ersten Seminar am 7.4. zu  präsentieren. (Günther)
+
+Diskussion:
+* Rolle "Projektleiter" ist eine Rollenerweiterung, die mit jeder WP-Rolle kombiniert werden kann. 
+* Funktionalität "Zuletzt besuchtes Werk" ist im Gestaltungsentwurf zu finden, aber noch nicht in die Requirements aufgenommen. Die genaue Realisierung muss noch besprochen und priorisiert werden. 
+* Plugin wp-members und Konzept "Profilseite User": Hier soll perspektivisch eine andere Lösung gefunden werden, die 
+** mehr auf die in WP bereits nativ vorhandenen Lösungen für Login, Registrierung und Passwort-Reset zurückgreift,
+** durch sinnvolle custom fields besser mit den Anforderungen der "Profilseite User" verbunden ist (insbesondere Felder mit Auswahlmenü),
+** das Upload eines User-Bilds über den Media-Upload der Plattform realisiert.
+** Auf der Basis soll das Konzept der "Profilseite User" stabilisiert werden (Malios). 
+
+= 14.04.: Weekly Scrum  =
+
+==Aufzeichnungen==
+
+Dabei: Gräbe, Günther, Malios.
+
+Organisatorisches
+* WHK-Vertrag 4h/Wo. 1.5.-30.9. für Herrn Malios wid nächste Woche unterschrieben. 
+* SHK-Vertrag 9h/Wo. 15.4.-30.5. für Herrn Günther ist abgeschlossen, die Verlängerung bis 30.9. muss noch eingereicht werden. 
+* Nächstes Weekly Scrum erst am 28.4. 12:00 Uhr im Büro Prof. Gräbe.
+
+Arbeitsberichte:
+* Herr Günther hat zum Seminarauftakt am 7.4. 13 Uhr den aktuellen Arbeitsstand an der Produktivinstanz der Plattform vorgestellt. 
+* Merkmale (Günther)
+** Die Merkmale wurden entsprechend den Angaben von Frau Düwel aktualisiert und in der Datenbank gespeichert. Dump siehe Code/SQL/Merkmale_04-2016.txt
+** Im Nachgang die Datei Daten/Merkmale.ttl aktualisiert (Gräbe) und Fehler in Merkmale_04-2016.txt gefixt.
+* Upload (Günther)
+** Upload eines Werks ist fertig, im Backend gibt es für Redakteure eine Liste von noch nicht freigeschalteten Werken. 
+** Damit ist diese Funktionalität vollständig umgesetzt und in der Produktivinstanz eingespielt, so dass die Seminarteilnehmer nun eigene Werke erstellen und hochladen können. Dazu müssen sich die Seminarteilnehmer aber zunächst an der Plattform registrieren. 
+** Löschen funktioniert noch nicht, muss aber auch noch genauer spezifiziert werden. 
+
+Architektur:
+* Wir diskutieren das Hochladen der Werke. 
+** Dabei wird eine Kopie der zip-Datei unter wp-content/uploads/pvm/archive/ abgelegt und daraus die entsprechenden Objekte extrahiert. 
+** In einem geplanten Werkstattprozess soll es einen Texteditor geben, mit dem der Autor seinen Text ändern kann. Das Paket würde danach als zip-Datei ebenda neu gespeichert, womit die Datei im Bereitstellungsraum nicht mehr aktuell wäre. 
+** Autoreninformation (Autor, Ort) wird während des Hochladens aus der Plattform-Datenbank ergänzt, sollte also nicht Teil des Pakets sein.
+** Es werden nur solche Merkmale aus dem Paket übernommen, die auch in der Plattform gespeichert sind. 
+** Ein RDF-Dump der Werke sollte deshalb auf diese Plattforminformationen zurückgreifen. Dazu ist ein Konzept zu detaillieren.
+* Wir diskutieren das Löschen von Werken.
+** Aktuell wird dabei nur ein Statusflag gesetzt. 
+** Verschiedene Löschvarianten von Werken sind noch einmal genauer zu spezifizieren. (Günther) 
+* Wir diskutieren das Verhältnis von User und Autor.
+** Nachdem nun das Löschen von Usern möglich ist, muss nicht jeder Autor ein User sein. Allerdings können nur User als Autoren '''aktiv''' sein.  
+** Es wäre allerdings umgekehrt sinnvoll, wenn jeder User gleich einen Autor-Account bekäme, auch wenn von ihm (noch) keine Werke existieren.  An diese Autor-ID kann alle persistente Information angehängt werden, die öffentlich sind und nach dem Löschen eines User-Accounts noch erhalten bleiben soll, an die User-ID (die als Feld in der Autorentabelle vermerkt ist) könnten alle Informationen angehängt werden, die privat sind. 
+** Am User wären zum Beispiel die Bewertungen und Favoriten anzuhängen, die zusammen mit dem User aus dem System gelöscht würden.
+** Dann gäbe es eine '''Profilseite''', auf der die Autor-Informationen angezeigt werden, die um User-Informationen erweitert werden (etwa Bewertungen und Favoriten), wenn der Autor auch User ist. 
+
+Fertigzustellen:
+* Stabiles Release nach dem Seminar am 14.4. konsolidieren und im git-Repo taggen. (Günther)
+* Skript, das die SQL-Tabelle aus Merkmale.ttl extrahiert. (Gräbe)
+* RDF-Dump der Werke aus der Plattform. (Gräbe)
+
+= 28.04.: Weekly Scrum  =
+
+== Was passierte bisher im Seminar? ==
+
+=== Seminar am 07.04.  ===
+
+Gruppeneinteilung, es wurden drei Gruppen gebildet.
+
+* To Do IT-Gruppe:
+** Designfeinheiten im Template (alle Linkfelder, die Grafiken sind, ins CSS bringen, keine Bilder verwenden!)
+** Merkmalsliste aktualisieren, gekürzte Version ist aktuell noch nicht online!
+* To Do Designgruppe:
+** Design Projekte (nach Vorgaben Gruppe Projekte)
+* To Do Tutorialgruppe:
+** Vorgaben zu den Hochgeladenen Dateien zusammentragen und hochladen: Bildgröße: Aufl. 72, 800 px längste Seite, Text: max. 3000 Zeichen
+
+=== Seminar am 21.04.  ===
+
+* Gestaltung der Plattform (Ansprechend? Motivation zur Teilnahme privat, warum ja, warum nein?).
+** Was hat besonders gefallen/motiviert?
+** Was hat das Thema für eine Bedeutung?
+** Gibt es Bereiche, in denen mehr Selbstbestimmung besser gewesen wäre?
+** Zusammenfassende Gesamteinschätzung des Projektes.
+* Welche Ergebnisse gab es dazu? 
+
+HA zum 28.04.
+* Konzepte für Lehrangebote lesen (Arbeitsmaterialien Me Projects) -> auch Designgruppe
+* Plan erstellen und vorstellen
+* Designgruppe nächste Schritte, Vorstellung erster Entwürfe für Me Projects
+* Vorbereitung eigener Werke zu nächster Woche zum Thema Essen
+
+==Aufzeichnungen zum Treffen==
+
+Dabei: Gräbe, Günther, Malios.
+
+Organisatorisches:
+* WHK-Vertrag Malios ist unterschrieben.
+* Verlängerung SHK-Vertrag Günther wird zeitnah eingereicht.
+
+Stand im Seminar:
+* Das mit den drei Gruppen wie am 7.4. notiert ist nicht mehr so. Stattdessen gibt es eine Gruppe pro Schule (jeweils von einem Tutor geleitet) sowie IT-Gruppe (aktuell nur Sebastian und Max) sowie die Design-Gruppe. 
+* Unklar, was mit "Designfeinheiten im Template (alle Linkfelder, die Grafiken sind, ins CSS bringen, keine Bilder verwenden!)" gemeint ist (Seminarnotiz 7.4.). 
+* Am 21.4. wurde die Plattform noch einmal vorgestellt, kritische Anmerkungen gab es nicht; der Fokus lag auf der nochmaligen Erläuterung der Funktionalität.
+* Stand Accounts: Neu im WP Carolin Gmyrek und Vivien Janner, es fehlen Elina Ulitko, Julia Püschel, Ronja Schlemme und Yaning Wu. 
+* Am 28.4. werden zunächst Ideen für Werke gesammelt, das Hochladen soll dann bis zum 12.5. erfolgen. 
+* Unklar ist die Zusammenarbeit der Designgruppe mit dem IT-Team. Es git keine personellen Überschneidungen. 
+
+Arbeitsberichte:
+* Löschprozess Werk in zwei Varianten (Günther)
+** Unpublish: (1) Werk wird zurück an den User gegeben (Standard), aufbereitetes zip wird dabei gelöscht; (2) Werk wird in den Redaktionsbereich zurückgegeben.
+** Delete: (1) Komplettes Löschen aus dem System, das Backup-zip bleibt aber erhalten; (2) auch das Backup-zip wird mit gelöscht.
+** Der Workflow muss in der Entwurfsbeschreibung noch genauer fixiert werden. 
+** Dieser Teil des Workflows ist ins Backend integriert, da die als Redakteure tätigen Lehrer auch mit dem Backend arbeiten sollen. 
+* Werk-Editor (Günther)
+** Der ist in Form eines "Studio-Moduls" in Arbeit, wird aktuell in der Entwicklungsinstanz erarbeitet.  
+** Soll in die Produktivinstanz überführt werden, wenn komplett fertig. Dann auch ein neues stabiles Release im git. Sprint 5 wird bis zum 12.05. verlängert, um diese Arbeiten dort abzuschließen. Fokus ist dabei auf eine funktionale Version, die zunächst nicht designmäßig optimiert wird.
+** Generell werden für jede im Frontend verfügbare funktionale Seite entsprechende Seitentemplates benötigt. 
+* Arbeiten an den Stylefiles (Malios) 
+** Keine wesentlichen Fortschritte. Fokus auf Einzel- und Übersichtsseite für Projekte.
+** Profilseite User wird erst einmal zurückgestellt, bis klar ist, wie das Plugin wp_members ersetzt wird.
+* RDF-Daten (Gräbe)
+** Die Datei Merkmale.ttl wurde entsprechend der eingekürzten Merkmalsliste aktualisiert und Fehler in Merkmale_04-2016.txt gefixt.
+** User und Autor: Zu beiden wurden RDF-Dateien aus einem Dump der Datenbank extrahiert, siehe Verzeichnis "Daten" im Repo. 
+
+Diskussion:
+* Wir diskutieren ein Update der Produktivinstanz.
+** Stabiles Release wurde nach dem 14.4. zwar getaggt, aber nicht in der Produktivinstanz ausgerollt.
+** Das soll nun erst mit dem neuen Werkeditor bis zum 12.5. erfolgen, wobei weiterhin die neue verkürzte Liste der Merkmale eingespielt werden muss. 
+** Dazu sind alle Werke zu löschen, die Code-Basis zu aktualisieren, die alten durch die neuen Merkmale zu ersetzen und dann die vorhandenen 5 Werke wieder einzuspielen. Das ist zugleich ein "proof of concept" für das Management von Werken. 
+
+Fertigzustellen:
+* Werkeditor im besprochenen Umfang. (Günther)
+* Neuaufsetzen der Produktivinstanz. (Günther)
+* Zusammen mit dem Neuaufsetzen der Produktivinstanz sollen die beiden WP-Instanzen über SVN aktualisiert werden. (Günther)
+* Design und Seitentemplates für Projekt-Einzelseite und Übersichtsseite "Alle Projekte". (Malios)
+
+Nächster Weekly Scrum am 12.5., da am 5.5. Feiertag ist. Dann auch Sprint Review.
+Verlegt auf 11.5. 11 Uhr, da Gräbe am 12.5. und am 19.5. nicht in Leipzig ist
+
+= 11.05.: Weekly Scrum, Sprint Review und Sprint Planning  =
+
+== Was passierte im Seminar am 28.04.?  ==
+
+HA zum 28.04.
+* Konzepte für Lehrangebote lesen (Arbeitsmaterialien Me Projects) -> auch Designgruppe
+* Plan erstellen und vorstellen
+* Designgruppe nächste Schritte, Vorstellung erster Entwürfe für Me Projects
+* Vorbereitung eigener Werke zu nächster Woche zum Thema Essen
+
+Das Einstellen eigener Werke wurden aber nicht diskutiert, sondern auf den 12.5. vertagt (5.5. Feiertag). 
+* Stand Accounts: Neu im WP Carolin Gmyrek und Vivien Janner, es fehlen Elina Ulitko, Julia Püschel, Ronja Schlemme und Yaning Wu. 
+* Am 28.4. werden zunächst Ideen für Werke gesammelt, das Hochladen soll dann bis zum 12.5. erfolgen. 
+* Unklar ist die Zusammenarbeit der Designgruppe mit dem IT-Team. Es gibt keine personellen Überschneidungen. 
+
+==Aufzeichnungen zum Treffen==
+
+Dabei: Gräbe, Günther, Malios.
+
+Wir diskutieren zunächst den Stand des Workflows "Werk erstellen, einreichen, freigeben".
+* Werk wird grundsätzlich über einen ins Frontend integrierten Editor (Edit-Template) erstellt. Das kann entweder als "Neues Werk erstellen" (leeres Formular) geschehen oder per Hochladen eines PVM-Pakets im zip-Format aus externer Quelle.  Im zweiten Fall wird das Formular entsprechend vorinitialisiert. Im Zuge des Editierprozesses werden
+** Eine Werk-Id vergeben und ein Zustandsflag gesetzt.
+** Werkdaten in die Datenbank eingetragen.
+** Bilder entsprechend zugeschnitten und abgespeichert.
+** Der Text in die Datenbank übernommen.
+** Merkmale entsprechend der hinterlegten morphologischen Tabelle zugeordnet.
+** Das Autorenprofil zugeordnet. 
+*** Über die Autoren-Id ist eine User-Id zu erreichen, wenn der Autor als User an der Plattform existiert.  Über diese User-Id werden weitere im Profil hinterlegte Informationen ausgelesen, die dann - neben einer Liste der eigenen Werke sowie der eigenen Bewertungen anderer Werke - auf der Profilseite des Autors angezeigt werden. 
+** Werke sind in dieser Phase im Zustand 1.
+* Alle Werke eines Autors im Zustand 1 werden im Backend unter "Meine Werke" gelistet 
+** mit einem Link "Editieren", über den das Edit-Formular gestartet werden kann, 
+** mit einem Link "Veröffentlichen", womit das Werk zur Veröffentlichung eingereicht wird und damit in den Zustand 2 übergeht, 
+** mit einem Link "Löschen", mit dem das Werk in den Zustand 0 versetzt werden kann (das Werk ist noch da, aber als gelöscht markiert). 
+* Im Zustand 2 kann das Werk nicht mehr vom Autor editiert werden. Das Werk erscheint in der Redaktionsliste "Werke zur Freigabe" und kann von einem Redakteur 
+** über den Link "Vorschau" in einer Vorschau betrachtet werden (dazu wird das Seitentemplate "Einzelnes Werk" mit der jeweiligen Werk-Id aufgerufen), 
+** über den Link "Werk editieren" redaktionell überarbeitet werden (dazu wird das Edit-Template für Werke gestartet),
+** über den Link "Freischalten" in den Fundus übergeben werden, womit das Werk in der Zustand 9 übergeht und in diesem Zustand weder vom Autor noch von der Redaktion bearbeitet werden kann, 
+** über den Link "Löschen" in den Zustand 0 (Werk als gelöscht markiert) überführt werden.
+* Beim Übergang in den Zustand 9 wird zusätzlich eine zip-Datei im PVM-Format für den Export des Werks angelegt. 
+* Ein Werk im Zustand 0 kann komplett aus der Datenbasis gelöscht werden ("delete permanently"). Bis dahin ist das Werk noch über seine Werk-Id zu erreichen. 
+** Nachsatz Gräbe: Ich verstehe nicht, wo diese Funktionalität in die Wordpress-Plattform eingebunden ist, weder in der Entwicklungs- noch in der Produktiv-Instanz.
+
+Wir diskutieren den Abschluss des Sprints und die Aktualisierung der Produktivplattform.
+* Hier ist bisher nichts von den Festlegungen vom 28.4. umgesetzt, auch waren bis 10.5. keine weiteren Änderungen ins git Repo eingespielt. 
+* Am 12.5. wird im Seminar die neue Version benötigt, ebenso muss für die Arbeiten in der Schule eine stabile Version verfügbar sein. Dazu wird die Produktivplattform zügig aktualisiert. 
+** Am 28.4. wurde dazu festgelegt: Dazu sind alle Werke zu löschen, die Code-Basis zu aktualisieren, die alten durch die neuen Merkmale zu ersetzen und dann die vorhandenen 5 Werke wieder einzuspielen. Das ist zugleich ein "proof of concept" für das Management von Werken. 
+
+Wir diskutieren den Stand der Umsetzung weiterer Designpunkte:
+* Profilseite Autor (nur Autoren haben Profilseiten!): Ist so weit wie derzeit möglich umgesetzt, greift auf die Autor-Id zu und über diese auf eine User-Id, wenn hinterlegt. 
+** Persistente Informationen müssen in die Tabelle pvmkit_authors eingetragen werden, dort ist derzeit nur der foaf:name sowie eine Spalte "location" hinterlegt.  
+* Präzisierung der Absprache, wie Design und Funktionalität ineinander greifen.
+
+Wir diskutieren Aufgaben für Sprint 6. Wir konzentrieren uns auf
+* Weitere Konsolidierung der bisher implementierten Funktionen.
+* Umsetzung des Projekt-Workflows in Anlehnung an den Workflow für Werke.
+* Umsetzung und Harmonisierung des Plattform-Designs in Abstimmung mit der Design-Gruppe.
+* Absicherung einer regulär nutzbaren Produktivinstanz.
+Im Sprint 6 wird das Thema Projektangebote zurückgestellt.
+
+Nächster Weekly Scrum am 18.5. 12 Uhr (Gräbe am 19.5. nicht in Leipzig). 
+
+= 18.05.: Weekly Scrum =
+
+== Was passierte im Seminar am 12.05.?  ==
+
+Planung der Arbeit in den Schulen
+* Fortuna, 8. Klasse, 16. OS, di 9:15-11:00 Uhr
+** Termine: 31.5. (Einstieg, Kino), 7.6. (Interpretationen, Evaluation), 14.6. (Hochladen, AS-Vorbereitung)
+* Reclam-Gym., 11. Klasse, fr. 8:00-9:35 Uhr
+** Termine: 20.5. (Vorstellung und Themenfindung), 3.6. (Erfahrungen sammeln), 10.6. (Werkstatt), 17.6. (Feinschliff, Hochladen, Feedback)
+* Reclam-Gym., 5. Klasse, mo. 8:00-9:35 Uhr
+** Termine: 23.5. (Vorstellen, Suche deinen Lieblingsort), 30.5. (fotografieren und gestalten), 6.6. (schreiben, fotografieren, präsentieren)
+
+Die Produktivinstanz wurde aktualisiert, die alten Werke sind gelöscht, drei neue Werke (von Michi, Juliane Trinks, Vivi) wurden eingestellt und dabei auch die Profilseiten der Autoren korrekt ausgerollt.  
+
+==Aufzeichnungen zum Treffen==
+
+Dabei: Gräbe, Günther, Malios.
+
+Max wird zum Ende Juni die SHK-Tätigkeit beenden, da neben der Masterarbeit keine Zeit mehr ist.  Hier wird zügig ein Ersatz benötigt. SHK-Verlängerung Sebastian ist eingereicht, aber noch nicht unterschrieben. 
+
+Arbeitsstand
+* Produktivinstanz wurde aktualisiert und eine Version Stable-5-with-editor neu getaggt. (Sebastian)
+** Dabei stellte sich heraus, dass einige Anpassungen von Alex, insbesondere zu "Profilseite User", nicht ins git eingepflegt waren und deshalb auch nach dem Upgrade der Produktivinstanz dort nicht verfügbar waren. Das wurde im Nachgang gefixt.
+** Weiter sind über die "Profilseite User" bei entsprechenden Rechten die Funktionen "Neues Werk erstellen" und "Benutzerrechte bearbeiten" erreichbar. 
+* Im Workflow "Werke" sind noch ein paar Punkte einzubauen, die Frau Düwel angemerkt hat. Das soll im Laufe der nächsten Woche erfolgen und auch in der Produktivinstanz verfügbar sein. 
+** Wir diskutieren, ob die Edit-Funktionen für Werke grundsätzlich über die User-Id gesteuert werden und über die Autor-Id nur die View-Funktionen angesprochen werden. Damit könnten einer User-Id mehrere Autoren-Ids zugewiesen werden, die dieser Unser für die jeweiligen Autoren verwaltet. Ein solches Problem ergab sich in der Konzeption der Arbeit mit der 5. Klasse, da die Schüler nicht rechtswirksam die AGBs akzeptieren können. 
+* Am Workflow "Projekte" wurde nicht weiter gearbeitet, es fehlen dazu auch noch verbindliche Design-Vorgaben. 
+** Sebastian hat für den 26.5. 10:00 Uhr ein Treffen mit Frau Düwel, um weitere Design-Details zu besprechen. 
+* Werk-Editor weiter an Design-Vorgaben angepasst (Max), aber noch nicht ins git eingecheckt. 
+
+Nächster Weekly Scrum am 26.5. 12 Uhr. 
+
+= 26.05.: Weekly Scrum =
+
+==Telefonische Abstimmung Gräbe - Düwel am 25.5.==
+
+1) Frau Düwel wusste noch nichts davon, dass Herr Malios seinen Vertrag zum 30.6. beendet. Nach meinen Unterlagen ist Herr Malios für 4h/Wo. vom 1.5.-30.6. beschäftigt, zum Ende des Monats müssten Sie also Frau Düwel die erste Stundenabrechnung abgeben, wie sie seit einiger Zeit in der Universität bei geringfügiger Beschäftigung monatlich abzugeben ist. Bitte besprechen Sie hierzu die Details direkt mit Frau Düwel, auch wäre es sinnvoll, sich dort überhaupt einmal sehen zu lassen.
+
+2) Eine Nachfolge habe ich bisher nicht auftreiben können. Ich habe mit Frau Düwel besprochen, dass sie im Bereich der Medienpädagogen jemanden sucht, der sich mit CSS so weit auskennt, dass er oder sie die Umsetzung von Designentwürfen in CSS realisieren kann. Basis hierfür wären entsprechend mit Markup ausgestattete Seitentemplates. Die sollten (wie bisher wohl auch schon) durch Herrn Günther entwickelt werden.
+
+3) Ich versuche, einen Kollegen zu gewinnen, der sich etwas mit CSS-Programmierung auskennt und der die noch zu gewinnende CSS-Fachkraft beraten kann. Das ist aber noch nicht in Sack und Tüten.
+
+==Aufzeichnungen zum Treffen mit Frau Düwel am 26.5. 10 Uhr==
+
+Dabei
+* Design-Gruppe (Michelle Kluge, Sina Behrens)
+* IT-Gruppe (Sebastion, Max)
+
+Festlegungen:
+* Es sind kleine Änderungen am Design des Werkeditors erforderlich. Genaue Anforderungen sind nachzutragen (Sebastian).
+** Anordnung und Aussehen der Buttons
+** Sicherungsabfrage erforderlich, wenn Texteditor verlassen wird. 
+** Aufteilung der Editier- und Uploadprozeduren auf eigene Seiten
+** klarere Struktur zum Navigieren innerhalb des Editors (wie kommt man auf die Übersicht zurück?)
+** Verwendung von Designelementen vereinheitlichen (Name, Ort im Werkeditor umgestalten)
+* Profilseite
+** Ähnlich wie bei den Favoriten wird eine Übersicht für Projekte eines Nutzer angelegt
+** Der Bereich wird auf die volle Breite erweitert
+** Der Werk hochladen-Button wird offensichtlicher platziert (analog dazu ein Projektleiter werden/Proj. erstellen Button)
+* Zum Projektlebenszyklus: Dieser wird ähnlich gestaltet wie der Lebenszyklus von Werken. Insbesondere gibt es ein Stadium, in dem das Projekt freigegeben, aber noch nicht veröffentlicht ist. 
+* Nutzer können sich (sofern das Proj. nicht abgeschlossen ist) auf der Projektseite über einen Link mit einem ihrer Werke für ein Projekt bewerben
+* Es wurden Designvorgaben der Designgruppe für die Projektdarstellung besprochen. Diese werden zügig ins Moodle hochgeladen. 
+** "ME PROJECTS" wird als Teilbereich der Seite in Form einer eigenen Menüführung eingebaut
+** Die Projektseite enthält drei Texte (Kurztext, Projektdokumentation, Abschlusstext), welche vom Projektleiter bereitgestellt und während des Projektverlaufs überarbeitet werden können; (+ dokumentarische Bilder)
+
+==Aufzeichnungen zum Weekly Scrum==
+
+Dabei: Gräbe, Günther, Malios.
+
+Organisatorisches
+* Sebastian hat SHK-Vertrag bis 30.9. unterschrieben. 
+* Max hat SHK-Tätigkeit zum Ende Juni gekündigt. 
+* Nachfolger konnte bisher nicht gefunden werden. Siehe obige Absprache mit Frau Düwel. Weitere Anfrage ging an Prof. Riechert (HTWK). 
+* Andreas Nareike nareike@informatik.uni-leipzig.de steht als Konsultationspartner zu CSS-Fragen zur Verfügung.
+
+Weitere Änderungen:
+* Weitere Anpassungen von Alex ins git eingepflegt.
+* Anpassungen von Max ins git eingepflegt.
+* Ein User kann jetzt mehreren Autoren zugeordnet werden, um deren Werke zu verwalten. 
+
+Offene Tasks bis 2.6.:
+* Werkeditor entsprechend den Anforderungen von Frau Düwel überarbeiten und ein neues Stable Release in der Produktiv-Instanz ausrollen. 
+* Anm. aus Seminar vom 02.06.: der Upload am 06.06. entfällt, somit kann das Ausrollen auf den Sprintabschluss gelegt werden
+
+Wir diskutieren über den Einsatz von esteem als Thema. Die umfangreichen Ergänzungen im child theme setzen das responsive Design außer Kraft, das vor allem in den Seitentemplates enthalten ist. Es wäre sinnvoll, das PVM-Thema komplett als eigenes [http://www.elmastudio.de/tutorials/wordpress-theme-mit-bootstrap-entwickeln-tutorial-fuer-einsteiger/ Thema auf Bootstrap-Basis] zu entwickeln.
+
+Nächster Weekly Scrum am 2.6. 12 Uhr. 
+
+= 02.06.: Weekly Scrum =
+
+Dabei: Gräbe, Günther. 
+
+Max schreibt im Nachgang: Sehr geehrter Herr Gräbe, ich habe morgen Abschlusspräsentation für ein Projekt, weshalb heute komplett für die abschließenden Vorbereitungen meiner Gruppe verplant ist. Nächste Woche bin ich wieder da.
+
+Organisatorisches
+* Anfrage Vivien vom 26.5. per Forum - Hat Sebastian nicht gesehen. 
+** Wir vereinbaren, dass derartige Anfragen als Anforderungen in die Wikiseite [[Anforderungen]] übernommen werden. Gräbe hat eine Antwort im Forum verfasst. 
+* Aufzeichnungen zum Gespräch von IT-Gruppe und Design-Gruppe mit Frau Düwel am 26.5.
+** Aufzeichnungen dazu sind im Wiki unter [[2016-05-26]] zu finden, diese werden durch Sebastian ergänzt (detaillierte Anforderungen zu Änderungen an der Plattform).
+** Frau Düwel sieht das durch mit dem Ziel, hier zu einem einvernehmlichen Protokoll zu kommen wie vereinbart.
+* Wordpress Produktivinstanz wurde am 12.5. auf Wordpress 4.5.2 aktualisiert. 
+* Gestaltungsentwürfe der Designgruppe für Projekte sind noch nicht ins Moddle hochgeladen. 
+
+Änderungen:
+* Sebastian hat im git einen Zweig Stable-5-bugfix angelegt und auf dem Webserver ausgerollt, um kleine Bugfixes als temporäre Workarounds zwischen Release-Wechseln in die Produktivplattform einspielen zu können. 
+* Wir schauen uns ein paar Aspekte in der Datenbank an. Zum besseren Modellverständnis wäre ein RDF-Dump der Datenbank als Verfahren aufzusetzen. (V: Gräbe)
+
+Es war vorgesehen, den Werkeditor entsprechend den Anforderungen von Frau Düwel bis 2.6. zu überarbeiten und ein neues Stable Release in der Produktiv-Instanz ausrollen. Das wird sich noch ein paar Tage hinziehen. 
+
+Nächster Weekly Scrum am 9.6. 12 Uhr. 
+
+
+= 09.06.: Weekly Scrum =
+
+Dabei: Gräbe, Malios. 
+
+Sebastian schreibt vorab: 
+Da die Entwicklung von Design und Programmierung deutlich mehr Zeit als gedacht in Anspruch nehmen entspricht der aktuelle Stand der Plattform noch nicht dem gewünschten Soll-Zustand. Diverse Module funktionieren noch nicht einwandfrei oder sind ungetestet, sodass eine Besprechung zum aktuellen Zeitpunkt wenig Sinn macht. 
+Auch aus zeitlichen Gründen werde ich heute nicht zum Treffen erscheinen können. Den Fokus lege ich vorerst auf den schnellstmöglichen Abschluss der Arbeiten für Sprint 6 (Werkeditor, konsistentes Design, Robustheit der Prozesse).
+
+Vorbereitung Projektseiten
+* Max hat die Designvorlagen für die Projektseiten noch nicht gesehen, die nach dem Treffen vom 26.5. von der Designgruppe noch einmal überarbeitet werden sollten.
+* Unklar ist auch, wie man an die anderen Kursmitglieder herankommt. 
+** Nachtrag Gräbe: Mailadressen finden sich auf der PVM-Plattform: Sina Behrens - sina.behrens@web.de, Michelle Kluge
+- michelle@die-kluges.net
+* Wir diskutieren, dass für die Projektseiten zwei Templates "PVM View All Projects Template" und "PVM View Single Project Template" erstellt werden müssen.  Max und Sebastian stimmen sich ab, wie das zügig Realität wird. 
+
+Organisatorisches
+* Aktuell liegen keine Informationen vor, wie die Arbeit an den Projekten in den Schulen vorangeht. 
+* Aufzeichnungen zum [[2016-05-26|Gespräch am 26.5.]] mit Frau Düwel wurden am 6.6. von Sebastian um detaillierte Anforderungen zu Änderungen an der Plattform ergänzt. 
+* Weitere Anmerkungen oder Protokollbestätigung von Frau Düwel zum [[2016-05-26|Gespräch am 26.5.]] liegen aktuell noch nicht vor. 
+
+Nächster Weekly Scrum am 16.6. 12 Uhr. 
+
+= 16.06.: Weekly Scrum =
+
+Dabei: Gräbe, Günther, Malios. 
+
+Stand in den Schulen:
+* 16. OS - Sebastian war beim Hochladen der Werke am 14.6. mit dabei. Probleme gab es mit einer Reihe von Schülern, die ihre Werke nicht komplett hatten.
+* Reclam-Gymnasium, Klasse 11: Sebastian wird beim Hochladen der Werke am 17.6. mit dabei sein.
+* Reclam-Gymnasium, Klasse 5: Projektabschluss war am 6.6. ohne Hochladen der Werke. Die Betreuer haben die Werke auf USB-Stick eingesammelt, so dass die Werke zu diesem Projekt später von den Betreuern in die Plattform eingespielt werden können. Dazu kann die neue Funktion verwendet werden, dass ein User mehrere Autoren anlegen kann. 
+
+Stand: 
+* Im Praxistest in den Schulen ergaben sich eine Reihe von Punkten bzgl. des Benutzerverhaltens, die weitere kleine Modifikationen des Werk Upload Prozesses erforderlich machen. 
+** Bei ungünstigem Klickverhalten werden bereits hochgeladene Werkteile wieder verloren. 
+** Auch erst teilweise fertiggestellte Werke müssen ablegbar sein, wenn die erforderlichen weiteren Elemente gerade nicht zur Hand sind oder im Rahmen der Schulstunde nicht hochgeladen werden können. 
+* Umgesetzt ist die Funktionalität, dass ein User mehrere Autorenprofile verwalten kann (etwa ein Lehrer, der die Arbeiten seiner Schüler hochlädt wie im Fall Reclam-Gymnasium Klasse 5). Es gibt damit nur noch das Konzept "Profilseite Autor", jedem User wird frühzeitig im Prozess ein Autorenprofil zugeordnet, das über eine Formularseite (wo ist die verlinkt?) bearbeitet werden kann. Ist aktuell noch stark mit dem Plugin wp-members verquickt. 
+* Ansatz "social media" (SM) ist unklar. Im Autorenprofil sollen Verweise auf die eigenen SM-Seiten eingetragen werden, an anderen Stellen soll die Möglichkeit eingebaut werden, aus den SM-Seiten auf einzelne Werke oder Projekte zu verweisen. Das sind zueinander orthogonale Funktionen. 
+* Was soll passieren, wenn auf einer Werkeeinzelseite eines der Merkmale angeklickt wird? 
+* Tooltips für Werkkacheln (siehe Gest.-Entwürfe vom Januar 2016) wurde inzwischen verworfen. 
+
+Organisatorisches
+* Sprint6-RC getaggt und als neue stabile Version auf der Produktivinstanz ausgerollt. 
+* 6. Sprint ist damit beendet, die offenen Punkte zur Einbindung von Projekten werden in den nächsten Sprint übernommen.
+* 7. Sprint 16.6.-16.7. mit folgenden Goals:
+** Weitere Konsolidierung des Werke-Upload-Prozesses
+** Erstellen und Einbau der erforderlichen Seitentemplates für Projekte. Dazu muss insbesondere studiert werden, wie verschiedene Menüs zu verschiedenen Seitentemplates verwaltet werden. 
+** Auf der Basis sollen die drei Schulprojekte aus diesem Semester als Projekte in die Plattform übernommen werden. 
+** Ersetzen von wp-members, um die Profilseite Autor zu konsolidieren, insb. Einbindung eines hochzuladenden Profilbilds des Autors. Problem sind Registrierfunktion und Passwort-Reset, die derzeit beide von wp-members realisiert werden.
+* Gestaltungsentwürfe Projekte und Profilseite Autor wurden inzwischen von der Designgruppe bereitgestellt. 
+** Entwurf "Neues Werk hochladen" entspricht nicht dem aktuellen Stand, inzwischen sind die Edit-Elemente über mehrere Formulare verteilt.   
+* Weitere Anmerkungen oder Protokollbestätigung von Frau Düwel zum [[2016-05-26|Gespräch am 26.5.]] liegen aktuell noch nicht vor. 
+** Düwel, 14.6.: Bitte entschuldigen Sie, ich hatte mir das erste Protokoll schon angeschaut und schaue mir die anderen Dinge morgen an. Ich würde dann die Fragen, die ich noch habe, am Donnerstag (16.6.) mit Herrn Günther besprechen und Sie anschließend informieren. 
+
+Nächster Weekly Scrum am 23.6. 12 Uhr. 
+
+= 23.06.: Weekly Scrum =
+
+Dabei: Gräbe, Günther. 
+
+Von: Maximilian Malios, 23 Jun 2016 10:00 
+* Wie ich gerade erfahren habe, habe ich leider heute in der Zeit des Weekly Scrum eine Prüfungskonsultation. Daher muss ich das Treffen heute leider spontan absagen. Ich werde, wie mit Sebastian besprochen, weiter an den Templates für die MeProjects-Seiten arbeiten. Am 30.6. bin ich wieder beim Treffen.
+* Letzte Commits vom Max vom 25.5., Templates für Projektseiten (Festlegung vom 9.6.) existieren noch nicht, es gibt auch keine Abstimmungen mit Sebastian. Was konkret passiert, ist also nicht nachvollziehbar. Ebenfalls unbekannt, ob Max inzwischen Kontakt mit der Designgruppe hat, um ggf. offene Fragen zu den Projektseiten-Templates zu besprechen (ebenfalls Festlegung vom 9.6.). 
+* Wie sieht es mit verschiedenen Menüs zu verschiedenen Seitentemplates aus? (Treffen am 16.6.)
+
+Stand in den Schulen:
+* Reclam-Gymnasium, Klasse 11: Alle Schüler hatten Accounts und haben ihre Werke hochgeladen. Funktionierte besser als gedacht. Freigabe der Werke erfolgte durch Frau Düwel. 
+** Bei einem Schüler gab es ein Problem mit dem Passwort und Passwort-Reset hat nicht so funktioniert, wie es funktionieren sollte (Übersendung eines neuen Passworts per Mail, aber die Mail enthielt kein neues Passwort)
+* Reclam-Gymnasium, Klasse 5: Werke zu diesem Projekt wurden von den Betreuern in die Plattform eingespielt. Freigabe der Werke erfolgte ebenfalls durch Frau Düwel. 
+** Viele Autoren zu den User-IDs 11 (Juliane Trinks), 12 (Wassily), 21 (Vivi). 
+
+Stand und Festlegungen zur Plattform: 
+* Im Praxistest in den Schulen ergaben sich weitere Aspekte, die kleine Modifikationen des Werk Upload Prozesses erforderlich machen. 
+** Oft werden die Merkmale vergessen. Deshalb Häkchen an den Workflow-Etappen auf der linken Seite ergänzen, um die bereits abgearbeiteten Punkte zu visualisieren. 
+* Ansatz "social media":
+** SM-Links sollen Share-Buttons sein wie aktuell bereits angelegt.
+* Was soll passieren, wenn eines der Merkmale angeklickt wird? 
+** Links bei Merkmalen sind nicht gewollt.
+* Workflow Projekte 
+** Dieser soll ähnlich aufgebaut werden wie Workflow Werke: Von einer Hauptseite wird auf Seiten für die einzelnen Unteraufgaben (Text eingeben, Bld hochladen usw.) weitergeleitet und von dort zurück auf die Hauptseite.  
+** Auch ein Projekt muss in ''mehreren'' Schritten mit Abspeichermöglichkeit des aktuellen Stands erstellbar sein. 
+** Projekte haben wenigstens die Zustände "noch nicht freigegeben", "freigegeben für initiale Werkzuordnung", "in Realisierung", "archiviert". 
+** Projekten werden Werke, aber keine Teilnehmer mehr zugeordnet. Jeder Autor kann für jedes Projekt auf der Projektseite eigene Werke vorschlagen, die vom Projektleiter bestätigt werden müssen. 
+* Emails sind noch einzudeutschen. 
+* Aktualisierung von Gestaltungsentwürfen?
+** Die Designgruppe hat kein Verständnis für die jeweils umzusetzenden Workflows (etwa wenn aus Workflowsicht nicht zusammengehörende Funktionen auf einer Seite im Gestaltungsentwurf zusammen erscheinen). Die Gestaltungsentwürfe werden als grobe Richtschnur für die Umsetzung betrachtet, eine ggf. erforderliche Anpassung erfolgt im Sinne eines iterativen Entwicklungsmodelss im Zuge einer späteren Überarbeitung, in die auch Usability-Fragen und Nutzererfahrungen mit einbezogen werden. 
+* wp-members-Ersatz scheint machbar. 
+
+Organisatorisches 
+* Anmerkungen von Frau Düwel zum [[2016-05-26|Gespräch am 26.5.]] mit Sebastian abgesprochen und eigearbeitet.
+* Abschlussbesprechung und Auswertung am 30.6.
+
+Nächster Weekly Scrum am 30.6. 12 Uhr. 
+
+= 30.06.: Weekly Scrum =
+
+Dabei: Gräbe, Günther, Malios. 
+
+Max:
+* git commit vom 29.6. pvm_view_single_project.php plus Anpassungen in style.css sowie Bilder in img/MePROJECTS. 
+** Eine zunächst hart codierte Version entsprechend der Designvorlage, in die nun Schritt für Schritt Funktionalität einzubauen ist. (Sebastian)
+** Problem in img/MePROJECTS/ sind die Dateinamen mit Leerzeichen. Bilder haben vielfach keine korrekte Dateierweiterung. (Max: fixen)
+** Einbindung der für MePROJECTS gewünschten anderen Menüstruktur ist noch unklar.
+** Max macht noch einzelne Nacharbeiten in Abstimmung mit Sebastian, steigt aber hiermit aus dem Team aus.
+
+Sebastian:
+* Hat an Projektklasse gearbeitet und die Separierung der Registrierfunktion von wp-members untersucht.
+
+Anmerkungen Frau Düwel für die IT-Gruppe im Wiki: 
+* Folgende Werke wieder raus: 
+** Popcorneimer (gibt es nicht)
+** Nachtigall (Werk-Id:Status: 49:1,50:0,76:8,80:1,81:1,82:1)
+** Frau Düwel kann Werke unsichtbar stellen
+** Lösch-Bug (BugReports, 23.06.) ist gefixt, aber noch nicht eingespielt.
+* Anpassungen:
+** Me Projects nach Vorlagen - in Arbeit
+** kleinere Anpassungen: alle Links Orange (alles, was bisher Rot ist Orange) - Anpassung im style.css erforderlich
+** INSPIRATION nun Kategorie, Text zur Erklärung mit rein, Überschrift? - dazu muss eigenes Seitentemplate her
+** Problem Werkeeditor: Eingefügte Absätze der Autoren mit übernehmen. - Realisierung über WP-Funktion, die Absätze als solche formatiert.
+** Anordnung der Bilder in der Objektübersicht: Random - zu klären, was Frau Düwel damit meint.
+* Zur Besprechung des Designs: Neuer Termin mit Sina, Michelle, Sebastian, Hendrikje
+** Me Projects: Vorlagen besprechen
+** Folgende Vorlagen stehen noch aus: 
+*** Missbrauch melden (Formular mit Text, im eingeloggten Zustand User) - noch nicht begonnen
+*** Mobile Version - müsste esteem im Prinzip mitbringen, kann erst ganz am Ende evauliert werden, wenn die Gesamtfunktionalität steht.
+*** INSPIRATION - dazu muss eigenes Seitentemplate her
+
+Stand Seitentemplates:
+* Profil Autor - existiert
+* Übersichtsseite Werke - existiert
+* Einzelseite Werke - existiert
+* Übersichtsseite Projekte - offen, analog Übersichtsseite Werke
+* Einzelseite Projekte - in Arbeit
+* Inspiration - Standard-Blogtemplate ist anzupassen, offen
+* Missbrauch melden - noch nicht begonnen
+
+Offene Punkte: 
+* Werke-Editor: Oft werden die Merkmale vergessen. Deshalb Checkliste an den Workflow-Etappen auf der linken Seite ergänzen, um die bereits abgearbeiteten Punkte zu visualisieren. 
+* Ansatz "social media": Links sollen Share-Buttons sein wie aktuell bereits angelegt.
+** Funktioniert bei Facebook nur zufällig. Noch nicht systematisch implementiert.
+* Links bei Merkmalen sind nicht gewollt.
+** Links sind noch zu entfernen.
+* Workflow Projekte - in Arbeit (Sebastian), siehe [[2016-06-23]]. 
+* wp-members-Ersatz:
+** Zunächst Separierung der Registrierfunktion erforderlich
+
+Nächster Weekly Scrum am 21.7. 12 Uhr. 
+
+= 21.07.: Weekly Scrum =
+
+Dabei: Gräbe, Günther. 
+
+Der Sprint wird (mind.) bis zum 28.7. verlängert, um ihn mit einer konsolidierten Version und einem Update der Produktiv-Instanz abzuschließen. Dort sind u.a. einzuspielen: 
+* Lösch-Bug (BugReports, 23.06.)
+* Links bei Merkmalen entfernen.
+* Alle Links Orange (alles, was bisher Rot ist Orange) - Anpassung im style.css erforderlich.
+* Werkeeditor: Eingefügte Absätze der Autoren mit übernehmen.
+* Ansatz "social media": Erzeugt beim Autorenprofil einen annotierten Link auf das Autorenprofil im social media target. 
+
+Zum Design: 
+* User kann mehrere Autoren und deren Profile anlegen. Dazu muss er vom Administrator das entsprechende Recht zugewiesen bekommen. Wenn der User später gelöscht wird, bleiben die Autorenprofile bestehen. 
+** Es gibt grundsätzlich nur eine "Profilseite Autor". Wenn der Autor zugleich User ist, können zusätzliche Informationen aus dem User-Profil eingebaut werden.
+** Aktuell wird das User-Profil ausschließlich für das Zugangs-Management verwendet.
+* Bedeutung Werk-Status: 0=gelöscht, 1=erstellt, 5=eingereicht, 8=freigegeben
+** Bereits freigegebene Werke können zurückgenommen werden (mehrfach von Frau Düwel praktizierter Use Case, weil die Werke den Qualitätsansprüchen nicht genügten). Dazu müssten die Beteiligten entsprechend informiert werden.  Design eines solchen Informationssystems ist offen. 
+* Anordnung der Bilder in der Objektübersicht: Random - wird nach Rücksprache mit Frau Düwel nicht umgesetzt.
+
+Aktuelle Baustellen: 
+* Ausbau Bereich Projekte, siehe [[2016-06-23]]. 
+** Max hatte zum 29.6. pvm_view_single_project.php plus Anpassungen in style.css angelegt sowie Bilder in img/MePROJECTS eingepflegt. Die Bilder sind inhomogen und müssten noch einmal bearbeitet werden. Das soll die Design-Gruppe machen, wir arbeiten mit den unvollkommenen Bildern und ersetzen die Dateien bei Gelegenheit. 
+* Bereich Werke:
+** Werke-Editor: Oft werden die Merkmale vergessen. Deshalb Checkliste an den Workflow-Etappen auf der linken Seite ergänzen, um die bereits abgearbeiteten Punkte zu visualisieren. 
+* Ersetzen von wp-members:
+** Formular für die Registrierfunktion fehlt noch.
+* Ansatz "social media": 
+** Gibt es aktuell nur beim Autorenprofil und erzeugt einen annotierten Link auf das Autorenprofil. 
+** Wäre auch auf der Ebene von Einzelseiten Werk denkbar.
+
+Pflege der Datenbasis: 
+* In img/MePROJECTS/ waren mehrere Dateinamen mit Leerzeichen und vielfach falscher Dateierweiterung.  Sollte Max eigentlich fixen. Gefixt von Gräbe am 20.7.
+
+Stand Seitentemplates:
+* Profil Autor - existiert
+* Übersichtsseite Werke - existiert
+* Einzelseite Werke - existiert
+* Übersichtsseite Projekte - offen, analog Übersichtsseite Werke
+* Einzelseite Projekte - in Arbeit
+* Inspiration - Standard-Blogtemplate ist anzupassen, offen
+** Liest aktuell die Posts der Kategorie "inspiration" aus, die nur für User zugänglich sind. Muss um Text zur Erklärung und Überschrift ergänzt werden - dazu muss eigenes Seitentemplate her.
+* Missbrauch melden - noch nicht begonnen
+** Umsetzung im Rahmen eines allgemeinen Konzepts eines Admin-Logs.
+
+= 28.07.: Weekly Scrum, Sprint Review 7. Sprint, Sprint Planning 8. Sprint  =
+
+Dabei: Gräbe, Günther
+
+Stand:
+* Die vorgesehene Aktualisierung der Produktivinstanz konnte nicht vorgenommen werden, da die von Max Malios übernommenen Implementierungen weitgehend unbrauchbar sind. 
+* Es gibt auch keine neuen commits im Repo und keine Aktualisierungen auf dem Server, da Sebastian den Code auf einer lokalen Maschine erst bis zu einer gewissen Produktreife entwickeln und dann erst auf der Plattform ausrollen will. 
+* Gräbe hat im Bereich Dokumente aus den Requirements eine Beschreibung der Plattform erstellt und mit den Aufzeichnungen aus den Arbeitstreffen abgeglichen. Noch zu überarbeiten bleiben
+** die Entwurfsbeschreibung mit genaueren Ausführungen zur Modellierung und Codestruktur sowie
+** das Admin-Handbuch mit u.a. einer genauen Relokationsbeschreibung, in der ausgeführt wird, wie die Plattform auf einem neuen Server ausgerollt und vorhandene Inhalte übernommen werden können. 
+* Gräbe hat weiter einen aktuellen Dump der Datenbank eingespielt und die Skripte zur Erstellung von RDF-Dumps der User-, Autoren- und Werksbeschreibungen in der Plattform (Verzeichnis Daten) aktualisiert. 
+* Damit wird der 7. Sprint abgeschlossen. Von den im Sprint Goal gestellten Aufgaben wurde mit Blick auf die komplizierte Personalsituation allein die Konsolidierung des Workflows für Werke abgeschlossen.  Nacharbeiten bleiben für die Punkte 
+** Erstellen und Einbau der erforderlichen Seitentemplates für Projekte,
+** Hochladen der drei Schulprojekte, die in diesem Semester bearbeitet wurden,
+** Ersetzen von wp-members,
+
+die im 8. Sprint priorisiert umgesetzt werden sollen. 
+* Weitere Einträge in BugReports.txt
+
+Designfragen:
+* Wie kommt man zur Profilseite eines speziellen Autors, wenn man dessen Werke nicht kennt? -> Aktuell nur über den Direktlink mit der Autoren-Id
+* Profilseite eines Autors bearbeiten: User mit dem Recht "mehrere zugeordnete Autoren" hat im Frontend eine Übersichtsseite, auf der die Profilseiten aller ihm zugeordneten Autoren mit entsprechenden Bearbeitungslinks gelistet sind. 
+* Bewertungen sind in pvm_pvmkit_ratings zu finden und dem User zugeordnet. 
+* Bewertungen werden auf der jeweiligen Werkseite kumulativ angezeigt. 
+* Export eines Werks als zip-Datei im PVM-Paketformat. 
+** Eine solche Funktion existiert, muss aber überarbeitet werden. 
+** Weiter muss geklärt werden, was genau wann und wohin im Verzeichnis uploads/pvm abgespeichert wird und unter welchen Konditionen sichtbar ist. 
+* Autor findet auf seiner Profilseite in der Übersicht "eigene Werke" auch all seine Werke "in Bearbeitung". 
+* Ein Power-User (mit mehreren Autorenprofilen) sieht im eingeloggten Zustand auf allen Profilen alle seine Werke als "eigene Werke". 
+
+== Planung 8. Sprint ==
+
+Zeitraum: 28.7.-1.9.
+
+Sprint Goal:
+* Ablösen von wp-members. Dazu muss die Registrierung fertiggestellt werden. 
+* Erstellen und Einbau der für Projekte erforderlichen Seitentemplates.
+* Als neues Release taggen und Produktivinstanz mit diesen Funktionalitäten aktualisieren.
+** Bugs in BugReports.txt fixen.
+** Links bei Merkmalen auf Werkeinzelseite entfernen.
+** Alle Links Orange (alles, was bisher Rot ist Orange)
+** Werke-Editor: Eingefügte Absätze der Autoren mit übernehmen.
+** Werke-Editor: Checkliste an den Workflow-Etappen auf der linken Seite ergänzen, um die bereits abgearbeiteten Punkte zu visualisieren. 
+* Einspielen der drei Schulprojekte, die in S16 bearbeitet wurden, in die Plattform.  Dazu
+** Bereitstellen der Projekt-Infrastruktur in der Plattform (Sebastian)
+** Anlegen von drei Projektseiten und Übergabe dieser an die (zu identifizierenden und mit entsprechenden Rechten auszustattenden) Projektleiterinnen (Sebastian)
+** Projektleiterinnen erstellen die Projektdokumentation und kümmern sich (ggf. in Zusammenarbeit mit Sebastian) um die Zuordnung der relevanten Werke zum jeweiligen Projekt. 
+** Projekte werden unter "Abgeschlossene Projekte" veröffentlicht. 
+* Bug Fixing, Optik, weitere Designanpassungen.
+** Volltextsuche über Werke einbinden.
+** Inspiration - Standard-Blogtemplate ist anzupassen, offen 
+** Export eines Werks als zip-Datei im PVM-Paketformat. Insbesondere muss geklärt werden, was genau wann und wohin im Verzeichnis uploads/pvm abgespeichert wird und unter welchen Konditionen sichtbar ist.
+* Entwurf und Implementierung eines plattforminternen Benachrichtigungssystems für 
+** "Missbrauch melden"
+** Mitteilungen an Autoren im "Workflow Werke". 
+* Missbrauch melden umsetzen. 
+
+Nächstes Arbeitstreffen am 1.9. 12:00 Uhr.
+
+= 01.09.: Weekly Scrum, Sprint Review 8. Sprint, Sprint Planning 9. Sprint  =
+
+Dabei: Gräbe, Günther
+
+Organisatorisches:
+* Die SHK-Stelle von Sebastian Günther läuft Ende September aus, Angebote zur Weiterführung des Projekts gibt es aktuell nicht. Das Projekt endet damit zum Ende September.
+
+Stand:
+* Entwicklung der besprochenen Funktionalität wurde lokal abgeschlossen, aber noch nicht im git-Repo eingecheckt und auch noch nicht auf der Produktivinstanz ausgerollt. 
+* Registrierung wurde umgebaut, so dass wp-members nun ersetzt werden kann. Weiterhin wurden die gelisteten Bugs gefixt. Allerdings muss beides noch in der Produktivinstanz ausgerollt werden. 
+* Alle Design-Anpassungen werden auf den 9. Sprint verschoben, da hier grundsätzliche Überlegungen her müssen, ggf. Realisierung als eigenes Thema auf Bootstrap-Basis statt als Child-Thema wie bisher. Der Einfluss des Elternthemas ist sehr groß, dort verankerte grundsätzliche Designentscheidungen (etwa zur Link-Gestaltung) sind im Prinzip im Child-Thema nicht mehr zu revidieren. 
+* Im Bereich Dokumente sind noch zu überarbeiten 
+** die Entwurfsbeschreibung mit genaueren Ausführungen zur Modellierung und Codestruktur sowie
+** das Admin-Handbuch mit u.a. einer genauen Relokationsbeschreibung, in der ausgeführt wird, wie die Plattform auf einem neuen Server auszurollen ist und vorhandene Inhalte übernommen werden können. 
+* Damit wird der 8. Sprint abgeschlossen. Von den im Sprint Goal gestellten Aufgaben wurde die Entwicklung der Plattform-Funktionalität abgeschlossen.  Nacharbeiten bleiben für die Punkte 
+** Erstellen und Einbau noch erforderlicher Seitentemplates,
+** Einbau der abweichenden Menüstruktur für den Bereich ME PROJECTS,
+** Integration der Schulprojekte, die in diesem Semester bearbeitet wurden,
+* Diese Punkte sollen im 9. Sprint priorisiert umgesetzt werden. 
+
+Anmerkungen zu den Goals des 8. Sprints:
+* Ablösen von wp-members. Dazu muss die Registrierung fertiggestellt werden. 
+** Im Prinzip fertig, muss noch ausgerollt werden
+* Erstellen und Einbau der für Projekte erforderlichen Seitentemplates.
+** Teil der Überarbeitung des Designs, verschoben in 9. Sprint. 
+* Links bei Merkmalen auf Werkeinzelseite entfernen.
+** Die zugehörigen Anzeigeklassen müssen dazu gefixt werden. Design -> 9. Sprint
+* Alle Links Orange (alles, was bisher Rot ist Orange)
+** Linkverhalten wird im Eltern-Thema weitgehend festgelegt; lässt sich nur über ein komplett eigenes Thema realisieren.
+* Werke-Editor: Checkliste an den Workflow-Etappen auf der linken Seite ergänzen, um die bereits abgearbeiteten Punkte zu visualisieren. 
+** Design -> 9. Sprint, vielleicht eine grundsätzlich andere Lösung ohne Checkliste. 
+* Einspielen der drei Schulprojekte, die in S16 bearbeitet wurden, in die Plattform.  Dazu
+** Bereitstellen der Projekt-Infrastruktur in der Plattform (Sebastian)
+*** Steht im Prinzip, muss in Teilen noch in der Produktivinstanz ausgerollt werden. 
+** Anlegen von drei Projektseiten und Übergabe dieser an die Projektleiterinnen (Sebastian)
+*** Klasse 5, Reclam-Gym: Juliane Trinks, Elisabeth Würzl, Vivien Janner. Die erstellten Werke wurde im Nachgang von den Betreuern über die Mehrfachzuordnung User->Autor eingespielt, sie müssen noch zum Projektkontext zusammengefasst werden. 
+*** Klasse 8, 16. OS: Georg Unland (?). Werke sind eingespielt, allerdings vielfach nicht vollständig. Weitere Werke wurden nicht veröffentlicht, weil die Qualität unzureichend ist. Aus dieser Gruppe sind etwa 6 Werke eingespielt und veröffentlichungsfähig. Sie müssen noch zum Projektkontext zusammengefasst werden.
+*** Klasse 11, Reclam-Gym: Sarah Doberitz. Werke hochgeladen und in deutlich vollständigerem Zustand.
+** Projektleiterinnen erstellen die Projektdokumentation und kümmern sich (ggf. in Zusammenarbeit mit Sebastian) um die Zuordnung der relevanten Werke zum jeweiligen Projekt. Sie müssen noch zum Projektkontext zusammengefasst werden.
+*** Hier ist noch nichts geschehen. 
+* Optik, weitere Designanpassungen, weiteres Bugfixing, plattforminternes Benachrichtigungssystem.
+** Verschoben auf den 9. Sprint.
+
+== Planung 9. Sprint ==
+
+Zeitraum: 1.9.-29.9.
+
+Schwerpunkt ist Design und Bugfixing
+
+Sprint Goal:
+* Erstellen und Einbau der für Projekte erforderlichen Seitentemplates sowie der alternativen Menüstruktur für ME PROJECTS.
+* Anpassung des Designs. 
+** Volltextsuche über Werke einbinden.
+** Inspiration - Standard-Blogtemplate anzupassen
+** Export eines Werks als zip-Datei im PVM-Paketformat. 
+* Bugfixing der Funktionalität. 
+* Plattforminternes Benachrichtigungssystem für 
+** "Missbrauch melden"
+** Mitteilungen an Autoren im "Workflow Werke". 
+* Als neues Release taggen und Produktivinstanz mit diesen Funktionalitäten aktualisieren.
+* Abschluss des Einspielens der drei Schulprojekte, die in S16 bearbeitet wurden. 
+
+Nächstes Arbeitstreffen am 8.9. 12:00 Uhr.
+
+= 08.09.: Weekly Scrum, Gespräch mit Frau Düwel =
+
+== Gespräch mit Frau Düwel, 10 Uhr, GS-Haus ==
+
+Dabei: Gräbe, Düwel
+
+* Weitere Betreuung des Projekts nach dem 1.10. wird durch Herrn Johannes Kiehl erfolgen, ein Webdesigner aus Leipzig mit eigener Firma. 
+* Perspektivisch soll die Plattform auf einer eigenen Domäne laufen, die z.B. bei Strato gehostet wird. Um den Umzug wird sich Herr Kiehl kümmern. Ein detailliertes Betreiberkonzept ist noch zu entwickeln. 
+* Die entscheidenden Teile der erstellten Software-Lösung sollen als Open Source veröffentlicht werden. 
+* Frau Düwel macht zügig einen Kontakt zwischen Gräbe und Kiehl, damit sich Herr Kiehl mit dem Projekt vertraut machen kann. 
+* Frau Düwel organisiert einen Termin mit Gräbe, Günther, Kiehl zur weiteren Abstimmung. Inzwischen bestätigt ist der 22.9. 12 Uhr im Büro Gräbe (P-633). 
+* Frau Düwel übergibt eine Papierversion des "Konzepts zur Gestaltung der Projektseiten". Die Version liegt nicht als pdf vor. 
+* Die Schulprojekte aus dem vergangenen Semester sind von unterschiedlicher Qualität, nur die beiden Projekte aus dem Reclam-Gynmasium sind vorzeigbar. 
+
+== Weekly Scrum ==
+
+Dabei: Gräbe, Günther
+
+Organisatorisches:
+* Gräbe berichtet vom Gespräch mit Frau Düwel und übergibt die Konzeption "Projektseiten". Für ein Gespräch mit Düwel, Gräbe, Günther, Kiehl wurde der 22.9. 12 Uhr im Raum P-633 (Büro Gräbe) inzwischen fest vereinbart. 
+
+Stand:
+* Verschiedene Überarbeitungen wurden im git-Repo eingecheckt, sind aber noch nicht auf der Produktivinstanz ausgerollt.  
+* Dazu gehört auch eine erste Version eines Benachrichtigungssystems. Benachrichtigungen werden user-orientiert erzeugt und in einer Tabelle in der Datenbank aufgesammelt. Beim Einloggen bekommt der Nutzer die letzten Nachrichten an ihn angezeigt zusammen mit einem Link, über den alle Nachrichten verwaltet werden können. 
+* Projekt-Klasse und Projekt-Template sind eingebunden, allerdings können Projekte aktuell nur lesend benutzt werden. 
+* Wir diskutieren die Konsequenzen der Ablösung von wp-members und legen fest, dass wp-members in der neuen Produktivversion deaktiviert wird. Entsprechende Bugs sind mit hoher Priorität zu fixen. 
+* Der aktuelle Stand (ohne wp-member, mit Benachrichtgungssystem) soll auf der Produktivinstanz ausgerollt werden, damit Frau Düwel sich den aktuellen Arbeitsstand anschauen kann. Wir vereinbaren, dass dies wieder über git-Tags verwaltet wird und Bug fixing hohe Priorität hat. 
+* Der Projekt-Editor ist noch nicht vollständig fertiggestellt und in die Oberfläche eingebunden. Das soll noch fertiggestellt werden, bevor die neue Produktivinstanz ausgerollt wird. Das alles soll aber bis zum nächsten Treffen am 15.9. abgeschlossen sein.
+* Gräbe hat ein weiteres Plugin pvm2rdf eingespielt, in dem der Export von Informationen aus der Datenbank als RDF (User, Autoren, Werke) gekapselt ist. Ist in pvmdevelop eingebunden; die Ausgabe erfolgt dort aktuell über WP-Shortcodes auf eine spezielle Testseite.
+
+Konzeptionelles:
+* Das WP-Thema, in dem das Design gekapselt ist, soll noch einmal gründlich überarbeitet werden. Dabei soll ein eigenes Basisthema auf Bootstrap-Basis durch Zusammenführen bisheriger Bearbeitungen entwickelt werden. 
+* Einbau der abweichenden Menüstruktur für den Bereich ME PROJECTS: Menüs werden über ihren Namen im Seitentemplate verankert und im WP-Admin-Bereich konfiguriert. Auf diese Weise können Seitentemplates mit unterschiedlichen Menüs erstellt und die entsprechenden Menüs im WP-Admin-Backend zur Laufzeit konfiguriert werden. 
+
+Offen: 
+* Erstellen und Einbau der für Projekte erforderlichen Seitentemplates sowie der alternativen Menüstruktur für ME PROJECTS.
+* Anpassung des Designs. 
+** Volltextsuche über Werke einbinden.
+** Inspiration - Standard-Blogtemplate anzupassen
+** Export eines Werks als zip-Datei im PVM-Paketformat. 
+
+Nächstes Arbeitstreffen am 15.9. 12:00 Uhr.
+
+= 15.09.: Weekly Scrum =
+
+Dabei: Gräbe, Günther
+
+Stand:
+* Im git-Repo wurden weitere Überarbeitungen eingecheckt, die Produktivinstanz verwendet nun den master branch und ist damit auf aktuellstem Stand. Die Developinstanz ist dennoch noch nicht obsolet, da Sebastian hier neue Konzepte ausprobiert. 
+* Umsetzung der Vereinbarung: Der aktuelle Stand (ohne wp-member, mit Benachrichtgungssystem) soll auf der Produktivinstanz ausgerollt werden, damit Frau Düwel sich den aktuellen Arbeitsstand anschauen kann. 
+** Das Benachrichtigungssystem wird über eine Tabelle pvmkit_notifications gesteuert, die in der Developinstanz, aber noch nicht in der Produktivinstanz verfügbar ist.
+** wp-members ist noch aktiv, es wird der Shortcode von dort zur Registrierung an mehreren Stellen verwendet, der ein HTML-Schnipsel statt einer ganzen Seite (WP-Standard-Registrierung) zur Verfügung stellt. Ablösung hat geringe Priorität.
+* Gräbe hat das Plugin pvm2rdf auch in der Produktivinstanz eingespielt; die Ausgabe erfolgt (prototypisch) ebenfalls über WP-Shortcodes auf eine spezielle Testseite.
+* Es hat sich als zu umfangreich erwiesen, das komplette Design von "esteem" ablösen zu wollen. Für das überarbeitete Design wird deshalb nur das child theme "esteem_pvm_child" angepasst (Anlegen neuer Template-Seiten und deren Einbindung in die functions.php).  
+* Menü ProjectMenu ist angelegt und kann im Dashboard konfiguriert werden.  Wird im Weiteren in Seitentemplates für Projekte eingebunden und damit dort das alternative Menü verfügbar. 
+* Der Projekt-Editor ist noch nicht vollständig fertiggestellt und in die Oberfläche eingebunden. 
+
+Weiter auszuführende Arbeiten: 
+* Bug "Werke löschen" fixen
+* Anpassung des Designs. 
+** Volltextsuche über Werke einbinden.
+** Inspiration - Standard-Blogtemplate anzupassen
+** Export eines Werks als zip-Datei im PVM-Paketformat. 
+
+Nächstes Treffen am 22.9. 12:00 Uhr mit Frau Düwel und Herrn Kiehl.
+
+= 22.09.: Erstes Treffen zur Übergabe des Projekts  =
+
+Dabei: Gräbe, Günther, Kiehl, Düwel
+
+Stand:
+* Gräbe hat auf der Basis der alten Entwurfsbeschreibung ein neues Dokument "Implementierungsdetails" erstellt, auf dessen Basis wir den aktuellen Umsetzungsstand durchsprechen. 
+* Insbesondere werden Herrn Kiehl die Designentscheidungen genauer erläutert. 
+* Sebastian zeigt, dass die Seitentemplates zur Umsetzung des Workflows Projekteangelegt sind, aber noch nicht ins Frontend eingebunden. 
+* Die Möglichkeit des Exportierens von Werken als zip-Datei im PVM-Paketformat wurde in der finalen Version nicht weiter verfolgt und ist aktuell nicht verfügbar. 
+* Der Lösch-Bug wurde gefixt, Werke können nun also gelöscht werden (Übergang in Zustand 0, keine "permanente Löschung" - die entsprechenden Werkeinzelteile sind noch im System). 
+* Gräbe hat im Nachgang das Plugin pvm2rdf gefixt, funktioniert wieder.  Problem war gelöschte Datei inc.php. 
+
+Vereinbarungen: 
+* Herr Kiehl hat Zugang zum git-Repo und über ssh auch zum Produktivsystem. 
+* Sebastian sichert Herrn Kiehl zu, dass er auch über Ende September als Konsultationspartner zur Verfügung steht. 
+* Es wurde erläutert, wie das Produktivsystem auf dem Rechner pcai042 ausgerollt it.
+* Für eine beschränkte Zeit soll das Produktivsystem auch noch auf diesem Rechner betrieben werden. 
+* Frau Düwel hat noch eine Liste von Anforderungen, die sie an Sebastian schickt. Das wird mit in die BugReports aufgenommen. 
+ 
+Nächstes Treffen am 29.9. 12:00 Uhr mit Frau Düwel und Herrn Kiehl.

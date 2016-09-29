@@ -1,0 +1,253 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{a4wide,ngerman,url}
+\usepackage[utf8]{inputenc}
+
+\parindent0pt
+\parskip3pt
+
+\title{Installation und Administration der PVM-Plattform}
+\author{Hans-Gert Gräbe, Sebastian Günther, Alexander Lieder}
+\date{Version vom 18. September 2016}
+
+\begin{document}
+\maketitle
+\begin{quote}
+Dieses Dokument beschreibt, welche personellen Voraussetzungen für den
+Plattformbetrieb erforderlich sind und wie eine Plattform-Instanz auf der Basis
+einer Standard-Wordpress-Installation auf einem entsprechend konfigurierten
+Web-Server Schritt für Schritt aufgebaut und verwaltet werden kann.
+\end{quote}
+\tableofcontents{}\newpage{}
+
+
+\section{Allgemeines}
+
+Zum Betrieb der Wordpress-Produktivinstanz der PVM-Plattform sind folgende
+Rollen zu besetzen:
+\begin{itemize}
+\item \emph{Site-Admin} --- zuständig für die Installation und Aktualisierung
+  der grundlegenden Software auf dem Rechner, das Basis-Backup sowie Kontakt
+  bei Rechnerausfällen und Neustart.
+\item \emph{Portal-Admin} -- Aktualisierung der Wordpress-Instanz auf eine
+  neue Version, Installation und Aktualisierung von Plugins und des
+  PVM-eigenen Themas, Upload-Verwaltung. Ein Portal-Admin hat Zugriff auf das
+  Installationsverzeichnis auf dem Server.
+\item \emph{WP-Admin} --- zuständig für konzeptionelle Fragen sowie die
+  Konfiguration der verschiedenen Anwendungen, Plugins und Funktionen über die
+  Admin-Konfigurations-Oberfläche von Wordpress. Ein WP-Admin hat keinen
+  Zugriff auf das Installationsverzeichnis auf dem Server.
+\item \emph{WP-Redakteure} --- zuständig für die Inhalte der Plattform. 
+\end{itemize}
+
+\section{Installation und Verwaltung der Wordpress Site}
+
+\subsection{Initialer Aufbau der Plattform}
+
+Die Plattform wird initial über die Standard-Installationsprozesse von
+Wordpress aus den im PVM-Release mitgelieferten Daten von einem
+\emph{Portal-Admin} über folgende Schritte aufgebaut:
+\begin{enumerate}
+\item Aufsetzen einer Standard-Installation von Wordpress\footnote{Siehe etwa
+  \url{http://wpde.org/installation/}. }. Wenn dies eine längerfristig laufende
+  Website werden soll, wird empfohlen, die üblichen allgemeinen\footnote{Siehe
+    etwa \url{http://httpd.apache.org/docs/2.4/misc/securitytips.html}.  } und
+  Wordpress-spezifischen Sicherheitshinweise\footnote{Siehe etwa
+    \url{https://wordpress.org/about/security/}.  } zu beachten.
+\item Einstellen von \emph{Permalinks} unter
+  \emph{Einstellungen\,$\to$\,Permalinks}.
+
+Wordpress versucht dabei, im Installationsverzeichnis eine \texttt{.htaccess}
+Datei anzulegen, welche das Rewriting der Links von den absoluten
+Seitenadressen auf die Post und Page Id's umsetzt. Kann der Webserver diese
+Datei nicht schreiben, so muss der Inhalt (siehe dazu die Anzeige im Menü
+\texttt{Einstellungen\,$\to$\,Permalinks}) manuell auf den Server übertragen
+werden.
+
+\item Einspielen, Aktivieren und Konfigurieren der verwendeten
+  Standard-Plugins aus dem Release-Verzeichnis \emph{Plugins-and-Themes}.
+
+Die Plugins müssen dazu ins Verzeichnis \texttt{wp-content/plugins/} kopiert
+und dort ausgepackt werden.
+
+\item Einspielen des im Release mitgelieferten \emph{WP-Backups}. Dieses
+  Backup ist ein komplettes Backup aller \emph{Seiten} der Plattform, das mit
+  der unter \emph{Werkzeuge\,$\to$\,Datenexport} für WP-Admins verfügbaren
+  Exportfunktion erstellt wurde.
+
+Für den Import muss das (mitgelieferte) Plugin \emph{wordpress-importer}
+installiert und ein Verzeichnis \texttt{wp-content/uploads/} für den Webserver
+schreibbar sein.
+
+\end{enumerate}
+Danach kann ein \emph{WP-Admin} die Menü- und Widgetstruktur über das
+WP-Admin-Interface einrichten. Folgende Modifikationen sollten vorgenommen
+werden.
+\begin{enumerate}
+\item Unter \texttt{Einstellungen\,$\to$\,Diskussion} Kommentare abschalten.
+\item Einstellungen des Plugins \texttt{wp-members} anpassen: Die Seiten
+  „Login“, „Registrierung“ und „Profil“ müssen den entsprechenden Funktionen
+  im Tab „WP-Members Optionen“ zugeordnet sowie die Registrierungsfelder
+  konfiguriert werden.
+\item Unter \texttt{Design\,$\to$\,Menüs} die Menüs für den Header (Primary
+  Menu), das ProjectMenu und den Footer (Footer Navigation Menu) anlegen.
+\item Seiten für die Menüs anlegen und dem jeweiligen Menü zuordnen
+\item Damit innerhalb der Seiten die korrekte Sidebar angezeigt wird, muss
+  diese in den Einstellungen der jeweiligen Seiten ausgewählt werden.  Soll
+  die Sidebar leer bleiben, reicht es nicht, eine leere Sidebar auszuwählen,
+  da diese von Wordpress ignoriert wird. Die Sidebar muss mindestens ein
+  Widget enthalten. Um dieses Problem zu umgehen, kann beispielsweise ein
+  leeres Widget angelegt und der Sidebar zugewiesen werden.
+\item Die Spezialseiten (Alle Werke, Einzelnes Werk, Benutzerprofil etc.)
+  anlegen.
+\item Den Spezialseiten das entsprechende Template zuordnen und \textbf{den
+  Permalink anpassen.}\footnote{HGG: Wird das nicht bereits durch den WP-Dump
+  realisiert?} 
+
+\begin{enumerate}
+\item Alle Werke: Homepage
+\item Einzelnes Werk: Homepage/single\_package
+\item Profilseite: Homepage/single\_user
+\item Benutzerwerke: Homepage/profile\_package\_list
+\end{enumerate}
+\item Unter \texttt{Design\,$\to$\,Widgets} den Spezialsidebars die
+  entsprechenden Widgets zuordnen:
+
+\begin{enumerate}
+\item All Packages Sidebar: Suche, Merkmale
+\item Single Package Sidebar: Werkmeta
+\end{enumerate}
+\end{enumerate}
+
+\section{Backupanforderungen und Upgrade der Plattform}
+
+Der Zustand der Plattform lässt sich aus regelmäßigen Backups des
+Installationsverzeichnisses, der Datenbank sowie folgender weiterer Daten (zu
+ergänzen) rekonstruieren. Ein entsprechender \emph{Backup-Prozess} muss durch
+den \emph{Site-Admin} spezifiziert und regelmäßig ausgeführt werden.
+
+Ein \emph{Upgrade der Plattform} kann in der üblichen Weise durch einen
+\emph{Portal-Admin} erfolgen durch einzelne oder alle der folgenden
+Operationen
+\begin{itemize}
+\item Upgrade der WP-Basisinstallation, 
+\item Upgrade einzelner Plugins, 
+\item Upgrade des PVM-Themes. 
+\end{itemize}
+Dabei sind die üblichen Upgrade-Regeln\footnote{Siehe etwa
+  \url{https://codex.wordpress.org/UpdatingWordPress}. } von Wordpress
+anzuwenden. Die Möglichkeiten eines automatischen Background Updates wurden
+nicht getestet.
+
+
+\section{Beschreibung der aktuell verwendeten Wordpress-Instanzen}
+
+
+\subsection{Grundsätzlicher Aufbau}
+
+Die \emph{Wordpress-Produktivinstanz} ist im Verzeichnis
+\texttt{public\_html/wp} auf der Basis der Word"|press-Version 4.6.1 (Stand:
+18.09.2016) als SVN-Installation ausgerollt. Der Apache-Server ist so
+konfiguriert\footnote{Siehe \texttt{/etc/apache2/vhosts.d/pvm.conf} }, dass
+dieses Verzeichnis auch als \texttt{pvm.uni-leipzig.de} ausgeliefert wird. Site
+und Home URL der Produktivinstanz sind entsprechend eingestellt.
+
+Die \emph{Wordpress-Entwicklungsinstanz} ist im Verzeichnis
+\texttt{public\_html/pvmdevelop} auf der Basis der Wordpress-Version 4.5.3
+(Stand: 18.09.2016) als SVN-Installation ausgerollt.
+
+Beide Instanzen verwenden dieselbe Datenbank mit verschiedenen
+Tabellen-Präfixen, die Produktivinstanz verwendet das Präfix \texttt{pvm\_},
+die Entwicklungsinstanz das Präfix \texttt{pvmdevelop\_}\,. In beiden Instanzen
+ist \texttt{WP\_DEBUG} eingeschaltet.
+
+In beiden Instanzen ist die Permalink-Option aktiviert. Zum Funktionieren der
+\emph{Permalinks} ist im jeweiligen Installationsverzeichnis eine
+\texttt{.htaccess} Datei angelegt, welche das Rewriting der Links von den
+absoluten Seitenadressen auf die Post und Page Id's umsetzt.
+
+Im Verzeichnis \texttt{wp-content/uploads/pvm/} sind die Werkdaten
+gespeichert. 
+
+\subsection{Plugins}
+
+Plugins enthalten spezifische funktionale Erweiterungen der
+Standard-WP-Plattform.  Sie werden als zip-Datei verteilt, müssen im
+Verzeichnis \texttt{wp-content/plugins/} als Unterverzeichnisse ausgerollt und
+dann über das Admin-Backend aktiviert werden.
+
+Zum Betrieb sind die folgenden Plugins installiert (Stand 17.01.2016): 
+\begin{itemize}
+\item \texttt{wp-members} -- Erweiterung der Nutzerverwaltung von Wordpress.
+\item \texttt{wp-mail-smtp} -- Anpassung der E-Mail-Adresse der Plattform an
+  die lokalen Gegebenheiten des E-Mail-Versands auf dem Server.
+\item \texttt{wordpress-importer} -- Import der Seitenstruktur aus einem
+  XML-basierten Dump der Seitenstruktur einer anderen Plattform.
+\item \texttt{pvmkit} -- Plugin mit PVM-spezifischen Funktionalitäten.
+\item \texttt{pvm2rdf} -- Plugin mit Shortcodes zum Export der Werk-Metadaten
+  im RDF-Format (experimentell, für den Betrieb aktuell nicht erforderlich).
+\end{itemize}
+Alle benötigten Plugins liegen als zip-Dateien im Repo-Verzeichnis
+\texttt{Plugins-and-Themes} und können von dort durch einen
+\emph{Portal-Admin} ausgerollt bzw.\ aktualisiert und im Backend unter
+„Plugins installieren“ aktiviert werden.
+
+\subsection{Themes}
+
+Themes sind die Basis, um das spezifische „Look and Feel“ einer Website
+einzustellen. Themes liefern Grund-Design-Funktionalitäten wie Menüstrukturen,
+Seitentemplates, CSS Style sheets, Short Codes usw., die an verschiedenen
+Stellen im Admin-Backend eingebunden sind und dem WP-Admin eine
+Basiskonfiguration der Plattform ermöglichen.
+
+Auch Themes werden als zip-Datei verteilt und müssen durch einen
+\emph{Portal-Admin} im Verzeichnis \texttt{wp-content/themes/} als
+Unterverzeichnis ausgerollt werden. Zur gleichen Zeit kann immer nur ein Theme
+aktiviert sein.
+
+Für die PVM-Plattform wurde das Child Theme \texttt{esteem\_pvm\_child} zum
+Basisthema \emph{esteem} entwickelt. Das Basistheme ist ein Theme, das ein
+spezielles „Look and Feel“ umsetzt und von einer größeren Community aktiv
+weiterentwickelt wird. Im Child Theme müssen dann nur Modifikationen gegenüber
+diesem Basistheme definiert werden, so dass künftiger eigener
+Weiterentwicklungsaufwand reduziert werden kann.
+
+\section{Weitere Hinweise}
+
+\paragraph{Wordpress aus dem WP-SVN installieren:}
+
+Wechsle in das Ziel-Verzeichnis und (abschließenden Punkt nicht vergessen --
+aktuelle Versionsnummer einsetzen)
+\begin{quote}
+\texttt{svn co http://core.svn.wordpress.org/tags/4.4.1 . }
+\end{quote}
+Danach \texttt{wp-config-sample.php} nach \texttt{wp-config.php} kopieren, die
+lokalen Daten"|bank-Zu"|gangs"|daten eintragen und weiter wie unter
+\begin{quote}
+{\small\url{http://codex.wordpress.org/InstallingWordPress} und}\\
+{\small\url{https://codex.wordpress.org/Installing/UpdatingWordPresswithSubversion}}
+\end{quote}
+beschrieben. Insbesondere sollte das Auslesen des \texttt{.svn}-Verzeichnisses
+über entsprechende Einträge in der \texttt{.htaccess}-Datei wie dort
+beschrieben verhindert werden.
+
+
+\paragraph{SVN auf neue WP-Version aktualisieren:}
+
+Deaktiviere alle Plugins. Wechsle ins Installationsverzeichnis und (sw wie
+switch -- aktuelle Versionsnummer einsetzen)
+\begin{quote}
+\texttt{svn sw http://core.svn.wordpress.org/tags/4.4.2 . }
+\end{quote}
+
+\paragraph{Debug Modus:}
+
+Dieser kann in der Datei \texttt{wp-config.php} eingeschaltet werden.  Nach
+der PHP-Konstanten \texttt{WP\_DEBUG} suchen.
+
+
+\paragraph{Wordpress auf Deutsch umstellen:}
+
+Dazu müssen unter \texttt{wp-content/languages} die deutschen Sprachdateien
+eingespielt sein. Dann kann ein WP-Admin im Menü
+\emph{Einstellungen\,$\to$\,Allgemeines} die Sprache ändern.
+\end{document}
