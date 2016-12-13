@@ -6,12 +6,14 @@ http://pvm.uni-leipzig.de
 Das Projekt "Partizipatives Virtuelles Museum" war ein Gemeinschaftsprojekt mit
 dem Institut für Kunstpädagogik an der Uni Leipzig. Das Projekt wurde im Rahmen
 der
-[Laboruniversität](http://studienart.gko.uni-leipzig.de/pvm/ueber-das-projekt-2/) 
+[Laboruniversität](http://studienart.gko.uni-leipzig.de/pvm/ueber-das-projekt-2/)
+gefördert.
 
-Das virtuelle Museum wird auf der Basis von Wordpress 
+Das virtuelle Museum basiert auf Wordpress. Die zusätzliche Funktionalität
+(Umgang mit Werken und Projekten) ist im WP-Plugin "pvmkit" zusammengefasst. 
 
 Hauptentwickler: Sebastian Günther. Weitere Beiträge von Alexander Lieder und
-Hans-Gert Gräbe
+Hans-Gert Gräbe.
 
 **Dokumente** - LaTeX-Quellen verschiedener Dokumente zum Projekt. 
 
